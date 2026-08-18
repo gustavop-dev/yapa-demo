@@ -1,116 +1,127 @@
-# Por donde empezar
+# Por donde empezar (Windows)
 
-Orden pensado para que lo bloqueante vaya primero y lo que puede fallar se descubra
-hoy, no el dia de la demo.
+El desarrollo se hace en Windows, no en la VM de Linux. La razon es concreta: el paso
+de USB en VirtualBox suelta el telefono cuando este se re-enumera al activar la
+depuracion o al aceptar la huella RSA, y sin `adb` viendo el telefono no se puede
+compilar, ni instalar, ni ensayar, ni hacer la demo. Ademas la videollamada corre en
+Windows igual, asi que la VM solo agrega capas entre el telefono y lo que ve David.
 
-## Paso 0: la sesion grafica (5 minutos, hacelo primero)
+Repositorio: https://github.com/gustavop-dev/yapa-demo (privado)
 
-Ubuntu 24.04 arranca en Wayland, y compartir pantalla por Zoom o Meet desde Wayland
-tiene fallas conocidas de pantalla en negro. Si esto te falla el dia de la llamada, no
-hay demo.
+## Paso 1: instalar (casi todo son descargas)
 
-1. Cerra sesion.
-2. En la pantalla de login, toca el engranaje y elegi **"Ubuntu on Xorg"**.
-3. Entra y verifica en una terminal del escritorio (no por SSH):
+1. **Node LTS**: https://nodejs.org (el instalador .msi)
+2. **Git para Windows**: https://git-scm.com/download/win
+   Incluye Git Bash, que es lo que vas a usar para correr los scripts `.sh` del repo.
+3. **Android Studio**: https://developer.android.com/studio
+   Al abrirlo por primera vez, dejá que el asistente baje el SDK y acepte las
+   licencias. Esa es la parte que mas se rompe si se hace a mano.
+4. **scrcpy**: bajar el zip de Windows desde
+   https://github.com/Genymobile/scrcpy/releases (hoy la v4.1)
+   Descomprimirlo en una carpeta fija y agregar esa carpeta al PATH.
+   No uses versiones viejas: la que trae apt en Linux es la 1.25, de 2022.
 
-```sh
-echo $XDG_SESSION_TYPE     # tiene que decir: x11
-```
+**JDK**: Android Studio ya trae un JDK embebido y Gradle lo usa por defecto, asi que
+normalmente no hace falta instalar nada aparte. Si el build se queja de la version de
+Java, instalá **JDK 17**: la documentacion de React Native dice textual *"We recommend
+JDK 17. You may encounter problems using higher JDK versions."*
 
-Si dice `wayland`, volve a cerrar sesion y revisa que elegiste Xorg.
+## Paso 2: clonar y preparar
 
-## Paso 1: las cuentas (10 minutos, en el navegador)
-
-Las dos son gratis y bloquean el dia de push remota. Hacelas ahora aunque no las uses
-hasta el jueves.
-
-- **Expo**: crear cuenta en https://expo.dev
-- **Firebase**: entrar a https://console.firebase.google.com con tu cuenta de Google.
-  Todavia no crees el proyecto, solo confirma que podes entrar.
-
-## Paso 2: el toolchain de linea de comandos
-
-```sh
-./scripts/setup-android.sh
-```
-
-Instala JDK 17, adb, reglas udev y scrcpy. Leelo antes si querés: esta comentado.
-
-Por que JDK 17 y no el 21 que ya tenés: la documentacion de React Native dice textual
-*"We recommend JDK 17. You may encounter problems using higher JDK versions."*
-
-Despues:
+En Git Bash o PowerShell:
 
 ```sh
-source ~/.bashrc
-java -version    # 17
-adb version
-scrcpy --version
+git clone https://github.com/gustavop-dev/yapa-demo.git
+cd yapa-demo
+npm install
+npm test
 ```
 
-## Paso 3: Android Studio y el SDK
+`npm test` tiene que dar 47 tests en verde (40 del motor, 7 del seed). Si eso pasa, el
+motor viajo bien y el problema, si aparece, va a ser de toolchain y no de codigo.
+
+Para ver el motor decidiendo sin necesidad de telefono:
 
 ```sh
-sudo snap install android-studio --classic
+npm run demo
 ```
 
-Abrilo y dejá que el asistente de primer arranque baje el SDK y acepte las licencias.
-Es la parte que mas se rompe si se hace a mano, por eso conviene el asistente.
-
-Cuando termine, verifica que el SDK quedo donde el script espera:
-
-```sh
-ls $ANDROID_HOME     # deberia listar platform-tools, platforms, build-tools
-```
-
-Si quedo en otro lado, corregi `ANDROID_HOME` en tu `~/.bashrc`.
-
-## Paso 4: el telefono
+## Paso 3: el telefono
 
 1. Ajustes, Acerca del telefono, tocar **Numero de compilacion** siete veces.
 2. Ajustes, Sistema, Opciones de desarrollador, activar **Depuracion por USB**.
 3. Conectar por USB y aceptar la huella RSA que aparece en el telefono.
 
 ```sh
-adb devices      # tiene que listar tu telefono como "device", no "unauthorized"
+adb devices
 ```
 
-Si dice `no permissions`, cerra sesion y volve a entrar: las reglas udev y el grupo
-plugdev necesitan un login nuevo.
+Tiene que listar el telefono como `device`. Si dice `unauthorized`, revisa el dialogo
+en la pantalla del telefono. Si no aparece nada, puede faltar el driver USB del
+fabricante: buscalo como "OEM USB driver" mas la marca de tu telefono.
 
-## Paso 5: el primer build
+## Paso 4: el primer build (el gate)
 
-Este es el gate. Si esto no funciona, no sirve seguir con nada mas.
+Si esto no funciona, no sirve seguir con nada mas.
 
 ```sh
 npm run android --workspace=@yapa/mobile
 ```
 
-La primera vez tarda entre 10 y 30 minutos: Gradle baja todo. Si falla, copiame el
+La primera vez tarda entre 10 y 30 minutos porque Gradle baja todo. Si falla, copiá el
 error completo.
 
-## Paso 6: espejar la pantalla
+## Paso 5: espejar la pantalla para la llamada
 
 ```sh
 scrcpy --stay-awake
 ```
 
-Deja el telefono enchufado por USB mientras dure la demo: Doze no aplica mientras
+Dejá el telefono enchufado por USB durante toda la demo: Doze no aplica mientras
 carga, y `--stay-awake` evita que la pantalla se apague sola.
 
-Para la llamada, compartí **pantalla completa**, no la ventana suelta de scrcpy. Es
-donde falla el portal de captura.
+En la videollamada, compartí **pantalla completa**, no la ventana suelta de scrcpy.
 
----
+## Para la demo, no antes
 
-## Cuando termines el paso 5
+Estas van el dia de la llamada, no ahora:
 
-Avisame y seguimos con la notificacion de proximidad y la push remota. El codigo de
-ubicacion ya esta escrito y compilando, solo falta probarlo en el dispositivo.
+- Telefono en **modo avion con wifi reconectado a mano**: mata llamadas y SMS
+  entrantes en medio de la demo. El GNSS sigue funcionando porque es solo receptor, y
+  el push llega igual por wifi.
+- Compilar con **`npm run android:release --workspace=@yapa/mobile`**: embebe el
+  bundle y elimina el servidor de Metro como dependencia viva. Sin pantalla roja ni
+  LogBox delante del fundador.
 
-## Lo que ya esta hecho y no vas a tener que tocar
+## Comandos utiles para ensayar
 
-- Motor de recomendacion por MCC, con 47 tests en verde
+Resetear permisos para volver a ver el dialogo de primer uso:
+
+```sh
+adb shell pm clear com.yapa.demo
+```
+
+Dejar el telefono exactamente en el estado de "ubicacion aproximada", que es el
+momento mas fuerte de la demo:
+
+```sh
+adb shell am force-stop com.yapa.demo
+adb shell pm revoke com.yapa.demo android.permission.ACCESS_FINE_LOCATION
+adb shell pm grant  com.yapa.demo android.permission.ACCESS_COARSE_LOCATION
+```
+
+La app tiene que detectarlo y mostrar el estado degradado, aunque Android reporte
+`granted: true`.
+
+## Lo que ya esta hecho
+
+- Motor de recomendacion por MCC, 47 tests en verde
 - 386 comercios de Costa Mesa y 467 de Duitama, sacados de OpenStreetMap
-- La pantalla, el modulo de ubicacion y el de notificaciones, escritos y compilando
+- Pantalla, modulo de ubicacion y modulo de notificaciones, escritos y compilando,
+  todavia sin probar en dispositivo
 - `scripts/send-push.sh` para disparar la push remota cuando tengas el token
+
+## Lo que falta
+
+- Dias 3 y 4 del plan: notificacion de proximidad y push remota con Firebase
+- El plan completo esta en `docs/plan-geo-y-push.md`
