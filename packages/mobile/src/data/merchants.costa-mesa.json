@@ -1,0 +1,3577 @@
+{
+  "region": "costa-mesa",
+  "label": "Costa Mesa, California",
+  "bbox": {
+    "south": 33.67,
+    "west": -117.94,
+    "north": 33.708,
+    "east": -117.87
+  },
+  "note": "South Coast Plaza y el corredor de Harbor Blvd, extendido al oeste para alcanzar un club mayorista. Elegida porque en el mismo radio conviven un mall cerrado (el argumento de interiores), supermercados MCC 5411, un superstore MCC 5310, un warehouse club MCC 5300 y gasolineras, incluida una de club mayorista. Es el set que va al repo.",
+  "attribution": "(c) OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "generatedFrom": "Overpass API, extraccion puntual",
+  "merchantCount": 386,
+  "mccBreakdown": {
+    "5200": 1,
+    "5251": 1,
+    "5300": 1,
+    "5310": 2,
+    "5311": 9,
+    "5331": 3,
+    "5411": 8,
+    "5422": 1,
+    "5441": 4,
+    "5451": 2,
+    "5462": 2,
+    "5499": 10,
+    "5541": 15,
+    "5651": 99,
+    "5732": 3,
+    "5812": 99,
+    "5813": 5,
+    "5814": 109,
+    "5912": 7,
+    "5942": 5
+  },
+  "merchants": [
+    {
+      "id": "node-5625748602",
+      "name": "& Other Stories",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690188,
+      "lon": -117.888204,
+      "osmId": "node/5625748602"
+    },
+    {
+      "id": "node-363121987",
+      "name": "7-Eleven",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.681989,
+      "lon": -117.884217,
+      "osmId": "node/363121987"
+    },
+    {
+      "id": "way-70333183",
+      "name": "7-Eleven",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.670177,
+      "lon": -117.919775,
+      "osmId": "way/70333183"
+    },
+    {
+      "id": "way-339130664",
+      "name": "7-Eleven",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.70051,
+      "lon": -117.88797,
+      "osmId": "way/339130664"
+    },
+    {
+      "id": "way-339232533",
+      "name": "76",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.70787,
+      "lon": -117.885117,
+      "osmId": "way/339232533"
+    },
+    {
+      "id": "node-5850036967",
+      "name": "A Pea in the Pod",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692616,
+      "lon": -117.892982,
+      "osmId": "node/5850036967"
+    },
+    {
+      "id": "node-5625730895",
+      "name": "Abercrombie & Fitch",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691457,
+      "lon": -117.887607,
+      "osmId": "node/5625730895"
+    },
+    {
+      "id": "node-5631393102",
+      "name": "Abercrombie & Fitch",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690876,
+      "lon": -117.888581,
+      "osmId": "node/5631393102"
+    },
+    {
+      "id": "node-5625667718",
+      "name": "Access",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690014,
+      "lon": -117.889917,
+      "osmId": "node/5625667718"
+    },
+    {
+      "id": "node-13879251546",
+      "name": "Ali's Bagel & Coffee",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.67889,
+      "lon": -117.919798,
+      "osmId": "node/13879251546"
+    },
+    {
+      "id": "node-5631407029",
+      "name": "AllSaints",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690545,
+      "lon": -117.888195,
+      "osmId": "node/5631407029"
+    },
+    {
+      "id": "way-844622562",
+      "name": "ampm",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.680537,
+      "lon": -117.88029,
+      "osmId": "way/844622562"
+    },
+    {
+      "id": "node-3306298903",
+      "name": "Ango Tei",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.682049,
+      "lon": -117.884586,
+      "osmId": "node/3306298903"
+    },
+    {
+      "id": "node-5625699804",
+      "name": "Ann Taylor",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690947,
+      "lon": -117.887622,
+      "osmId": "node/5625699804"
+    },
+    {
+      "id": "node-5631393108",
+      "name": "Anne Fontaine",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691106,
+      "lon": -117.888395,
+      "osmId": "node/5631393108"
+    },
+    {
+      "id": "node-9874357901",
+      "name": "AnQi Bistro",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.688776,
+      "lon": -117.88825,
+      "osmId": "node/9874357901"
+    },
+    {
+      "id": "node-5850036890",
+      "name": "Anthropologie",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691465,
+      "lon": -117.892965,
+      "osmId": "node/5850036890"
+    },
+    {
+      "id": "node-5625625823",
+      "name": "Antonello",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.695888,
+      "lon": -117.890208,
+      "osmId": "node/5625625823"
+    },
+    {
+      "id": "node-5625699827",
+      "name": "Antonello Espresso",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.690894,
+      "lon": -117.88847,
+      "osmId": "node/5625699827"
+    },
+    {
+      "id": "node-3463194507",
+      "name": "Apple Store",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692046,
+      "lon": -117.892987,
+      "osmId": "node/3463194507"
+    },
+    {
+      "id": "way-865478691",
+      "name": "Arco",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680423,
+      "lon": -117.88007,
+      "osmId": "way/865478691"
+    },
+    {
+      "id": "way-865478692",
+      "name": "Arco",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680329,
+      "lon": -117.880419,
+      "osmId": "way/865478692"
+    },
+    {
+      "id": "way-1081059507",
+      "name": "ARCO",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.687319,
+      "lon": -117.919806,
+      "osmId": "way/1081059507"
+    },
+    {
+      "id": "node-5625748593",
+      "name": "Aritzia",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689993,
+      "lon": -117.887932,
+      "osmId": "node/5625748593"
+    },
+    {
+      "id": "node-5631407031",
+      "name": "Armani Exchange",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690342,
+      "lon": -117.8882,
+      "osmId": "node/5631407031"
+    },
+    {
+      "id": "node-5631377825",
+      "name": "Assouline",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691305,
+      "lon": -117.889892,
+      "osmId": "node/5631377825"
+    },
+    {
+      "id": "node-5631434822",
+      "name": "babyGap",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691102,
+      "lon": -117.887898,
+      "osmId": "node/5631434822"
+    },
+    {
+      "id": "node-5623311704",
+      "name": "Baja Fish Tacos",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.698651,
+      "lon": -117.886792,
+      "osmId": "node/5623311704"
+    },
+    {
+      "id": "node-5625749127",
+      "name": "Banana Republic",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690423,
+      "lon": -117.887933,
+      "osmId": "node/5625749127"
+    },
+    {
+      "id": "node-5631486935",
+      "name": "Baskin-Robbins",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 33.699263,
+      "lon": -117.88494,
+      "osmId": "node/5631486935"
+    },
+    {
+      "id": "node-5384154995",
+      "name": "Bella Cocina",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700315,
+      "lon": -117.888426,
+      "osmId": "node/5384154995"
+    },
+    {
+      "id": "node-7068081755",
+      "name": "Bella Cuba",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694657,
+      "lon": -117.886328,
+      "osmId": "node/7068081755"
+    },
+    {
+      "id": "node-5625699806",
+      "name": "Berluti",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691107,
+      "lon": -117.888695,
+      "osmId": "node/5625699806"
+    },
+    {
+      "id": "way-1264601275",
+      "name": "Best Buy",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.688339,
+      "lon": -117.892939,
+      "osmId": "way/1264601275"
+    },
+    {
+      "id": "node-13012413982",
+      "name": "Better Buzz Coffee",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.672072,
+      "lon": -117.919779,
+      "osmId": "node/13012413982"
+    },
+    {
+      "id": "way-228745471",
+      "name": "Black Bear Diner",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700919,
+      "lon": -117.885131,
+      "osmId": "way/228745471"
+    },
+    {
+      "id": "node-3111013768",
+      "name": "Blackmarket Bakery",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678889,
+      "lon": -117.886456,
+      "osmId": "node/3111013768"
+    },
+    {
+      "id": "way-589102157",
+      "name": "Bloomingdale's",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689212,
+      "lon": -117.888165,
+      "osmId": "way/589102157"
+    },
+    {
+      "id": "node-13663047560",
+      "name": "Board & Brew",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681291,
+      "lon": -117.91892,
+      "osmId": "node/13663047560"
+    },
+    {
+      "id": "node-13013899718",
+      "name": "Bonchon Chicken",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673635,
+      "lon": -117.921047,
+      "osmId": "node/13013899718"
+    },
+    {
+      "id": "node-12748906918",
+      "name": "Book Off",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678984,
+      "lon": -117.920254,
+      "osmId": "node/12748906918"
+    },
+    {
+      "id": "node-5631434711",
+      "name": "Boudin SF",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690937,
+      "lon": -117.887237,
+      "osmId": "node/5631434711"
+    },
+    {
+      "id": "node-5562787638",
+      "name": "BrandsWalk",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.67748,
+      "lon": -117.88602,
+      "osmId": "node/5562787638"
+    },
+    {
+      "id": "node-7068081742",
+      "name": "Brasa",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694571,
+      "lon": -117.886023,
+      "osmId": "node/7068081742"
+    },
+    {
+      "id": "node-9659807857",
+      "name": "Bred Hot Chicken",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.67766,
+      "lon": -117.88623,
+      "osmId": "node/9659807857"
+    },
+    {
+      "id": "node-13663127152",
+      "name": "Brewing Reserve",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679125,
+      "lon": -117.916142,
+      "osmId": "node/13663127152"
+    },
+    {
+      "id": "node-13012413999",
+      "name": "Broken Yolk",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.672089,
+      "lon": -117.921268,
+      "osmId": "node/13012413999"
+    },
+    {
+      "id": "node-5625699837",
+      "name": "Brunello Cucinelli",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691096,
+      "lon": -117.888766,
+      "osmId": "node/5625699837"
+    },
+    {
+      "id": "node-5562787630",
+      "name": "Buffalo Exchange",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677431,
+      "lon": -117.885855,
+      "osmId": "node/5562787630"
+    },
+    {
+      "id": "way-228745479",
+      "name": "Buffalo Wild Wings",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696741,
+      "lon": -117.885056,
+      "osmId": "way/228745479"
+    },
+    {
+      "id": "node-5631393106",
+      "name": "Burberry",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69089,
+      "lon": -117.888799,
+      "osmId": "node/5631393106"
+    },
+    {
+      "id": "way-127288262",
+      "name": "Cal Shabu",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679583,
+      "lon": -117.889863,
+      "osmId": "way/127288262"
+    },
+    {
+      "id": "node-13012461202",
+      "name": "California Fish Grill",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.671524,
+      "lon": -117.91976,
+      "osmId": "node/13012461202"
+    },
+    {
+      "id": "node-5562724778",
+      "name": "Calipoke",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677178,
+      "lon": -117.885429,
+      "osmId": "node/5562724778"
+    },
+    {
+      "id": "node-13993922022",
+      "name": "Cancun Fresh Mexican Grill",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701647,
+      "lon": -117.934262,
+      "osmId": "node/13993922022"
+    },
+    {
+      "id": "node-13676225994",
+      "name": "Carl's Jr.",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.702877,
+      "lon": -117.919047,
+      "osmId": "node/13676225994"
+    },
+    {
+      "id": "node-5631393093",
+      "name": "Carolina Herrera",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.6909,
+      "lon": -117.889303,
+      "osmId": "node/5631393093"
+    },
+    {
+      "id": "node-5631434717",
+      "name": "Casa Barilla",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.691664,
+      "lon": -117.887844,
+      "osmId": "node/5631434717"
+    },
+    {
+      "id": "node-5625699821",
+      "name": "Celine",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690906,
+      "lon": -117.888768,
+      "osmId": "node/5625699821"
+    },
+    {
+      "id": "node-5850036900",
+      "name": "Champagne",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.691604,
+      "lon": -117.893202,
+      "osmId": "node/5850036900"
+    },
+    {
+      "id": "node-5625649264",
+      "name": "Chanel",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691749,
+      "lon": -117.889706,
+      "osmId": "node/5625649264"
+    },
+    {
+      "id": "node-3268103831",
+      "name": "Chaya",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681381,
+      "lon": -117.885346,
+      "osmId": "node/3268103831"
+    },
+    {
+      "id": "node-13969552783",
+      "name": "Chevron",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.686766,
+      "lon": -117.919051,
+      "osmId": "node/13969552783"
+    },
+    {
+      "id": "way-127225536",
+      "name": "Chevron",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679761,
+      "lon": -117.886141,
+      "osmId": "way/127225536"
+    },
+    {
+      "id": "way-228745500",
+      "name": "Chevron",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.697185,
+      "lon": -117.885109,
+      "osmId": "way/228745500"
+    },
+    {
+      "id": "way-228745504",
+      "name": "Chevron",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.703421,
+      "lon": -117.885178,
+      "osmId": "way/228745504"
+    },
+    {
+      "id": "way-1083090818",
+      "name": "Chevron",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.682028,
+      "lon": -117.885328,
+      "osmId": "way/1083090818"
+    },
+    {
+      "id": "way-228745488",
+      "name": "Chick-fil-A",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.699682,
+      "lon": -117.885018,
+      "osmId": "way/228745488"
+    },
+    {
+      "id": "way-1082183520",
+      "name": "Chick-fil-A",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.686346,
+      "lon": -117.920101,
+      "osmId": "way/1082183520"
+    },
+    {
+      "id": "node-5850036992",
+      "name": "Chico's",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692097,
+      "lon": -117.892986,
+      "osmId": "node/5850036992"
+    },
+    {
+      "id": "way-228745476",
+      "name": "China Olive",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701407,
+      "lon": -117.885891,
+      "osmId": "way/228745476"
+    },
+    {
+      "id": "node-5563546181",
+      "name": "Chipotle",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.698344,
+      "lon": -117.885062,
+      "osmId": "node/5563546181"
+    },
+    {
+      "id": "node-13360453901",
+      "name": "Chronic Tacos",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680373,
+      "lon": -117.918045,
+      "osmId": "node/13360453901"
+    },
+    {
+      "id": "node-14072085390",
+      "name": "Circle K",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.696137,
+      "lon": -117.907302,
+      "osmId": "node/14072085390"
+    },
+    {
+      "id": "way-70337765",
+      "name": "Circle K",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.680469,
+      "lon": -117.918458,
+      "osmId": "way/70337765"
+    },
+    {
+      "id": "node-3306298896",
+      "name": "Claim Jumper",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691646,
+      "lon": -117.887188,
+      "osmId": "node/3306298896"
+    },
+    {
+      "id": "node-5631407037",
+      "name": "Club Monaco",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690267,
+      "lon": -117.887933,
+      "osmId": "node/5631407037"
+    },
+    {
+      "id": "node-13679635483",
+      "name": "Confetti Italian Ice & Custard",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678373,
+      "lon": -117.906989,
+      "osmId": "node/13679635483"
+    },
+    {
+      "id": "node-5625625834",
+      "name": "Corner Bakery",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.695591,
+      "lon": -117.89038,
+      "osmId": "node/5625625834"
+    },
+    {
+      "id": "node-5631407034",
+      "name": "Corner Bakery",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.689982,
+      "lon": -117.888208,
+      "osmId": "node/5631407034"
+    },
+    {
+      "id": "node-5625748604",
+      "name": "COS",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690072,
+      "lon": -117.888206,
+      "osmId": "node/5625748604"
+    },
+    {
+      "id": "way-211365188",
+      "name": "Costco",
+      "mcc": "5300",
+      "mccSource": "community",
+      "mccNote": "Reporte de comunidad. Warehouse club, excluido de supermercados.",
+      "brandId": "costco",
+      "lat": 33.703424,
+      "lon": -117.931107,
+      "osmId": "way/211365188"
+    },
+    {
+      "id": "node-13979022131",
+      "name": "Costco Food Court",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Tag de OSM (amenity=fast_food) sobre una marca conocida. La marca se conserva porque hay reglas de tarjeta que excluyen por nombre y no por MCC.",
+      "brandId": "costco",
+      "lat": 33.703572,
+      "lon": -117.932022,
+      "osmId": "node/13979022131"
+    },
+    {
+      "id": "way-741059237",
+      "name": "Costco Gasoline",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Tag de OSM (amenity=fuel) sobre una marca conocida. La marca se conserva porque hay reglas de tarjeta que excluyen por nombre y no por MCC.",
+      "brandId": "costco",
+      "lat": 33.702352,
+      "lon": -117.93111,
+      "osmId": "way/741059237"
+    },
+    {
+      "id": "node-13979022126",
+      "name": "Costco Pharmacy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Tag de OSM (amenity=pharmacy) sobre una marca conocida. La marca se conserva porque hay reglas de tarjeta que excluyen por nombre y no por MCC.",
+      "brandId": "costco",
+      "lat": 33.703731,
+      "lon": -117.931799,
+      "osmId": "node/13979022126"
+    },
+    {
+      "id": "node-3268103835",
+      "name": "CVS Pharmacy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.695593,
+      "lon": -117.884246,
+      "osmId": "node/3268103835"
+    },
+    {
+      "id": "node-13685396506",
+      "name": "CVS Pharmacy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.68221,
+      "lon": -117.91775,
+      "osmId": "node/13685396506"
+    },
+    {
+      "id": "node-14095696281",
+      "name": "CVS Pharmacy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.695588,
+      "lon": -117.88389,
+      "osmId": "node/14095696281"
+    },
+    {
+      "id": "way-70265251",
+      "name": "CVS Pharmacy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.671905,
+      "lon": -117.921646,
+      "osmId": "way/70265251"
+    },
+    {
+      "id": "way-127106462",
+      "name": "CVS Pharmacy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680502,
+      "lon": -117.905648,
+      "osmId": "way/127106462"
+    },
+    {
+      "id": "node-12346872976",
+      "name": "Darkroom Restaurant & Wine Bar",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696648,
+      "lon": -117.918795,
+      "osmId": "node/12346872976"
+    },
+    {
+      "id": "node-5625625837",
+      "name": "Darya",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69621,
+      "lon": -117.889879,
+      "osmId": "node/5625625837"
+    },
+    {
+      "id": "node-5037203626",
+      "name": "David's Bridal",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.68842,
+      "lon": -117.89543,
+      "osmId": "node/5037203626"
+    },
+    {
+      "id": "node-13676225997",
+      "name": "Del Taco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.702542,
+      "lon": -117.918949,
+      "osmId": "node/13676225997"
+    },
+    {
+      "id": "way-127109541",
+      "name": "Del Taco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679792,
+      "lon": -117.905982,
+      "osmId": "way/127109541"
+    },
+    {
+      "id": "way-127262934",
+      "name": "Del Taco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678744,
+      "lon": -117.885473,
+      "osmId": "way/127262934"
+    },
+    {
+      "id": "node-13013878374",
+      "name": "Deli Seoul",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673745,
+      "lon": -117.920029,
+      "osmId": "node/13013878374"
+    },
+    {
+      "id": "way-228727883",
+      "name": "Denny's",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.686352,
+      "lon": -117.919046,
+      "osmId": "way/228727883"
+    },
+    {
+      "id": "node-13012413983",
+      "name": "Descano",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.672883,
+      "lon": -117.921266,
+      "osmId": "node/13012413983"
+    },
+    {
+      "id": "node-5631377514",
+      "name": "Diane Von Furstenberg",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690538,
+      "lon": -117.889924,
+      "osmId": "node/5631377514"
+    },
+    {
+      "id": "node-5850036895",
+      "name": "Diesel",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692245,
+      "lon": -117.892785,
+      "osmId": "node/5850036895"
+    },
+    {
+      "id": "node-5127671559",
+      "name": "Din Tai Fung",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691692,
+      "lon": -117.887843,
+      "osmId": "node/5127671559"
+    },
+    {
+      "id": "node-13012459607",
+      "name": "Ding Tea",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.671013,
+      "lon": -117.918636,
+      "osmId": "node/13012459607"
+    },
+    {
+      "id": "node-12009915569",
+      "name": "Divine Mediterranean Experience",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694632,
+      "lon": -117.883827,
+      "osmId": "node/12009915569"
+    },
+    {
+      "id": "node-13676256163",
+      "name": "DK's Donuts",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.6789,
+      "lon": -117.908273,
+      "osmId": "node/13676256163"
+    },
+    {
+      "id": "node-5625674424",
+      "name": "Dolce & Gabbana",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690208,
+      "lon": -117.889908,
+      "osmId": "node/5625674424"
+    },
+    {
+      "id": "node-5217196387",
+      "name": "Dollar Tree",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.704345,
+      "lon": -117.931937,
+      "osmId": "node/5217196387"
+    },
+    {
+      "id": "node-7355051056",
+      "name": "Dollar Tree",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.702906,
+      "lon": -117.884467,
+      "osmId": "node/7355051056"
+    },
+    {
+      "id": "node-13446993726",
+      "name": "Domino's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680395,
+      "lon": -117.92014,
+      "osmId": "node/13446993726"
+    },
+    {
+      "id": "node-13676256161",
+      "name": "Eat's Sushi",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678374,
+      "lon": -117.90721,
+      "osmId": "node/13676256161"
+    },
+    {
+      "id": "node-5625649274",
+      "name": "Ebar",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.692146,
+      "lon": -117.889637,
+      "osmId": "node/5625649274"
+    },
+    {
+      "id": "node-13663047572",
+      "name": "Eightfold Tea Shoppe",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.680421,
+      "lon": -117.918045,
+      "osmId": "node/13663047572"
+    },
+    {
+      "id": "node-5625699832",
+      "name": "Eileen Fisher",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691104,
+      "lon": -117.888013,
+      "osmId": "node/5625699832"
+    },
+    {
+      "id": "way-127262933",
+      "name": "El Pollo Loco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679672,
+      "lon": -117.885346,
+      "osmId": "way/127262933"
+    },
+    {
+      "id": "way-228727896",
+      "name": "El Pollo Loco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.684176,
+      "lon": -117.919842,
+      "osmId": "way/228727896"
+    },
+    {
+      "id": "node-13809741766",
+      "name": "El Zamorano",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681046,
+      "lon": -117.919652,
+      "osmId": "node/13809741766"
+    },
+    {
+      "id": "node-5631407033",
+      "name": "Escada",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691108,
+      "lon": -117.888278,
+      "osmId": "node/5631407033"
+    },
+    {
+      "id": "node-7068081744",
+      "name": "Euro Caffe",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69491,
+      "lon": -117.886337,
+      "osmId": "node/7068081744"
+    },
+    {
+      "id": "node-5631377823",
+      "name": "Eve By Eve’s",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690216,
+      "lon": -117.889891,
+      "osmId": "node/5631377823"
+    },
+    {
+      "id": "node-5850036972",
+      "name": "Everything But Water",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692256,
+      "lon": -117.892653,
+      "osmId": "node/5850036972"
+    },
+    {
+      "id": "node-5631434825",
+      "name": "Express",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69153,
+      "lon": -117.887849,
+      "osmId": "node/5631434825"
+    },
+    {
+      "id": "way-228727811",
+      "name": "ExtraMile",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.686622,
+      "lon": -117.918754,
+      "osmId": "way/228727811"
+    },
+    {
+      "id": "way-228745496",
+      "name": "ExtraMile",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.69722,
+      "lon": -117.884769,
+      "osmId": "way/228745496"
+    },
+    {
+      "id": "node-5631377827",
+      "name": "Fendi",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690873,
+      "lon": -117.889934,
+      "osmId": "node/5631377827"
+    },
+    {
+      "id": "node-13012413993",
+      "name": "Firehouse Subs",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.671728,
+      "lon": -117.919765,
+      "osmId": "node/13012413993"
+    },
+    {
+      "id": "way-548477284",
+      "name": "Food Court",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.670229,
+      "lon": -117.898678,
+      "osmId": "way/548477284"
+    },
+    {
+      "id": "node-5631407035",
+      "name": "Free People",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690522,
+      "lon": -117.887934,
+      "osmId": "node/5631407035"
+    },
+    {
+      "id": "node-5625757297",
+      "name": "Friar Tux Shop",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692841,
+      "lon": -117.888187,
+      "osmId": "node/5625757297"
+    },
+    {
+      "id": "way-1141765605",
+      "name": "Friends of the Library Bookstore",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678973,
+      "lon": -117.927104,
+      "osmId": "way/1141765605"
+    },
+    {
+      "id": "node-14095701312",
+      "name": "G&M",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.682668,
+      "lon": -117.88599,
+      "osmId": "node/14095701312"
+    },
+    {
+      "id": "way-127254354",
+      "name": "G&M Food Mart",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.682726,
+      "lon": -117.886282,
+      "osmId": "way/127254354"
+    },
+    {
+      "id": "node-5631407028",
+      "name": "Gap",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690145,
+      "lon": -117.888205,
+      "osmId": "node/5631407028"
+    },
+    {
+      "id": "node-5631434821",
+      "name": "Gap Kids",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691415,
+      "lon": -117.887853,
+      "osmId": "node/5631434821"
+    },
+    {
+      "id": "way-71270603",
+      "name": "Garf's Sports Lounge",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 33.681667,
+      "lon": -117.885357,
+      "osmId": "way/71270603"
+    },
+    {
+      "id": "node-5625730889",
+      "name": "Gateway Newstand",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691783,
+      "lon": -117.887264,
+      "osmId": "node/5625730889"
+    },
+    {
+      "id": "node-5623311695",
+      "name": "George’s Thai Bistro",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.697107,
+      "lon": -117.887543,
+      "osmId": "node/5623311695"
+    },
+    {
+      "id": "node-5631377838",
+      "name": "Georgio Armani",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691147,
+      "lon": -117.889649,
+      "osmId": "node/5631377838"
+    },
+    {
+      "id": "node-13012413988",
+      "name": "Gina’s Pizza",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.671785,
+      "lon": -117.919765,
+      "osmId": "node/13012413988"
+    },
+    {
+      "id": "node-5562787629",
+      "name": "Goodtown Doughnuts",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677474,
+      "lon": -117.886235,
+      "osmId": "node/5562787629"
+    },
+    {
+      "id": "node-13012459605",
+      "name": "Gotcha",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.673097,
+      "lon": -117.918804,
+      "osmId": "node/13012459605"
+    },
+    {
+      "id": "node-11911538919",
+      "name": "greenhouse",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.68932,
+      "lon": -117.883013,
+      "osmId": "node/11911538919"
+    },
+    {
+      "id": "node-5631407026",
+      "name": "Guess",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690446,
+      "lon": -117.888198,
+      "osmId": "node/5631407026"
+    },
+    {
+      "id": "node-5631434714",
+      "name": "Gymboree",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691347,
+      "lon": -117.887856,
+      "osmId": "node/5631434714"
+    },
+    {
+      "id": "node-5850036915",
+      "name": "H&M",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692495,
+      "lon": -117.892985,
+      "osmId": "node/5850036915"
+    },
+    {
+      "id": "node-5460929204",
+      "name": "Habana",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.67744,
+      "lon": -117.885723,
+      "osmId": "node/5460929204"
+    },
+    {
+      "id": "node-13012459604",
+      "name": "Habit Burger & Grill",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673577,
+      "lon": -117.920032,
+      "osmId": "node/13012459604"
+    },
+    {
+      "id": "node-5623311691",
+      "name": "Han’s",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.697571,
+      "lon": -117.88676,
+      "osmId": "node/5623311691"
+    },
+    {
+      "id": "node-13809741762",
+      "name": "Happy Pho",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681046,
+      "lon": -117.919823,
+      "osmId": "node/13809741762"
+    },
+    {
+      "id": "way-70417410",
+      "name": "Harbor Freight Tools",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.68152,
+      "lon": -117.92022,
+      "osmId": "way/70417410"
+    },
+    {
+      "id": "node-3268103836",
+      "name": "Hashigo Korean Kitchen",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.682047,
+      "lon": -117.886665,
+      "osmId": "node/3268103836"
+    },
+    {
+      "id": "node-13411216567",
+      "name": "Haus Of Pizza",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.674036,
+      "lon": -117.920639,
+      "osmId": "node/13411216567"
+    },
+    {
+      "id": "node-5623311682",
+      "name": "Hawaiian BBQ",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696719,
+      "lon": -117.886671,
+      "osmId": "node/5623311682"
+    },
+    {
+      "id": "node-5625649265",
+      "name": "Hermès",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691569,
+      "lon": -117.8897,
+      "osmId": "node/5625649265"
+    },
+    {
+      "id": "node-13676331138",
+      "name": "heybing's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679617,
+      "lon": -117.906554,
+      "osmId": "node/13676331138"
+    },
+    {
+      "id": "node-5631393107",
+      "name": "Hugo Boss",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690901,
+      "lon": -117.889179,
+      "osmId": "node/5631393107"
+    },
+    {
+      "id": "node-5631407047",
+      "name": "Hugo Boss",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690625,
+      "lon": -117.888193,
+      "osmId": "node/5631407047"
+    },
+    {
+      "id": "way-339232534",
+      "name": "I Heart Pancakes",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.70726,
+      "lon": -117.885093,
+      "osmId": "way/339232534"
+    },
+    {
+      "id": "node-13009415089",
+      "name": "If You Know You Know",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.670648,
+      "lon": -117.910997,
+      "osmId": "node/13009415089"
+    },
+    {
+      "id": "way-1081059511",
+      "name": "IHOP",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.683665,
+      "lon": -117.919742,
+      "osmId": "way/1081059511"
+    },
+    {
+      "id": "way-228727840",
+      "name": "In-N-Out Burger",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.687754,
+      "lon": -117.919892,
+      "osmId": "way/228727840"
+    },
+    {
+      "id": "way-228745470",
+      "name": "In-N-Out Burger",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700326,
+      "lon": -117.885065,
+      "osmId": "way/228745470"
+    },
+    {
+      "id": "node-9733734566",
+      "name": "In-sīt Coffee",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.679551,
+      "lon": -117.893862,
+      "osmId": "node/9733734566"
+    },
+    {
+      "id": "node-7068081741",
+      "name": "Inka Mama's",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694727,
+      "lon": -117.885985,
+      "osmId": "node/7068081741"
+    },
+    {
+      "id": "node-5631393091",
+      "name": "Intermix",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691109,
+      "lon": -117.889213,
+      "osmId": "node/5631393091"
+    },
+    {
+      "id": "node-11303195255",
+      "name": "Istanbul Grill",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701647,
+      "lon": -117.934339,
+      "osmId": "node/11303195255"
+    },
+    {
+      "id": "node-5127722909",
+      "name": "Izakaya Hachi",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681254,
+      "lon": -117.886343,
+      "osmId": "node/5127722909"
+    },
+    {
+      "id": "node-5625748613",
+      "name": "J.Crew",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690456,
+      "lon": -117.888197,
+      "osmId": "node/5625748613"
+    },
+    {
+      "id": "node-5850036956",
+      "name": "J.Jill",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692748,
+      "lon": -117.892986,
+      "osmId": "node/5850036956"
+    },
+    {
+      "id": "node-5631434826",
+      "name": "Jacadi",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691105,
+      "lon": -117.888102,
+      "osmId": "node/5631434826"
+    },
+    {
+      "id": "way-127128275",
+      "name": "Jack in the Box",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679893,
+      "lon": -117.90855,
+      "osmId": "way/127128275"
+    },
+    {
+      "id": "way-228745473",
+      "name": "Jack in the Box",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.697154,
+      "lon": -117.886008,
+      "osmId": "way/228745473"
+    },
+    {
+      "id": "node-12009938369",
+      "name": "Jersey Mike's Subs",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694561,
+      "lon": -117.883827,
+      "osmId": "node/12009938369"
+    },
+    {
+      "id": "node-13979049510",
+      "name": "Jimmy John's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701665,
+      "lon": -117.935313,
+      "osmId": "node/13979049510"
+    },
+    {
+      "id": "node-5850036926",
+      "name": "Joe’s",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691532,
+      "lon": -117.89303,
+      "osmId": "node/5850036926"
+    },
+    {
+      "id": "node-5631393095",
+      "name": "John Varvatos",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691108,
+      "lon": -117.889095,
+      "osmId": "node/5631393095"
+    },
+    {
+      "id": "node-13663047561",
+      "name": "Juicy Dumpling Factory",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681779,
+      "lon": -117.91896,
+      "osmId": "node/13663047561"
+    },
+    {
+      "id": "node-12023053169",
+      "name": "Kaisen Kaiten",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696416,
+      "lon": -117.884285,
+      "osmId": "node/12023053169"
+    },
+    {
+      "id": "node-3298710123",
+      "name": "Karl Strauss Brewing Company",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689519,
+      "lon": -117.895724,
+      "osmId": "node/3298710123"
+    },
+    {
+      "id": "node-11474168645",
+      "name": "Kashiwa Ramen",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680402,
+      "lon": -117.916967,
+      "osmId": "node/11474168645"
+    },
+    {
+      "id": "node-5625748611",
+      "name": "Kate Spade New York",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690551,
+      "lon": -117.888195,
+      "osmId": "node/5625748611"
+    },
+    {
+      "id": "node-13012413994",
+      "name": "Kenwoods",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.672883,
+      "lon": -117.921635,
+      "osmId": "node/13012413994"
+    },
+    {
+      "id": "node-5631434829",
+      "name": "Kids Atelier",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690897,
+      "lon": -117.887615,
+      "osmId": "node/5631434829"
+    },
+    {
+      "id": "node-5127722889",
+      "name": "Kitakata Ramen Ban Nai",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679479,
+      "lon": -117.893756,
+      "osmId": "node/5127722889"
+    },
+    {
+      "id": "node-13012433299",
+      "name": "La Farola",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673106,
+      "lon": -117.918698,
+      "osmId": "node/13012433299"
+    },
+    {
+      "id": "node-5625699842",
+      "name": "La Perla",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691109,
+      "lon": -117.8892,
+      "osmId": "node/5625699842"
+    },
+    {
+      "id": "way-785248140",
+      "name": "La Pradera Carniceria",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.706762,
+      "lon": -117.885203,
+      "osmId": "way/785248140"
+    },
+    {
+      "id": "node-5625749128",
+      "name": "Lacoste",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690219,
+      "lon": -117.887933,
+      "osmId": "node/5625749128"
+    },
+    {
+      "id": "node-5625674422",
+      "name": "Lanvin",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69141,
+      "lon": -117.889893,
+      "osmId": "node/5625674422"
+    },
+    {
+      "id": "node-7355051054",
+      "name": "Lee's Sandwiches",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.702559,
+      "lon": -117.8859,
+      "osmId": "node/7355051054"
+    },
+    {
+      "id": "node-12146888264",
+      "name": "Lil' Pickle",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679442,
+      "lon": -117.908267,
+      "osmId": "node/12146888264"
+    },
+    {
+      "id": "node-13024849769",
+      "name": "Little Caesars",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679257,
+      "lon": -117.920544,
+      "osmId": "node/13024849769"
+    },
+    {
+      "id": "node-5631393092",
+      "name": "Loius Vuitton",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691108,
+      "lon": -117.888985,
+      "osmId": "node/5631393092"
+    },
+    {
+      "id": "node-5631393100",
+      "name": "Loius Vuitton",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690889,
+      "lon": -117.888922,
+      "osmId": "node/5631393100"
+    },
+    {
+      "id": "node-5850036965",
+      "name": "Lululemon",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692017,
+      "lon": -117.892805,
+      "osmId": "node/5850036965"
+    },
+    {
+      "id": "way-589101111",
+      "name": "Macy's",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691042,
+      "lon": -117.89051,
+      "osmId": "way/589101111"
+    },
+    {
+      "id": "way-40869143",
+      "name": "Macy's Home Furniture",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.693279,
+      "lon": -117.892902,
+      "osmId": "way/40869143"
+    },
+    {
+      "id": "way-589102158",
+      "name": "Macy's The Men's Store",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690179,
+      "lon": -117.890269,
+      "osmId": "way/589102158"
+    },
+    {
+      "id": "node-5625748615",
+      "name": "Madewell",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690295,
+      "lon": -117.888201,
+      "osmId": "node/5625748615"
+    },
+    {
+      "id": "node-363128789",
+      "name": "Maggiano's",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.693822,
+      "lon": -117.88713,
+      "osmId": "node/363128789"
+    },
+    {
+      "id": "node-5625749123",
+      "name": "Maje",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690635,
+      "lon": -117.887934,
+      "osmId": "node/5625749123"
+    },
+    {
+      "id": "node-4402775200",
+      "name": "Manpuku Tokyo BBQ Dining",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679856,
+      "lon": -117.893554,
+      "osmId": "node/4402775200"
+    },
+    {
+      "id": "node-5631393111",
+      "name": "Marni",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690903,
+      "lon": -117.889441,
+      "osmId": "node/5631393111"
+    },
+    {
+      "id": "node-13516271015",
+      "name": "Marugame Udon",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691587,
+      "lon": -117.887848,
+      "osmId": "node/13516271015"
+    },
+    {
+      "id": "node-3279163906",
+      "name": "Mastro's Steakhouse",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689641,
+      "lon": -117.882634,
+      "osmId": "node/3279163906"
+    },
+    {
+      "id": "node-5631377821",
+      "name": "Max Mara",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691171,
+      "lon": -117.889891,
+      "osmId": "node/5631377821"
+    },
+    {
+      "id": "node-3268103859",
+      "name": "McDonald's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696664,
+      "lon": -117.885871,
+      "osmId": "node/3268103859"
+    },
+    {
+      "id": "way-71269420",
+      "name": "McDonald's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.683803,
+      "lon": -117.886218,
+      "osmId": "way/71269420"
+    },
+    {
+      "id": "way-211365193",
+      "name": "McDonald's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.702265,
+      "lon": -117.932227,
+      "osmId": "way/211365193"
+    },
+    {
+      "id": "way-228727828",
+      "name": "McDonald's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.685043,
+      "lon": -117.919893,
+      "osmId": "way/228727828"
+    },
+    {
+      "id": "way-339126060",
+      "name": "McDonald's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700263,
+      "lon": -117.905566,
+      "osmId": "way/339126060"
+    },
+    {
+      "id": "node-5127722906",
+      "name": "Meiji Seimen",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679801,
+      "lon": -117.903888,
+      "osmId": "node/5127722906"
+    },
+    {
+      "id": "node-362649604",
+      "name": "Memphis Cafe",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.676866,
+      "lon": -117.886639,
+      "osmId": "node/362649604"
+    },
+    {
+      "id": "way-70334399",
+      "name": "Mendocino Farms",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673007,
+      "lon": -117.919679,
+      "osmId": "way/70334399"
+    },
+    {
+      "id": "node-5497290174",
+      "name": "Mesa",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679911,
+      "lon": -117.886703,
+      "osmId": "node/5497290174"
+    },
+    {
+      "id": "node-5850036966",
+      "name": "Mezzet",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692233,
+      "lon": -117.892564,
+      "osmId": "node/5850036966"
+    },
+    {
+      "id": "node-5631393097",
+      "name": "Michael Kors",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691108,
+      "lon": -117.888842,
+      "osmId": "node/5631393097"
+    },
+    {
+      "id": "node-13300573966",
+      "name": "Milk & Cookies",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700273,
+      "lon": -117.906683,
+      "osmId": "node/13300573966"
+    },
+    {
+      "id": "node-4335512093",
+      "name": "Milk & Honey",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.679457,
+      "lon": -117.886161,
+      "osmId": "node/4335512093"
+    },
+    {
+      "id": "node-5631377520",
+      "name": "Missoni",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690366,
+      "lon": -117.889946,
+      "osmId": "node/5631377520"
+    },
+    {
+      "id": "way-71270499",
+      "name": "Mitsuwa",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681455,
+      "lon": -117.884057,
+      "osmId": "way/71270499"
+    },
+    {
+      "id": "node-3463184617",
+      "name": "Mobil",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696043,
+      "lon": -117.907354,
+      "osmId": "node/3463184617"
+    },
+    {
+      "id": "way-70337699",
+      "name": "Mobil",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680445,
+      "lon": -117.918818,
+      "osmId": "way/70337699"
+    },
+    {
+      "id": "node-13012461201",
+      "name": "Mokkoji Sbau Shabu Bar",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.672958,
+      "lon": -117.921373,
+      "osmId": "node/13012461201"
+    },
+    {
+      "id": "node-5625667712",
+      "name": "Moncler",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690319,
+      "lon": -117.889829,
+      "osmId": "node/5625667712"
+    },
+    {
+      "id": "way-866413752",
+      "name": "Morton's The Steakhouse",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694629,
+      "lon": -117.890666,
+      "osmId": "way/866413752"
+    },
+    {
+      "id": "node-362650599",
+      "name": "Mother India",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680787,
+      "lon": -117.884992,
+      "osmId": "node/362650599"
+    },
+    {
+      "id": "node-5850036995",
+      "name": "Moulin",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.691766,
+      "lon": -117.890683,
+      "osmId": "node/5850036995"
+    },
+    {
+      "id": "node-5850036970",
+      "name": "Nékter Juice Bar",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69152,
+      "lon": -117.893205,
+      "osmId": "node/5850036970"
+    },
+    {
+      "id": "node-13663047571",
+      "name": "Nékter Juice Bar",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680344,
+      "lon": -117.918042,
+      "osmId": "node/13663047571"
+    },
+    {
+      "id": "node-12346872975",
+      "name": "Nguyen's Kitchen",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696406,
+      "lon": -117.91877,
+      "osmId": "node/12346872975"
+    },
+    {
+      "id": "node-5850036893",
+      "name": "Nike",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692502,
+      "lon": -117.89275,
+      "osmId": "node/5850036893"
+    },
+    {
+      "id": "node-13679635489",
+      "name": "No. 1 Chinese Food",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678372,
+      "lon": -117.906678,
+      "osmId": "node/13679635489"
+    },
+    {
+      "id": "node-5562787627",
+      "name": "Nook",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.677303,
+      "lon": -117.885882,
+      "osmId": "node/5562787627"
+    },
+    {
+      "id": "way-589101109",
+      "name": "Nordstrom",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692479,
+      "lon": -117.889707,
+      "osmId": "way/589101109"
+    },
+    {
+      "id": "way-126993875",
+      "name": "OCC Bookstore",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.670293,
+      "lon": -117.909851,
+      "osmId": "way/126993875"
+    },
+    {
+      "id": "node-14007539683",
+      "name": "Olea Mediterranian Grill",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.704268,
+      "lon": -117.932977,
+      "osmId": "node/14007539683"
+    },
+    {
+      "id": "node-13960767861",
+      "name": "Pacific Pearl Cafe",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.688941,
+      "lon": -117.878359,
+      "osmId": "node/13960767861"
+    },
+    {
+      "id": "node-5850036905",
+      "name": "Pacific Whey Cafe",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.692351,
+      "lon": -117.893086,
+      "osmId": "node/5850036905"
+    },
+    {
+      "id": "node-13979049511",
+      "name": "Panda Express",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701655,
+      "lon": -117.93552,
+      "osmId": "node/13979049511"
+    },
+    {
+      "id": "node-12009946569",
+      "name": "Panera Bread",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69444,
+      "lon": -117.883826,
+      "osmId": "node/12009946569"
+    },
+    {
+      "id": "node-9874466244",
+      "name": "Panini Kabob Grill",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.67957,
+      "lon": -117.875577,
+      "osmId": "node/9874466244"
+    },
+    {
+      "id": "node-3463184621",
+      "name": "Papa John's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.703501,
+      "lon": -117.886132,
+      "osmId": "node/3463184621"
+    },
+    {
+      "id": "node-5850036919",
+      "name": "PB Teen",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691712,
+      "lon": -117.89299,
+      "osmId": "node/5850036919"
+    },
+    {
+      "id": "node-3965144392",
+      "name": "Philly's Best",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700311,
+      "lon": -117.906589,
+      "osmId": "node/3965144392"
+    },
+    {
+      "id": "way-785248142",
+      "name": "Pho Crystal Noodle House",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.706757,
+      "lon": -117.884913,
+      "osmId": "way/785248142"
+    },
+    {
+      "id": "node-13993922021",
+      "name": "Phonic",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.704262,
+      "lon": -117.933512,
+      "osmId": "node/13993922021"
+    },
+    {
+      "id": "node-3463184614",
+      "name": "Pick Up Stix",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.7003,
+      "lon": -117.906799,
+      "osmId": "node/3463184614"
+    },
+    {
+      "id": "node-5625699825",
+      "name": "Pink",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691319,
+      "lon": -117.887611,
+      "osmId": "node/5625699825"
+    },
+    {
+      "id": "node-13012459619",
+      "name": "Pizza Hut",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.672314,
+      "lon": -117.918533,
+      "osmId": "node/13012459619"
+    },
+    {
+      "id": "node-5623311687",
+      "name": "Plato's Closet",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696752,
+      "lon": -117.886401,
+      "osmId": "node/5623311687"
+    },
+    {
+      "id": "node-13411308812",
+      "name": "PokeTiki",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673569,
+      "lon": -117.919795,
+      "osmId": "node/13411308812"
+    },
+    {
+      "id": "node-5631377822",
+      "name": "Polo Ralph Lauren",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690858,
+      "lon": -117.889654,
+      "osmId": "node/5631377822"
+    },
+    {
+      "id": "node-5562787635",
+      "name": "Popbar",
+      "mcc": "5441",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677466,
+      "lon": -117.885977,
+      "osmId": "node/5562787635"
+    },
+    {
+      "id": "node-12009970670",
+      "name": "Portable Planets",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.694753,
+      "lon": -117.883828,
+      "osmId": "node/12009970670"
+    },
+    {
+      "id": "node-5625674431",
+      "name": "Prada",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690901,
+      "lon": -117.889931,
+      "osmId": "node/5625674431"
+    },
+    {
+      "id": "node-13979049508",
+      "name": "Qargo Coffee",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.701614,
+      "lon": -117.935119,
+      "osmId": "node/13979049508"
+    },
+    {
+      "id": "node-5631393101",
+      "name": "Quattro Caffe",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69111,
+      "lon": -117.889444,
+      "osmId": "node/5631393101"
+    },
+    {
+      "id": "way-228727799",
+      "name": "Raising Cane's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.685818,
+      "lon": -117.919003,
+      "osmId": "way/228727799"
+    },
+    {
+      "id": "node-12009946570",
+      "name": "Raku Sushi & Teriyaki",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694691,
+      "lon": -117.883828,
+      "osmId": "node/12009946570"
+    },
+    {
+      "id": "node-5982188390",
+      "name": "Rance's Chicago Pizza",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680402,
+      "lon": -117.917062,
+      "osmId": "node/5982188390"
+    },
+    {
+      "id": "way-1081059515",
+      "name": "Randy's Donuts",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678149,
+      "lon": -117.918904,
+      "osmId": "way/1081059515"
+    },
+    {
+      "id": "node-5562787639",
+      "name": "Red & Blue Vintage",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677483,
+      "lon": -117.886194,
+      "osmId": "node/5562787639"
+    },
+    {
+      "id": "node-5623311697",
+      "name": "Red Robin",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.695082,
+      "lon": -117.887692,
+      "osmId": "node/5623311697"
+    },
+    {
+      "id": "node-5631377830",
+      "name": "Red Valentino",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69045,
+      "lon": -117.889941,
+      "osmId": "node/5631377830"
+    },
+    {
+      "id": "node-5625748600",
+      "name": "REISS",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690284,
+      "lon": -117.887933,
+      "osmId": "node/5625748600"
+    },
+    {
+      "id": "node-3605542277",
+      "name": "Ritters Steam Kettle Cooking",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700465,
+      "lon": -117.887677,
+      "osmId": "node/3605542277"
+    },
+    {
+      "id": "node-5625667709",
+      "name": "Roberto Cavalli",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690436,
+      "lon": -117.889818,
+      "osmId": "node/5625667709"
+    },
+    {
+      "id": "node-3463184622",
+      "name": "Ross",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.695294,
+      "lon": -117.887475,
+      "osmId": "node/3463184622"
+    },
+    {
+      "id": "node-5217196386",
+      "name": "Ross",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.704091,
+      "lon": -117.931928,
+      "osmId": "node/5217196386"
+    },
+    {
+      "id": "node-13676331140",
+      "name": "Round Table Pizza",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679816,
+      "lon": -117.90655,
+      "osmId": "node/13676331140"
+    },
+    {
+      "id": "node-5625625833",
+      "name": "Royal Khyber",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.695795,
+      "lon": -117.890311,
+      "osmId": "node/5625625833"
+    },
+    {
+      "id": "node-3463184615",
+      "name": "Rubio's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700552,
+      "lon": -117.907317,
+      "osmId": "node/3463184615"
+    },
+    {
+      "id": "node-5850036996",
+      "name": "Ruby’s",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692538,
+      "lon": -117.892571,
+      "osmId": "node/5850036996"
+    },
+    {
+      "id": "node-5621052538",
+      "name": "Ruin",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 33.677431,
+      "lon": -117.885772,
+      "osmId": "node/5621052538"
+    },
+    {
+      "id": "node-5625649266",
+      "name": "Ruscello",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692737,
+      "lon": -117.889381,
+      "osmId": "node/5625649266"
+    },
+    {
+      "id": "node-5625699846",
+      "name": "Saint Laurent",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690905,
+      "lon": -117.888987,
+      "osmId": "node/5625699846"
+    },
+    {
+      "id": "way-589102150",
+      "name": "Saks Fifth Avenue",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689659,
+      "lon": -117.89005,
+      "osmId": "way/589102150"
+    },
+    {
+      "id": "node-5625699835",
+      "name": "Sam Edelman",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690862,
+      "lon": -117.887629,
+      "osmId": "node/5625699835"
+    },
+    {
+      "id": "node-5625748599",
+      "name": "Sandro",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690513,
+      "lon": -117.887934,
+      "osmId": "node/5625748599"
+    },
+    {
+      "id": "node-7068081743",
+      "name": "Sankai",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694683,
+      "lon": -117.886111,
+      "osmId": "node/7068081743"
+    },
+    {
+      "id": "node-5625748619",
+      "name": "Scotch & Soda",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689966,
+      "lon": -117.888209,
+      "osmId": "node/5625748619"
+    },
+    {
+      "id": "node-5562812640",
+      "name": "Seabirds Kitchen",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677473,
+      "lon": -117.886323,
+      "osmId": "node/5562812640"
+    },
+    {
+      "id": "node-5625748605",
+      "name": "Seasons 52",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.68996,
+      "lon": -117.887491,
+      "osmId": "node/5625748605"
+    },
+    {
+      "id": "node-5631434715",
+      "name": "See's Candies",
+      "mcc": "5441",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690791,
+      "lon": -117.887561,
+      "osmId": "node/5631434715"
+    },
+    {
+      "id": "node-5850036963",
+      "name": "See's Candies",
+      "mcc": "5441",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692849,
+      "lon": -117.892816,
+      "osmId": "node/5850036963"
+    },
+    {
+      "id": "node-3463184618",
+      "name": "Shell",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696098,
+      "lon": -117.908079,
+      "osmId": "node/3463184618"
+    },
+    {
+      "id": "node-5623311689",
+      "name": "Silva’s",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.698803,
+      "lon": -117.887141,
+      "osmId": "node/5623311689"
+    },
+    {
+      "id": "node-9874334603",
+      "name": "Silver Trumpet Restaurant & Bar",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691403,
+      "lon": -117.880548,
+      "osmId": "node/9874334603"
+    },
+    {
+      "id": "node-13013878390",
+      "name": "Simply Fish",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.673639,
+      "lon": -117.920911,
+      "osmId": "node/13013878390"
+    },
+    {
+      "id": "node-5850036947",
+      "name": "Soma",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692011,
+      "lon": -117.892988,
+      "osmId": "node/5850036947"
+    },
+    {
+      "id": "way-393298732",
+      "name": "Sonic",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.699552,
+      "lon": -117.907251,
+      "osmId": "way/393298732"
+    },
+    {
+      "id": "way-491519908",
+      "name": "Sonic",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.682291,
+      "lon": -117.919852,
+      "osmId": "way/491519908"
+    },
+    {
+      "id": "way-127288319",
+      "name": "Speedway",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679882,
+      "lon": -117.888154,
+      "osmId": "way/127288319"
+    },
+    {
+      "id": "way-127288324",
+      "name": "Speedway",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 33.679697,
+      "lon": -117.888269,
+      "osmId": "way/127288324"
+    },
+    {
+      "id": "node-4888318623",
+      "name": "Spicy Noodle House",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.703494,
+      "lon": -117.885969,
+      "osmId": "node/4888318623"
+    },
+    {
+      "id": "way-70337516",
+      "name": "Sprouts Farmers Market",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681633,
+      "lon": -117.917415,
+      "osmId": "way/70337516"
+    },
+    {
+      "id": "node-461986017",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.680817,
+      "lon": -117.906371,
+      "osmId": "node/461986017"
+    },
+    {
+      "id": "node-461986018",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.681644,
+      "lon": -117.918977,
+      "osmId": "node/461986018"
+    },
+    {
+      "id": "node-470778998",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.68982,
+      "lon": -117.877614,
+      "osmId": "node/470778998"
+    },
+    {
+      "id": "node-5217196384",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.70395,
+      "lon": -117.933932,
+      "osmId": "node/5217196384"
+    },
+    {
+      "id": "node-5625730885",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.691718,
+      "lon": -117.8876,
+      "osmId": "node/5625730885"
+    },
+    {
+      "id": "node-5850036991",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.692589,
+      "lon": -117.892989,
+      "osmId": "node/5850036991"
+    },
+    {
+      "id": "node-13685396505",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.682418,
+      "lon": -117.917762,
+      "osmId": "node/13685396505"
+    },
+    {
+      "id": "way-228745467",
+      "name": "Starbucks",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.700986,
+      "lon": -117.884371,
+      "osmId": "way/228745467"
+    },
+    {
+      "id": "way-1263891442",
+      "name": "Stater Bros.",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.67892,
+      "lon": -117.906307,
+      "osmId": "way/1263891442"
+    },
+    {
+      "id": "node-5625699829",
+      "name": "Stella McCartney",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690902,
+      "lon": -117.88909,
+      "osmId": "node/5625699829"
+    },
+    {
+      "id": "node-10140330706",
+      "name": "Subvegan",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694861,
+      "lon": -117.886012,
+      "osmId": "node/10140330706"
+    },
+    {
+      "id": "node-3268103857",
+      "name": "Subway",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680448,
+      "lon": -117.886215,
+      "osmId": "node/3268103857"
+    },
+    {
+      "id": "node-3463184613",
+      "name": "Subway",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700287,
+      "lon": -117.906649,
+      "osmId": "node/3463184613"
+    },
+    {
+      "id": "node-5631445447",
+      "name": "Subway",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.697766,
+      "lon": -117.884984,
+      "osmId": "node/5631445447"
+    },
+    {
+      "id": "node-13024849770",
+      "name": "Subway",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680457,
+      "lon": -117.919879,
+      "osmId": "node/13024849770"
+    },
+    {
+      "id": "node-13679635488",
+      "name": "Subway",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678373,
+      "lon": -117.907056,
+      "osmId": "node/13679635488"
+    },
+    {
+      "id": "node-13993922024",
+      "name": "Subway",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.704267,
+      "lon": -117.933847,
+      "osmId": "node/13993922024"
+    },
+    {
+      "id": "node-5631393104",
+      "name": "Sugarfina",
+      "mcc": "5441",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690899,
+      "lon": -117.889075,
+      "osmId": "node/5631393104"
+    },
+    {
+      "id": "way-75076393",
+      "name": "Sukiya Sushi & Japanese Buffet",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690739,
+      "lon": -117.921079,
+      "osmId": "way/75076393"
+    },
+    {
+      "id": "node-13181853377",
+      "name": "Sunright Tea Studio",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.694326,
+      "lon": -117.925788,
+      "osmId": "node/13181853377"
+    },
+    {
+      "id": "way-127128282",
+      "name": "Super A's",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678469,
+      "lon": -117.908177,
+      "osmId": "way/127128282"
+    },
+    {
+      "id": "way-228745487",
+      "name": "Super Antojitos",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.703216,
+      "lon": -117.885092,
+      "osmId": "way/228745487"
+    },
+    {
+      "id": "node-13963337810",
+      "name": "Super King Market",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701191,
+      "lon": -117.905813,
+      "osmId": "node/13963337810"
+    },
+    {
+      "id": "node-13663047575",
+      "name": "Sushi Teri",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680404,
+      "lon": -117.917732,
+      "osmId": "node/13663047575"
+    },
+    {
+      "id": "way-211365191",
+      "name": "Taco Bell",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.702243,
+      "lon": -117.932942,
+      "osmId": "way/211365191"
+    },
+    {
+      "id": "way-339232524",
+      "name": "Taco Bell",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.707797,
+      "lon": -117.885793,
+      "osmId": "way/339232524"
+    },
+    {
+      "id": "way-1081059512",
+      "name": "Taco Bell",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.683157,
+      "lon": -117.919923,
+      "osmId": "way/1081059512"
+    },
+    {
+      "id": "node-5625748608",
+      "name": "Tadishi Shoji",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689859,
+      "lon": -117.888197,
+      "osmId": "node/5625748608"
+    },
+    {
+      "id": "node-13663047577",
+      "name": "Takumi Sushi",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680401,
+      "lon": -117.917195,
+      "osmId": "node/13663047577"
+    },
+    {
+      "id": "node-5850036902",
+      "name": "Talbots",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692478,
+      "lon": -117.892779,
+      "osmId": "node/5850036902"
+    },
+    {
+      "id": "node-3268103839",
+      "name": "Tandoori India Cuisine",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694654,
+      "lon": -117.886154,
+      "osmId": "node/3268103839"
+    },
+    {
+      "id": "way-70336375",
+      "name": "Target",
+      "mcc": "5310",
+      "mccSource": "community",
+      "mccNote": "Reporte de comunidad. Amex lo nombra como superstore excluido de supermercados.",
+      "brandId": "target",
+      "lat": 33.68255,
+      "lon": -117.917306,
+      "osmId": "way/70336375"
+    },
+    {
+      "id": "way-228745503",
+      "name": "Target",
+      "mcc": "5310",
+      "mccSource": "community",
+      "mccNote": "Reporte de comunidad. Amex lo nombra como superstore excluido de supermercados.",
+      "brandId": "target",
+      "lat": 33.702859,
+      "lon": -117.887642,
+      "osmId": "way/228745503"
+    },
+    {
+      "id": "node-13679635485",
+      "name": "Tastea",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.678373,
+      "lon": -117.906907,
+      "osmId": "node/13679635485"
+    },
+    {
+      "id": "node-5631393090",
+      "name": "Ted Baker",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691107,
+      "lon": -117.888708,
+      "osmId": "node/5631393090"
+    },
+    {
+      "id": "node-13978874051",
+      "name": "Tenkatori",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680407,
+      "lon": -117.88621,
+      "osmId": "node/13978874051"
+    },
+    {
+      "id": "way-674073306",
+      "name": "TGI Fridays",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.68967,
+      "lon": -117.881353,
+      "osmId": "way/674073306"
+    },
+    {
+      "id": "node-13411216581",
+      "name": "That Boba Place",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.673854,
+      "lon": -117.920886,
+      "osmId": "node/13411216581"
+    },
+    {
+      "id": "way-228745459",
+      "name": "The Boiling Crab",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69963,
+      "lon": -117.888438,
+      "osmId": "way/228745459"
+    },
+    {
+      "id": "node-13013878400",
+      "name": "The Caffeine Club",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.67364,
+      "lon": -117.921145,
+      "osmId": "node/13013878400"
+    },
+    {
+      "id": "node-5625748618",
+      "name": "The Capital Grille",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689939,
+      "lon": -117.887554,
+      "osmId": "node/5625748618"
+    },
+    {
+      "id": "node-461988564",
+      "name": "The Clubhouse",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.689791,
+      "lon": -117.887746,
+      "osmId": "node/461988564"
+    },
+    {
+      "id": "node-5631377833",
+      "name": "The Coffee Bean",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.689996,
+      "lon": -117.889899,
+      "osmId": "node/5631377833"
+    },
+    {
+      "id": "node-13676256143",
+      "name": "The Flame Broiler",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678373,
+      "lon": -117.907121,
+      "osmId": "node/13676256143"
+    },
+    {
+      "id": "node-13979049504",
+      "name": "The Flame Broiler",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.686723,
+      "lon": -117.919828,
+      "osmId": "node/13979049504"
+    },
+    {
+      "id": "node-9630984667",
+      "name": "The Halal Guys",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.681254,
+      "lon": -117.886429,
+      "osmId": "node/9630984667"
+    },
+    {
+      "id": "way-194858633",
+      "name": "The Home Depot",
+      "mcc": "5200",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.7003,
+      "lon": -117.916412,
+      "osmId": "way/194858633"
+    },
+    {
+      "id": "node-13012413997",
+      "name": "The Kebab Shop",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.672954,
+      "lon": -117.921483,
+      "osmId": "node/13012413997"
+    },
+    {
+      "id": "node-5563546179",
+      "name": "The Kickin' Crab",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.69901,
+      "lon": -117.88497,
+      "osmId": "node/5563546179"
+    },
+    {
+      "id": "node-5850036964",
+      "name": "The North Face",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692208,
+      "lon": -117.892985,
+      "osmId": "node/5850036964"
+    },
+    {
+      "id": "node-5572585724",
+      "name": "The Pizza Press",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.688859,
+      "lon": -117.896385,
+      "osmId": "node/5572585724"
+    },
+    {
+      "id": "way-547322255",
+      "name": "The Snack Shack",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.670423,
+      "lon": -117.912216,
+      "osmId": "way/547322255"
+    },
+    {
+      "id": "node-12146884434",
+      "name": "The Straw",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 33.67977,
+      "lon": -117.908854,
+      "osmId": "node/12146884434"
+    },
+    {
+      "id": "node-5625699840",
+      "name": "The Webster",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690892,
+      "lon": -117.888586,
+      "osmId": "node/5625699840"
+    },
+    {
+      "id": "node-13012413992",
+      "name": "Thrive Juice Lab",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.671891,
+      "lon": -117.919765,
+      "osmId": "node/13012413992"
+    },
+    {
+      "id": "way-127288414",
+      "name": "Tin Lizzie Saloon",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 33.677698,
+      "lon": -117.888056,
+      "osmId": "way/127288414"
+    },
+    {
+      "id": "node-5623311701",
+      "name": "TJ Maxx",
+      "mcc": "5311",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696252,
+      "lon": -117.887513,
+      "osmId": "node/5623311701"
+    },
+    {
+      "id": "way-127262936",
+      "name": "TK Burger",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.678998,
+      "lon": -117.885441,
+      "osmId": "way/127262936"
+    },
+    {
+      "id": "node-13004744172",
+      "name": "Tokyo Central",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679753,
+      "lon": -117.920565,
+      "osmId": "node/13004744172"
+    },
+    {
+      "id": "node-12346872977",
+      "name": "Tommy Pastrami",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.696751,
+      "lon": -117.918775,
+      "osmId": "node/12346872977"
+    },
+    {
+      "id": "way-228745490",
+      "name": "Trader Joe's",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.701347,
+      "lon": -117.884223,
+      "osmId": "way/228745490"
+    },
+    {
+      "id": "node-5850036978",
+      "name": "Trojan Town",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692562,
+      "lon": -117.892821,
+      "osmId": "node/5850036978"
+    },
+    {
+      "id": "node-5127671558",
+      "name": "Uniqlo",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691621,
+      "lon": -117.887603,
+      "osmId": "node/5127671558"
+    },
+    {
+      "id": "node-5562787631",
+      "name": "Urban Outfitters",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.677189,
+      "lon": -117.886369,
+      "osmId": "node/5562787631"
+    },
+    {
+      "id": "node-6587480187",
+      "name": "Uroko",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.684011,
+      "lon": -117.886041,
+      "osmId": "node/6587480187"
+    },
+    {
+      "id": "node-9874340859",
+      "name": "Vaca",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692113,
+      "lon": -117.88441,
+      "osmId": "node/9874340859"
+    },
+    {
+      "id": "node-5625699805",
+      "name": "Valentino",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690904,
+      "lon": -117.889467,
+      "osmId": "node/5625699805"
+    },
+    {
+      "id": "node-5354015321",
+      "name": "Vans",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.694684,
+      "lon": -117.922982,
+      "osmId": "node/5354015321"
+    },
+    {
+      "id": "node-5625699813",
+      "name": "Versace",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691108,
+      "lon": -117.888857,
+      "osmId": "node/5625699813"
+    },
+    {
+      "id": "node-5625699838",
+      "name": "Victoria's Secret",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691162,
+      "lon": -117.887616,
+      "osmId": "node/5625699838"
+    },
+    {
+      "id": "node-5850036928",
+      "name": "Victoria's Secret",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692822,
+      "lon": -117.8928,
+      "osmId": "node/5850036928"
+    },
+    {
+      "id": "node-12146884435",
+      "name": "Vietnam's Pearl Restaurant",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679769,
+      "lon": -117.908933,
+      "osmId": "node/12146884435"
+    },
+    {
+      "id": "way-130008574",
+      "name": "Vons",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.671803,
+      "lon": -117.920281,
+      "osmId": "way/130008574"
+    },
+    {
+      "id": "way-133124757",
+      "name": "Vons",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.698192,
+      "lon": -117.887087,
+      "osmId": "way/133124757"
+    },
+    {
+      "id": "node-12146849702",
+      "name": "Wadaya",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679096,
+      "lon": -117.908266,
+      "osmId": "node/12146849702"
+    },
+    {
+      "id": "node-461986021",
+      "name": "Wahoo's Fish Taco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.692319,
+      "lon": -117.893265,
+      "osmId": "node/461986021"
+    },
+    {
+      "id": "way-71270633",
+      "name": "Wahoo's Fish Taco",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.680356,
+      "lon": -117.885349,
+      "osmId": "way/71270633"
+    },
+    {
+      "id": "way-784943914",
+      "name": "Walgreens",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.707174,
+      "lon": -117.885931,
+      "osmId": "way/784943914"
+    },
+    {
+      "id": "way-228745498",
+      "name": "Wang Cho Korean BBQ",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.699109,
+      "lon": -117.886448,
+      "osmId": "way/228745498"
+    },
+    {
+      "id": "node-3279163913",
+      "name": "Water Grill",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691175,
+      "lon": -117.884995,
+      "osmId": "node/3279163913"
+    },
+    {
+      "id": "node-1630006090",
+      "name": "We Olive & Wine Bar",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 33.694647,
+      "lon": -117.925712,
+      "osmId": "node/1630006090"
+    },
+    {
+      "id": "node-5631407044",
+      "name": "Weekend Max Mara",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690582,
+      "lon": -117.887934,
+      "osmId": "node/5631407044"
+    },
+    {
+      "id": "way-228745452",
+      "name": "Wienerschnitzel",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.70045,
+      "lon": -117.886919,
+      "osmId": "way/228745452"
+    },
+    {
+      "id": "node-4913336378",
+      "name": "Windsor Homebrew Supply Co",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.679822,
+      "lon": -117.88731,
+      "osmId": "node/4913336378"
+    },
+    {
+      "id": "node-3965144391",
+      "name": "Wingstop",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.700307,
+      "lon": -117.906718,
+      "osmId": "node/3965144391"
+    },
+    {
+      "id": "node-5631377516",
+      "name": "Wolford",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690678,
+      "lon": -117.889641,
+      "osmId": "node/5631377516"
+    },
+    {
+      "id": "node-5631434709",
+      "name": "XXI Forever",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.691788,
+      "lon": -117.887594,
+      "osmId": "node/5631434709"
+    },
+    {
+      "id": "node-13050665764",
+      "name": "Yogurtland",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 33.680572,
+      "lon": -117.917719,
+      "osmId": "node/13050665764"
+    },
+    {
+      "id": "node-5625699819",
+      "name": "Zara",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690795,
+      "lon": -117.887935,
+      "osmId": "node/5625699819"
+    },
+    {
+      "id": "node-5625699820",
+      "name": "Zegna",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 33.690682,
+      "lon": -117.8897,
+      "osmId": "node/5625699820"
+    }
+  ]
+}

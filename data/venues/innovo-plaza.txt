@@ -1,0 +1,54 @@
+# Innovo Plaza, Duitama, Boyaca
+#
+# Este archivo se llena a mano caminando el mall. Es a proposito: OpenStreetMap
+# tiene 467 comercios mapeados en Duitama y solo 1 adentro de este mall, asi que
+# el problema de interiores es doble, no hay GPS util y tampoco hay datos de POI.
+#
+# NO hace falta coordenada por local. Adentro del edificio el error horizontal
+# supera la distancia entre locales, asi que darle lat/lon a cada tienda seria
+# declarar una precision que no existe. El mall tiene una coordenada y todos sus
+# locales entran juntos como candidatos.
+#
+# Como llenarlo: un local por linea, con el formato
+#
+#     Nombre del local | categoria
+#
+# Vocabulario de categorias (usa la que mas se acerque):
+#
+#   comida        restaurante  comida-rapida  cafe  bar  heladeria  panaderia
+#                 dulces  carniceria  supermercado  tienda  fruteria
+#   ropa          ropa  ropa-deportiva  zapatos  marroquineria  joyeria
+#                 relojeria  cosmeticos  perfumeria
+#   tecnologia    electronica  celulares  electrodomesticos  musica  discos
+#                 fotografia
+#   ocio          libreria  papeleria  juguetes  videojuegos  regalos  deportes
+#                 cine  gimnasio  mascotas
+#   servicios     farmacia  optica  peluqueria  barberia  spa  lavanderia
+#                 floristeria
+#   hogar         muebles  ferreteria  materiales
+#   general       variedades  departamental  descuento  mayorista  general
+#
+# Si no sabes la categoria de un local, escribi ? y el script te avisa cuantos
+# quedaron sin clasificar. Es mejor eso que adivinar el MCC.
+#
+# Cuando termines:  npm run venue --workspace=@yapa/seed -- innovo-plaza
+
+id: innovo-plaza
+nombre: Innovo Plaza
+lat: 5.8325762
+lon: -73.0321686
+radio: 93
+
+# El radio de 93 m es el maximo desde el centroide de la huella real del edificio
+# en OpenStreetMap (way/962050370, poligono de 44 nodos). No es una estimacion.
+
+--- locales ---
+
+# Estos dos ya estaban en OpenStreetMap, dejalos y agrega el resto abajo.
+Puerto Madero | restaurante
+Frutin | heladeria
+
+# Agrega desde aca. Ejemplos del formato, borralos cuando pongas los reales:
+# Juan Valdez | comida-rapida
+# Arturo Calle | ropa
+# Farmatodo | farmacia

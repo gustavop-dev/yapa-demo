@@ -1,0 +1,29 @@
+{
+  "id": "innovo-plaza",
+  "name": "Innovo Plaza",
+  "lat": 5.8325762,
+  "lon": -73.0321686,
+  "radiusM": 93,
+  "source": "Sembrado a mano caminando el lugar",
+  "tenantCount": 2,
+  "mccBreakdown": {
+    "5451": 1,
+    "5812": 1
+  },
+  "tenants": [
+    {
+      "id": "innovo-plaza-puerto-madero",
+      "name": "Puerto Madero",
+      "mcc": "5812",
+      "mccSource": "hand-seeded",
+      "category": "restaurante"
+    },
+    {
+      "id": "innovo-plaza-frutin",
+      "name": "Frutin",
+      "mcc": "5451",
+      "mccSource": "hand-seeded",
+      "category": "heladeria"
+    }
+  ]
+}

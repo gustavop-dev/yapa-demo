@@ -1,0 +1,4356 @@
+{
+  "region": "duitama",
+  "label": "Duitama, Boyaca, Colombia",
+  "bbox": {
+    "south": 5.815,
+    "west": -73.045,
+    "north": 5.835,
+    "east": -73.02
+  },
+  "note": "Innovo Plaza y el centro de Duitama. Existe solo para grabar el video con el telefono en un mall real. Los MCC son ISO 18245, el mismo estandar en todo el mundo, asi que el motor no cambia.",
+  "attribution": "(c) OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "generatedFrom": "Overpass API, extraccion puntual",
+  "merchantCount": 467,
+  "mccBreakdown": {
+    "5200": 1,
+    "5251": 19,
+    "5331": 4,
+    "5399": 2,
+    "5411": 36,
+    "5422": 6,
+    "5441": 1,
+    "5451": 14,
+    "5462": 32,
+    "5499": 69,
+    "5541": 7,
+    "5651": 53,
+    "5732": 23,
+    "5812": 85,
+    "5813": 3,
+    "5814": 58,
+    "5912": 52,
+    "5942": 2
+  },
+  "merchants": [
+    {
+      "id": "node-932376413",
+      "name": "24 horas",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825007,
+      "lon": -73.036329,
+      "osmId": "node/932376413"
+    },
+    {
+      "id": "node-2215458016",
+      "name": "24 horas",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824245,
+      "lon": -73.037298,
+      "osmId": "node/2215458016"
+    },
+    {
+      "id": "node-933233898",
+      "name": "A Donde Rosa",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.834368,
+      "lon": -73.041416,
+      "osmId": "node/933233898"
+    },
+    {
+      "id": "node-5754535409",
+      "name": "A.C. El mundo electrónico",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825821,
+      "lon": -73.036077,
+      "osmId": "node/5754535409"
+    },
+    {
+      "id": "node-932342518",
+      "name": "Accesorios de Transporte",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825611,
+      "lon": -73.029793,
+      "osmId": "node/932342518"
+    },
+    {
+      "id": "node-933102206",
+      "name": "aguila",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.82391,
+      "lon": -73.035848,
+      "osmId": "node/933102206"
+    },
+    {
+      "id": "node-903618213",
+      "name": "Aguila",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825748,
+      "lon": -73.033337,
+      "osmId": "node/903618213"
+    },
+    {
+      "id": "node-932376356",
+      "name": "Aguila",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 5.833643,
+      "lon": -73.035986,
+      "osmId": "node/932376356"
+    },
+    {
+      "id": "node-11413933335",
+      "name": "Akikiriki",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827899,
+      "lon": -73.034652,
+      "osmId": "node/11413933335"
+    },
+    {
+      "id": "way-960921029",
+      "name": "Akikiriki",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824952,
+      "lon": -73.043703,
+      "osmId": "way/960921029"
+    },
+    {
+      "id": "way-962432346",
+      "name": "Akikiriki",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825831,
+      "lon": -73.02862,
+      "osmId": "way/962432346"
+    },
+    {
+      "id": "way-962435739",
+      "name": "Akikiriki",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830911,
+      "lon": -73.029162,
+      "osmId": "way/962435739"
+    },
+    {
+      "id": "node-11374500741",
+      "name": "Al pan pararán",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825966,
+      "lon": -73.037003,
+      "osmId": "node/11374500741"
+    },
+    {
+      "id": "node-860606645",
+      "name": "Aldana's Food",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834008,
+      "lon": -73.035401,
+      "osmId": "node/860606645"
+    },
+    {
+      "id": "node-4660148108",
+      "name": "Alemana",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827872,
+      "lon": -73.032976,
+      "osmId": "node/4660148108"
+    },
+    {
+      "id": "node-9966265919",
+      "name": "Almacen de Ropa el Tendedero",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826281,
+      "lon": -73.033835,
+      "osmId": "node/9966265919"
+    },
+    {
+      "id": "node-9966265823",
+      "name": "Almacen de Ropa Luber",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827259,
+      "lon": -73.033744,
+      "osmId": "node/9966265823"
+    },
+    {
+      "id": "node-9995856216",
+      "name": "Almacén Mojica",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82473,
+      "lon": -73.034902,
+      "osmId": "node/9995856216"
+    },
+    {
+      "id": "node-876404024",
+      "name": "Almacen Napoles",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826756,
+      "lon": -73.033889,
+      "osmId": "node/876404024"
+    },
+    {
+      "id": "node-9966284229",
+      "name": "Almacen Napoles",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.826918,
+      "lon": -73.034032,
+      "osmId": "node/9966284229"
+    },
+    {
+      "id": "node-876668341",
+      "name": "Almacen Paraíso No. 3",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82492,
+      "lon": -73.03556,
+      "osmId": "node/876668341"
+    },
+    {
+      "id": "node-896423506",
+      "name": "Almacén Rodriguez",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.831723,
+      "lon": -73.036778,
+      "osmId": "node/896423506"
+    },
+    {
+      "id": "node-874908862",
+      "name": "Almacen Universo",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82517,
+      "lon": -73.034087,
+      "osmId": "node/874908862"
+    },
+    {
+      "id": "node-907186392",
+      "name": "American Broaester",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.823269,
+      "lon": -73.037964,
+      "osmId": "node/907186392"
+    },
+    {
+      "id": "node-9951212896",
+      "name": "American Pizza",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829793,
+      "lon": -73.03357,
+      "osmId": "node/9951212896"
+    },
+    {
+      "id": "node-10176064058",
+      "name": "American Pizza",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825368,
+      "lon": -73.034101,
+      "osmId": "node/10176064058"
+    },
+    {
+      "id": "node-874902407",
+      "name": "AMERICAS",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824791,
+      "lon": -73.03513,
+      "osmId": "node/874902407"
+    },
+    {
+      "id": "node-5168557245",
+      "name": "Angus Burger",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828825,
+      "lon": -73.033014,
+      "osmId": "node/5168557245"
+    },
+    {
+      "id": "node-903618169",
+      "name": "Aqui se come",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825195,
+      "lon": -73.034375,
+      "osmId": "node/903618169"
+    },
+    {
+      "id": "node-9795118340",
+      "name": "ARA",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82876,
+      "lon": -73.033224,
+      "osmId": "node/9795118340"
+    },
+    {
+      "id": "node-4748087928",
+      "name": "Aromas",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832473,
+      "lon": -73.034889,
+      "osmId": "node/4748087928"
+    },
+    {
+      "id": "node-8902471596",
+      "name": "Asadero El Gran Pollo",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817465,
+      "lon": -73.029753,
+      "osmId": "node/8902471596"
+    },
+    {
+      "id": "node-5117651715",
+      "name": "Asadero Pollo Frito y listo",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825803,
+      "lon": -73.035918,
+      "osmId": "node/5117651715"
+    },
+    {
+      "id": "node-5168557231",
+      "name": "Asadero Tocaima",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828972,
+      "lon": -73.032629,
+      "osmId": "node/5168557231"
+    },
+    {
+      "id": "node-6975027903",
+      "name": "Asadero Vivas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.83491,
+      "lon": -73.033912,
+      "osmId": "node/6975027903"
+    },
+    {
+      "id": "node-907411622",
+      "name": "Asaos",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827233,
+      "lon": -73.032308,
+      "osmId": "node/907411622"
+    },
+    {
+      "id": "way-515124053",
+      "name": "Asedero de Carne",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.814898,
+      "lon": -73.029303,
+      "osmId": "way/515124053"
+    },
+    {
+      "id": "node-4004660668",
+      "name": "Atlanta Mar",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82693,
+      "lon": -73.030811,
+      "osmId": "node/4004660668"
+    },
+    {
+      "id": "node-907386235",
+      "name": "autoservicio",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.81945,
+      "lon": -73.034209,
+      "osmId": "node/907386235"
+    },
+    {
+      "id": "node-9951247610",
+      "name": "Autoservicio Marcily",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.830336,
+      "lon": -73.024613,
+      "osmId": "node/9951247610"
+    },
+    {
+      "id": "node-932338366",
+      "name": "Autoservicio Megamarket",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825628,
+      "lon": -73.036673,
+      "osmId": "node/932338366"
+    },
+    {
+      "id": "node-11359285539",
+      "name": "Aventura Polar",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.826839,
+      "lon": -73.036155,
+      "osmId": "node/11359285539"
+    },
+    {
+      "id": "node-5117651704",
+      "name": "Avicola Las Brisas",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825728,
+      "lon": -73.035173,
+      "osmId": "node/5117651704"
+    },
+    {
+      "id": "node-907416362",
+      "name": "bassler",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826938,
+      "lon": -73.032846,
+      "osmId": "node/907416362"
+    },
+    {
+      "id": "node-901703594",
+      "name": "Beer Station",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 5.815772,
+      "lon": -73.030046,
+      "osmId": "node/901703594"
+    },
+    {
+      "id": "node-1227378968",
+      "name": "Big Burger",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823424,
+      "lon": -73.038257,
+      "osmId": "node/1227378968"
+    },
+    {
+      "id": "way-1088195763",
+      "name": "Biomax",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818648,
+      "lon": -73.02895,
+      "osmId": "way/1088195763"
+    },
+    {
+      "id": "node-4660148113",
+      "name": "Bokados",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.82801,
+      "lon": -73.033524,
+      "osmId": "node/4660148113"
+    },
+    {
+      "id": "node-11372603487",
+      "name": "Boutique",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82622,
+      "lon": -73.035486,
+      "osmId": "node/11372603487"
+    },
+    {
+      "id": "node-874902400",
+      "name": "BOYACA",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824316,
+      "lon": -73.035683,
+      "osmId": "node/874902400"
+    },
+    {
+      "id": "node-876510155",
+      "name": "boyacabroaster",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825342,
+      "lon": -73.043526,
+      "osmId": "node/876510155"
+    },
+    {
+      "id": "node-11418682098",
+      "name": "Brand Store",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828356,
+      "lon": -73.031789,
+      "osmId": "node/11418682098"
+    },
+    {
+      "id": "node-11418682096",
+      "name": "Brasa y Brasas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826172,
+      "lon": -73.032176,
+      "osmId": "node/11418682096"
+    },
+    {
+      "id": "node-11413945237",
+      "name": "Brasas y Parrilla",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825095,
+      "lon": -73.032992,
+      "osmId": "node/11413945237"
+    },
+    {
+      "id": "node-5117651712",
+      "name": "Breik",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825994,
+      "lon": -73.035822,
+      "osmId": "node/5117651712"
+    },
+    {
+      "id": "way-72945690",
+      "name": "BRIO LA DORADA",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826942,
+      "lon": -73.028818,
+      "osmId": "way/72945690"
+    },
+    {
+      "id": "node-9811218220",
+      "name": "Broaster de las Americas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823196,
+      "lon": -73.038109,
+      "osmId": "node/9811218220"
+    },
+    {
+      "id": "node-9921104365",
+      "name": "Broaster Frit",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831636,
+      "lon": -73.033581,
+      "osmId": "node/9921104365"
+    },
+    {
+      "id": "node-9921104369",
+      "name": "Broaster la Perla",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.8332,
+      "lon": -73.036283,
+      "osmId": "node/9921104369"
+    },
+    {
+      "id": "node-5150963178",
+      "name": "Burger Stop",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827428,
+      "lon": -73.03225,
+      "osmId": "node/5150963178"
+    },
+    {
+      "id": "node-9966287612",
+      "name": "Burguer Bross - Restaurante de Comidas Rápidas",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827244,
+      "lon": -73.033183,
+      "osmId": "node/9966287612"
+    },
+    {
+      "id": "node-10121327021",
+      "name": "Bushido Wok",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825117,
+      "lon": -73.037239,
+      "osmId": "node/10121327021"
+    },
+    {
+      "id": "node-903618207",
+      "name": "Busi",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825037,
+      "lon": -73.034629,
+      "osmId": "node/903618207"
+    },
+    {
+      "id": "node-11423789938",
+      "name": "Café Aquí y Ahora",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.828025,
+      "lon": -73.033508,
+      "osmId": "node/11423789938"
+    },
+    {
+      "id": "node-10742420450",
+      "name": "Cafe Ciclismo",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.833848,
+      "lon": -73.029815,
+      "osmId": "node/10742420450"
+    },
+    {
+      "id": "way-962050698",
+      "name": "Café Leyenda",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.830136,
+      "lon": -73.034458,
+      "osmId": "way/962050698"
+    },
+    {
+      "id": "node-907378600",
+      "name": "Café Licor",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.824378,
+      "lon": -73.035978,
+      "osmId": "node/907378600"
+    },
+    {
+      "id": "node-10727783038",
+      "name": "Café Sport Bar",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.826014,
+      "lon": -73.033246,
+      "osmId": "node/10727783038"
+    },
+    {
+      "id": "node-4660148114",
+      "name": "Cafe y Licor",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.827997,
+      "lon": -73.033519,
+      "osmId": "node/4660148114"
+    },
+    {
+      "id": "node-3529395843",
+      "name": "Cafeteria el buen pastel",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.830161,
+      "lon": -73.033818,
+      "osmId": "node/3529395843"
+    },
+    {
+      "id": "node-9935875078",
+      "name": "Cafeteria Estudiantes Colegio Salesiano",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.833441,
+      "lon": -73.03422,
+      "osmId": "node/9935875078"
+    },
+    {
+      "id": "way-100093883",
+      "name": "Cafeteria estudiantil",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.831027,
+      "lon": -73.038705,
+      "osmId": "way/100093883"
+    },
+    {
+      "id": "node-933265140",
+      "name": "Cafeteria lady",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.817013,
+      "lon": -73.033719,
+      "osmId": "node/933265140"
+    },
+    {
+      "id": "node-907291193",
+      "name": "Cafeteria Lady",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.817473,
+      "lon": -73.033855,
+      "osmId": "node/907291193"
+    },
+    {
+      "id": "node-10176038376",
+      "name": "Cafetería Trigos",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.826169,
+      "lon": -73.0336,
+      "osmId": "node/10176038376"
+    },
+    {
+      "id": "node-9906221170",
+      "name": "Cafetería y Heladeria Paty",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824719,
+      "lon": -73.03635,
+      "osmId": "node/9906221170"
+    },
+    {
+      "id": "way-525058132",
+      "name": "campollo",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.816934,
+      "lon": -73.029532,
+      "osmId": "way/525058132"
+    },
+    {
+      "id": "node-4660148100",
+      "name": "Campollo",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828238,
+      "lon": -73.032847,
+      "osmId": "node/4660148100"
+    },
+    {
+      "id": "node-2456272649",
+      "name": "Car audio",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822794,
+      "lon": -73.036434,
+      "osmId": "node/2456272649"
+    },
+    {
+      "id": "node-11418143912",
+      "name": "Carbone",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822565,
+      "lon": -73.034178,
+      "osmId": "node/11418143912"
+    },
+    {
+      "id": "way-960913952",
+      "name": "Carnes Angus La16",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825018,
+      "lon": -73.038082,
+      "osmId": "way/960913952"
+    },
+    {
+      "id": "node-3529382905",
+      "name": "Carnes Finas el Progreso",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832842,
+      "lon": -73.038643,
+      "osmId": "node/3529382905"
+    },
+    {
+      "id": "node-11413984616",
+      "name": "Carnicería Salesiano",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832708,
+      "lon": -73.035918,
+      "osmId": "node/11413984616"
+    },
+    {
+      "id": "node-932332477",
+      "name": "Casa China",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825862,
+      "lon": -73.028392,
+      "osmId": "node/932332477"
+    },
+    {
+      "id": "node-11418408832",
+      "name": "Centro naturista \"El Mana\"",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829064,
+      "lon": -73.034308,
+      "osmId": "node/11418408832"
+    },
+    {
+      "id": "node-11413961481",
+      "name": "Cereales Futurama",
+      "mcc": "5399",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "shop=wholesale generico. No se asume warehouse club: eso exige marca conocida.",
+      "lat": 5.825921,
+      "lon": -73.030256,
+      "osmId": "node/11413961481"
+    },
+    {
+      "id": "node-9935875087",
+      "name": "Cigarreria",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.831666,
+      "lon": -73.034822,
+      "osmId": "node/9935875087"
+    },
+    {
+      "id": "node-11359307495",
+      "name": "Cigarrería",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.83141,
+      "lon": -73.033612,
+      "osmId": "node/11359307495"
+    },
+    {
+      "id": "node-932337905",
+      "name": "Cigarreria Halls",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.828288,
+      "lon": -73.031926,
+      "osmId": "node/932337905"
+    },
+    {
+      "id": "node-932337883",
+      "name": "Cigarreria Sofi",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.82809,
+      "lon": -73.031515,
+      "osmId": "node/932337883"
+    },
+    {
+      "id": "node-876383505",
+      "name": "Clase Aparte",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825943,
+      "lon": -73.03339,
+      "osmId": "node/876383505"
+    },
+    {
+      "id": "node-10168022080",
+      "name": "Cocoa Waffle",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825272,
+      "lon": -73.037459,
+      "osmId": "node/10168022080"
+    },
+    {
+      "id": "node-9951212893",
+      "name": "Colsubsidio",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.815449,
+      "lon": -73.030224,
+      "osmId": "node/9951212893"
+    },
+    {
+      "id": "node-5168557285",
+      "name": "Coma & Lleve",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829442,
+      "lon": -73.033281,
+      "osmId": "node/5168557285"
+    },
+    {
+      "id": "node-932376355",
+      "name": "Comcel",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833317,
+      "lon": -73.029791,
+      "osmId": "node/932376355"
+    },
+    {
+      "id": "node-655362986",
+      "name": "COMIDA",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833931,
+      "lon": -73.040514,
+      "osmId": "node/655362986"
+    },
+    {
+      "id": "node-11359277637",
+      "name": "Conhealdos",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.826986,
+      "lon": -73.036749,
+      "osmId": "node/11359277637"
+    },
+    {
+      "id": "node-10176016823",
+      "name": "Cowfish",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827283,
+      "lon": -73.036919,
+      "osmId": "node/10176016823"
+    },
+    {
+      "id": "node-9935875051",
+      "name": "Cremitos",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.826901,
+      "lon": -73.03568,
+      "osmId": "node/9935875051"
+    },
+    {
+      "id": "node-932337875",
+      "name": "crillos",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.8263,
+      "lon": -73.030458,
+      "osmId": "node/932337875"
+    },
+    {
+      "id": "node-5166661497",
+      "name": "Criss't Ross Boutique",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828137,
+      "lon": -73.032532,
+      "osmId": "node/5166661497"
+    },
+    {
+      "id": "node-10172144216",
+      "name": "Cruz Verde",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828394,
+      "lon": -73.032962,
+      "osmId": "node/10172144216"
+    },
+    {
+      "id": "node-655373788",
+      "name": "De Todito",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.833941,
+      "lon": -73.03715,
+      "osmId": "node/655373788"
+    },
+    {
+      "id": "node-11372588075",
+      "name": "Delifrut's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.826427,
+      "lon": -73.032136,
+      "osmId": "node/11372588075"
+    },
+    {
+      "id": "node-3369420770",
+      "name": "Dineer Time",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.816097,
+      "lon": -73.030281,
+      "osmId": "node/3369420770"
+    },
+    {
+      "id": "node-3529382893",
+      "name": "Dinolucas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832729,
+      "lon": -73.037401,
+      "osmId": "node/3529382893"
+    },
+    {
+      "id": "node-907416348",
+      "name": "Discotienda Sensaciones",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82912,
+      "lon": -73.034268,
+      "osmId": "node/907416348"
+    },
+    {
+      "id": "node-11423800021",
+      "name": "Disfraces Lanzelot",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834145,
+      "lon": -73.036258,
+      "osmId": "node/11423800021"
+    },
+    {
+      "id": "node-6806718890",
+      "name": "Disfraces Los Angeles",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830704,
+      "lon": -73.035994,
+      "osmId": "node/6806718890"
+    },
+    {
+      "id": "node-874902418",
+      "name": "Distribuciones Tatis",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824694,
+      "lon": -73.035324,
+      "osmId": "node/874902418"
+    },
+    {
+      "id": "node-11417321291",
+      "name": "Distribuidora De Pollo El dorado",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822366,
+      "lon": -73.037583,
+      "osmId": "node/11417321291"
+    },
+    {
+      "id": "node-9921224126",
+      "name": "Don Roberto",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829378,
+      "lon": -73.041211,
+      "osmId": "node/9921224126"
+    },
+    {
+      "id": "node-11413981111",
+      "name": "Donato's moda",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827825,
+      "lon": -73.034736,
+      "osmId": "node/11413981111"
+    },
+    {
+      "id": "node-933102173",
+      "name": "Donde Blanca",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824243,
+      "lon": -73.035949,
+      "osmId": "node/933102173"
+    },
+    {
+      "id": "node-907386373",
+      "name": "Donde Mafe",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825158,
+      "lon": -73.031059,
+      "osmId": "node/907386373"
+    },
+    {
+      "id": "node-932376358",
+      "name": "Donde rocio",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.831434,
+      "lon": -73.030026,
+      "osmId": "node/932376358"
+    },
+    {
+      "id": "node-932337863",
+      "name": "Donde Rosa",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.834517,
+      "lon": -73.040897,
+      "osmId": "node/932337863"
+    },
+    {
+      "id": "node-933102197",
+      "name": "Donde Rosita",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82496,
+      "lon": -73.03545,
+      "osmId": "node/933102197"
+    },
+    {
+      "id": "node-876383490",
+      "name": "Drogas Duitama",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825632,
+      "lon": -73.03325,
+      "osmId": "node/876383490"
+    },
+    {
+      "id": "node-907386335",
+      "name": "Drogas Economia",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826657,
+      "lon": -73.031956,
+      "osmId": "node/907386335"
+    },
+    {
+      "id": "node-896423567",
+      "name": "Drogas Economica",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829863,
+      "lon": -73.035512,
+      "osmId": "node/896423567"
+    },
+    {
+      "id": "node-907386391",
+      "name": "Drogas La 17",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827806,
+      "lon": -73.032456,
+      "osmId": "node/907386391"
+    },
+    {
+      "id": "node-907343946",
+      "name": "Drogas la economica",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830102,
+      "lon": -73.035662,
+      "osmId": "node/907343946"
+    },
+    {
+      "id": "node-9966276257",
+      "name": "Drogas La Económica",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.8272,
+      "lon": -73.033851,
+      "osmId": "node/9966276257"
+    },
+    {
+      "id": "node-876383527",
+      "name": "Drogas la Rebaja",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82569,
+      "lon": -73.033109,
+      "osmId": "node/876383527"
+    },
+    {
+      "id": "node-876451200",
+      "name": "Drogas la Rebaja",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827926,
+      "lon": -73.034646,
+      "osmId": "node/876451200"
+    },
+    {
+      "id": "node-907363977",
+      "name": "Drogas la Rebaja",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826805,
+      "lon": -73.032825,
+      "osmId": "node/907363977"
+    },
+    {
+      "id": "node-932337932",
+      "name": "Drogas Superior",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826193,
+      "lon": -73.030443,
+      "osmId": "node/932337932"
+    },
+    {
+      "id": "node-907411636",
+      "name": "Drogeria",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826251,
+      "lon": -73.031644,
+      "osmId": "node/907411636"
+    },
+    {
+      "id": "node-9966234692",
+      "name": "Drogeria super",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830287,
+      "lon": -73.033854,
+      "osmId": "node/9966234692"
+    },
+    {
+      "id": "node-3483520833",
+      "name": "Drogería Superior",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818569,
+      "lon": -73.035005,
+      "osmId": "node/3483520833"
+    },
+    {
+      "id": "node-4519604290",
+      "name": "Droguería",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834686,
+      "lon": -73.039674,
+      "osmId": "node/4519604290"
+    },
+    {
+      "id": "node-9966275206",
+      "name": "Droguería Alemana",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82738,
+      "lon": -73.033563,
+      "osmId": "node/9966275206"
+    },
+    {
+      "id": "node-5168557246",
+      "name": "Droguería Alemana 240",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828773,
+      "lon": -73.032989,
+      "osmId": "node/5168557246"
+    },
+    {
+      "id": "node-5754535407",
+      "name": "Droguería Biomédica",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826096,
+      "lon": -73.03607,
+      "osmId": "node/5754535407"
+    },
+    {
+      "id": "node-876529228",
+      "name": "Drogueria Colfamiliar",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825382,
+      "lon": -73.043698,
+      "osmId": "node/876529228"
+    },
+    {
+      "id": "node-896409017",
+      "name": "Drogueria Colfamiliar",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825182,
+      "lon": -73.043658,
+      "osmId": "node/896409017"
+    },
+    {
+      "id": "node-907427762",
+      "name": "Drogueria de San Jose",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828277,
+      "lon": -73.033682,
+      "osmId": "node/907427762"
+    },
+    {
+      "id": "way-1086035233",
+      "name": "Droguería Drogas y Más",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834554,
+      "lon": -73.033984,
+      "osmId": "way/1086035233"
+    },
+    {
+      "id": "node-11374514185",
+      "name": "Droguería El Milagro",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.815367,
+      "lon": -73.026384,
+      "osmId": "node/11374514185"
+    },
+    {
+      "id": "way-962048786",
+      "name": "Drogueria Pinto 3",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833132,
+      "lon": -73.036348,
+      "osmId": "way/962048786"
+    },
+    {
+      "id": "node-11418607203",
+      "name": "Droguería Pro Económica",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828203,
+      "lon": -73.034738,
+      "osmId": "node/11418607203"
+    },
+    {
+      "id": "node-9935875090",
+      "name": "Drogueria Salesiano",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834174,
+      "lon": -73.035136,
+      "osmId": "node/9935875090"
+    },
+    {
+      "id": "node-874902411",
+      "name": "Drogueria Super",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823064,
+      "lon": -73.038014,
+      "osmId": "node/874902411"
+    },
+    {
+      "id": "node-3529395845",
+      "name": "Drogueria Super",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830234,
+      "lon": -73.033839,
+      "osmId": "node/3529395845"
+    },
+    {
+      "id": "node-11413981101",
+      "name": "Droguería Super Descuentos",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.821568,
+      "lon": -73.034572,
+      "osmId": "node/11413981101"
+    },
+    {
+      "id": "node-9906227501",
+      "name": "Drogueria Super Salud",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.820134,
+      "lon": -73.03611,
+      "osmId": "node/9906227501"
+    },
+    {
+      "id": "node-932332469",
+      "name": "Drogueria upe",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824256,
+      "lon": -73.027363,
+      "osmId": "node/932332469"
+    },
+    {
+      "id": "node-7383372452",
+      "name": "Drogueria vida",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825035,
+      "lon": -73.038801,
+      "osmId": "node/7383372452"
+    },
+    {
+      "id": "node-3356925239",
+      "name": "Droguerías Acuña",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826606,
+      "lon": -73.031791,
+      "osmId": "node/3356925239"
+    },
+    {
+      "id": "node-11418432560",
+      "name": "Droguerías Colombia Farma",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828935,
+      "lon": -73.034221,
+      "osmId": "node/11418432560"
+    },
+    {
+      "id": "node-9966288213",
+      "name": "Dulce Espera",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82722,
+      "lon": -73.033191,
+      "osmId": "node/9966288213"
+    },
+    {
+      "id": "node-932376464",
+      "name": "dulceria",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.826651,
+      "lon": -73.03067,
+      "osmId": "node/932376464"
+    },
+    {
+      "id": "node-11418648013",
+      "name": "Dulcinea (Pastelería y Pan)",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826162,
+      "lon": -73.032253,
+      "osmId": "node/11418648013"
+    },
+    {
+      "id": "node-11359272380",
+      "name": "E-FRUIT helado",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.827618,
+      "lon": -73.036083,
+      "osmId": "node/11359272380"
+    },
+    {
+      "id": "node-932337934",
+      "name": "economia",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826921,
+      "lon": -73.030895,
+      "osmId": "node/932337934"
+    },
+    {
+      "id": "node-10184823116",
+      "name": "El Bodegón Restaurante",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825814,
+      "lon": -73.036507,
+      "osmId": "node/10184823116"
+    },
+    {
+      "id": "node-876509874",
+      "name": "El Buen Sabor",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826164,
+      "lon": -73.044455,
+      "osmId": "node/876509874"
+    },
+    {
+      "id": "node-874902405",
+      "name": "El Carnaval del Pollo",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.8236,
+      "lon": -73.03707,
+      "osmId": "node/874902405"
+    },
+    {
+      "id": "node-907386258",
+      "name": "El Charrito",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82508,
+      "lon": -73.031011,
+      "osmId": "node/907386258"
+    },
+    {
+      "id": "node-933102200",
+      "name": "El Ciguenal",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824063,
+      "lon": -73.035945,
+      "osmId": "node/933102200"
+    },
+    {
+      "id": "node-860606647",
+      "name": "El compa",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833491,
+      "lon": -73.03591,
+      "osmId": "node/860606647"
+    },
+    {
+      "id": "node-10049407347",
+      "name": "El Dorado",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.831992,
+      "lon": -73.036784,
+      "osmId": "node/10049407347"
+    },
+    {
+      "id": "node-907183499",
+      "name": "El Faro Marino",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818929,
+      "lon": -73.03529,
+      "osmId": "node/907183499"
+    },
+    {
+      "id": "way-1199310294",
+      "name": "El Faro Marino",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825873,
+      "lon": -73.024235,
+      "osmId": "way/1199310294"
+    },
+    {
+      "id": "node-8902471598",
+      "name": "El gallineral",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817649,
+      "lon": -73.029613,
+      "osmId": "node/8902471598"
+    },
+    {
+      "id": "node-5365121022",
+      "name": "El Hojaldre",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.815626,
+      "lon": -73.028101,
+      "osmId": "node/5365121022"
+    },
+    {
+      "id": "node-10172143801",
+      "name": "El Jarro",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.827721,
+      "lon": -73.033337,
+      "osmId": "node/10172143801"
+    },
+    {
+      "id": "node-7007028733",
+      "name": "El Portal del Norte",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834003,
+      "lon": -73.028548,
+      "osmId": "node/7007028733"
+    },
+    {
+      "id": "node-3529382894",
+      "name": "El progreso",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832598,
+      "lon": -73.039093,
+      "osmId": "node/3529382894"
+    },
+    {
+      "id": "node-874902409",
+      "name": "El Sazon Llanero",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824932,
+      "lon": -73.034568,
+      "osmId": "node/874902409"
+    },
+    {
+      "id": "node-933102693",
+      "name": "El Transistor",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826366,
+      "lon": -73.035304,
+      "osmId": "node/933102693"
+    },
+    {
+      "id": "node-932337886",
+      "name": "El Tundama",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826218,
+      "lon": -73.030619,
+      "osmId": "node/932337886"
+    },
+    {
+      "id": "node-11359521890",
+      "name": "El Vaticano",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.831996,
+      "lon": -73.029908,
+      "osmId": "node/11359521890"
+    },
+    {
+      "id": "node-933102195",
+      "name": "Elctro Servicios",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824207,
+      "lon": -73.036024,
+      "osmId": "node/933102195"
+    },
+    {
+      "id": "node-907341517",
+      "name": "electro carreño",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818345,
+      "lon": -73.034506,
+      "osmId": "node/907341517"
+    },
+    {
+      "id": "node-11418659821",
+      "name": "Electrodomésticos Pedro Medina",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826176,
+      "lon": -73.032578,
+      "osmId": "node/11418659821"
+    },
+    {
+      "id": "node-932376405",
+      "name": "eli",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824679,
+      "lon": -73.036315,
+      "osmId": "node/932376405"
+    },
+    {
+      "id": "node-10134513653",
+      "name": "Empanadas",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823418,
+      "lon": -73.037344,
+      "osmId": "node/10134513653"
+    },
+    {
+      "id": "node-9935857131",
+      "name": "Empanadas y Café",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.831226,
+      "lon": -73.034278,
+      "osmId": "node/9935857131"
+    },
+    {
+      "id": "node-11423792600",
+      "name": "Emparedados",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827444,
+      "lon": -73.037054,
+      "osmId": "node/11423792600"
+    },
+    {
+      "id": "node-932343596",
+      "name": "En red",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826168,
+      "lon": -73.02846,
+      "osmId": "node/932343596"
+    },
+    {
+      "id": "node-9811218377",
+      "name": "Estacion la Esmeralda",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.819756,
+      "lon": -73.03584,
+      "osmId": "node/9811218377"
+    },
+    {
+      "id": "node-11423720892",
+      "name": "Euphoria Cheese Steak",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830461,
+      "lon": -73.035793,
+      "osmId": "node/11423720892"
+    },
+    {
+      "id": "node-876404028",
+      "name": "Exito",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826117,
+      "lon": -73.033299,
+      "osmId": "node/876404028"
+    },
+    {
+      "id": "node-932342524",
+      "name": "Fabrica de Pinturas",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825518,
+      "lon": -73.029739,
+      "osmId": "node/932342524"
+    },
+    {
+      "id": "node-5168550304",
+      "name": "Faraon Gourmet",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829072,
+      "lon": -73.032378,
+      "osmId": "node/5168550304"
+    },
+    {
+      "id": "node-9811213423",
+      "name": "Ferremetro Ferreteria",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818123,
+      "lon": -73.034809,
+      "osmId": "node/9811213423"
+    },
+    {
+      "id": "node-907386331",
+      "name": "ferreteria",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823969,
+      "lon": -73.032702,
+      "osmId": "node/907386331"
+    },
+    {
+      "id": "node-903618203",
+      "name": "FERRETERIA",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832785,
+      "lon": -73.039634,
+      "osmId": "node/903618203"
+    },
+    {
+      "id": "node-907193032",
+      "name": "Ferreteria Boyaca",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824702,
+      "lon": -73.035303,
+      "osmId": "node/907193032"
+    },
+    {
+      "id": "node-11374522552",
+      "name": "Ferretería El Progreso",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832383,
+      "lon": -73.042703,
+      "osmId": "node/11374522552"
+    },
+    {
+      "id": "node-907386378",
+      "name": "ferreteria Hr",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825379,
+      "lon": -73.031192,
+      "osmId": "node/907386378"
+    },
+    {
+      "id": "node-907341528",
+      "name": "Ferreteria La Avenida",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817796,
+      "lon": -73.03416,
+      "osmId": "node/907341528"
+    },
+    {
+      "id": "way-960914617",
+      "name": "Ferropaz",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822044,
+      "lon": -73.036704,
+      "osmId": "way/960914617"
+    },
+    {
+      "id": "node-903617430",
+      "name": "ferrs",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828088,
+      "lon": -73.039616,
+      "osmId": "node/903617430"
+    },
+    {
+      "id": "node-4660148109",
+      "name": "Fruteria Tropical",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.827822,
+      "lon": -73.033062,
+      "osmId": "node/4660148109"
+    },
+    {
+      "id": "node-12142988662",
+      "name": "FRUTI'IN",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.832117,
+      "lon": -73.034916,
+      "osmId": "node/12142988662"
+    },
+    {
+      "id": "node-6806718892",
+      "name": "Frutin",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.830849,
+      "lon": -73.035743,
+      "osmId": "node/6806718892"
+    },
+    {
+      "id": "node-12106419246",
+      "name": "Frutin",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.832705,
+      "lon": -73.031288,
+      "osmId": "node/12106419246"
+    },
+    {
+      "id": "node-10175974666",
+      "name": "Frutos del Campo",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.823796,
+      "lon": -73.026827,
+      "osmId": "node/10175974666"
+    },
+    {
+      "id": "way-962115638",
+      "name": "Fruver de la 10",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.82977,
+      "lon": -73.039133,
+      "osmId": "way/962115638"
+    },
+    {
+      "id": "way-962118945",
+      "name": "Fruver de la 10",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.829306,
+      "lon": -73.039798,
+      "osmId": "way/962118945"
+    },
+    {
+      "id": "way-1086030241",
+      "name": "Fruver La Placita",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.826489,
+      "lon": -73.028732,
+      "osmId": "way/1086030241"
+    },
+    {
+      "id": "node-876510528",
+      "name": "Full house",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832961,
+      "lon": -73.038472,
+      "osmId": "node/876510528"
+    },
+    {
+      "id": "node-9811260979",
+      "name": "Galia",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827697,
+      "lon": -73.033305,
+      "osmId": "node/9811260979"
+    },
+    {
+      "id": "node-4660148111",
+      "name": "Galia 1539",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827729,
+      "lon": -73.033341,
+      "osmId": "node/4660148111"
+    },
+    {
+      "id": "node-9966234689",
+      "name": "Garras y Garros",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826781,
+      "lon": -73.033243,
+      "osmId": "node/9966234689"
+    },
+    {
+      "id": "way-1086034687",
+      "name": "Gasolinera Petrobras",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828679,
+      "lon": -73.025245,
+      "osmId": "way/1086034687"
+    },
+    {
+      "id": "node-11418468613",
+      "name": "Geff-Punto Blanco",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827494,
+      "lon": -73.03227,
+      "osmId": "node/11418468613"
+    },
+    {
+      "id": "node-11418154227",
+      "name": "Glotones Gourmet",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834307,
+      "lon": -73.026013,
+      "osmId": "node/11418154227"
+    },
+    {
+      "id": "node-907386300",
+      "name": "granos",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825347,
+      "lon": -73.031059,
+      "osmId": "node/907386300"
+    },
+    {
+      "id": "node-10742420451",
+      "name": "Green Farm",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833927,
+      "lon": -73.029823,
+      "osmId": "node/10742420451"
+    },
+    {
+      "id": "node-10171859725",
+      "name": "Hamburguesas El Corral",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824923,
+      "lon": -73.040139,
+      "osmId": "node/10171859725"
+    },
+    {
+      "id": "node-907386342",
+      "name": "hechura",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822107,
+      "lon": -73.033464,
+      "osmId": "node/907386342"
+    },
+    {
+      "id": "way-962047868",
+      "name": "Heladeria el Carmen",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.827233,
+      "lon": -73.035867,
+      "osmId": "way/962047868"
+    },
+    {
+      "id": "node-10176029197",
+      "name": "Heladería Nevada",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.827805,
+      "lon": -73.036404,
+      "osmId": "node/10176029197"
+    },
+    {
+      "id": "node-9935875055",
+      "name": "Heladeria y Fruteria Patty",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.825762,
+      "lon": -73.034319,
+      "osmId": "node/9935875055"
+    },
+    {
+      "id": "node-9951212895",
+      "name": "Heladeria y Miscelanea Fisco",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.832348,
+      "lon": -73.040083,
+      "osmId": "node/9951212895"
+    },
+    {
+      "id": "node-932338379",
+      "name": "helados",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.832322,
+      "lon": -73.037416,
+      "osmId": "node/932338379"
+    },
+    {
+      "id": "node-874902417",
+      "name": "Herrajes Multiherrajes",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82329,
+      "lon": -73.037599,
+      "osmId": "node/874902417"
+    },
+    {
+      "id": "node-9966305018",
+      "name": "ienda de Ropa Correartes",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827484,
+      "lon": -73.033387,
+      "osmId": "node/9966305018"
+    },
+    {
+      "id": "node-9921199013",
+      "name": "Imagenes",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830494,
+      "lon": -73.033209,
+      "osmId": "node/9921199013"
+    },
+    {
+      "id": "node-11417321292",
+      "name": "Imperio Paisa",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822308,
+      "lon": -73.037545,
+      "osmId": "node/11417321292"
+    },
+    {
+      "id": "node-2456272653",
+      "name": "Industrial de Bobinados",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823309,
+      "lon": -73.036899,
+      "osmId": "node/2456272653"
+    },
+    {
+      "id": "way-1080791805",
+      "name": "INPRO Michelin",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823933,
+      "lon": -73.036953,
+      "osmId": "way/1080791805"
+    },
+    {
+      "id": "node-932376384",
+      "name": "internet",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834469,
+      "lon": -73.036643,
+      "osmId": "node/932376384"
+    },
+    {
+      "id": "node-932376388",
+      "name": "internet",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834698,
+      "lon": -73.034302,
+      "osmId": "node/932376388"
+    },
+    {
+      "id": "node-4823770424",
+      "name": "Intinazca",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830717,
+      "lon": -73.033321,
+      "osmId": "node/4823770424"
+    },
+    {
+      "id": "node-907386327",
+      "name": "j ,g",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824586,
+      "lon": -73.031686,
+      "osmId": "node/907386327"
+    },
+    {
+      "id": "node-5166661498",
+      "name": "Jhorman",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828167,
+      "lon": -73.032467,
+      "osmId": "node/5166661498"
+    },
+    {
+      "id": "node-10178474859",
+      "name": "Julio Parrilla",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825587,
+      "lon": -73.028303,
+      "osmId": "node/10178474859"
+    },
+    {
+      "id": "node-10032007603",
+      "name": "Karlott",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824308,
+      "lon": -73.037529,
+      "osmId": "node/10032007603"
+    },
+    {
+      "id": "node-10184812686",
+      "name": "Kikes",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.825172,
+      "lon": -73.028955,
+      "osmId": "node/10184812686"
+    },
+    {
+      "id": "node-907414489",
+      "name": "Kokoripollo",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825983,
+      "lon": -73.034153,
+      "osmId": "node/907414489"
+    },
+    {
+      "id": "node-907386362",
+      "name": "la 17",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825278,
+      "lon": -73.031131,
+      "osmId": "node/907386362"
+    },
+    {
+      "id": "node-11374440820",
+      "name": "La canasta",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.833347,
+      "lon": -73.039684,
+      "osmId": "node/11374440820"
+    },
+    {
+      "id": "node-11359546176",
+      "name": "La Canasta",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.832253,
+      "lon": -73.030113,
+      "osmId": "node/11359546176"
+    },
+    {
+      "id": "way-960924095",
+      "name": "La Canasta Campesina",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.822935,
+      "lon": -73.038014,
+      "osmId": "way/960924095"
+    },
+    {
+      "id": "node-11413980089",
+      "name": "La Casa del Chocolate",
+      "mcc": "5441",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824427,
+      "lon": -73.035508,
+      "osmId": "node/11413980089"
+    },
+    {
+      "id": "node-932337828",
+      "name": "La Casa del Ponque",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827651,
+      "lon": -73.031313,
+      "osmId": "node/932337828"
+    },
+    {
+      "id": "node-9811218221",
+      "name": "La Cocina",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823524,
+      "lon": -73.038304,
+      "osmId": "node/9811218221"
+    },
+    {
+      "id": "node-903618177",
+      "name": "la Economia",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82676,
+      "lon": -73.033667,
+      "osmId": "node/903618177"
+    },
+    {
+      "id": "node-876404043",
+      "name": "La Economia",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82635,
+      "lon": -73.033429,
+      "osmId": "node/876404043"
+    },
+    {
+      "id": "node-9966234691",
+      "name": "La Economica",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826736,
+      "lon": -73.032943,
+      "osmId": "node/9966234691"
+    },
+    {
+      "id": "node-11417223564",
+      "name": "La Economica",
+      "mcc": "5942",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828814,
+      "lon": -73.034875,
+      "osmId": "node/11417223564"
+    },
+    {
+      "id": "node-3369420769",
+      "name": "La esquina del buen pan",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.816229,
+      "lon": -73.030731,
+      "osmId": "node/3369420769"
+    },
+    {
+      "id": "node-896423471",
+      "name": "La Esquina del Croassant",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832103,
+      "lon": -73.036994,
+      "osmId": "node/896423471"
+    },
+    {
+      "id": "node-876509598",
+      "name": "La Esquina del Croissant",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825418,
+      "lon": -73.043771,
+      "osmId": "node/876509598"
+    },
+    {
+      "id": "node-9921104370",
+      "name": "La Esquina del Pastel de Yuca",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830185,
+      "lon": -73.033995,
+      "osmId": "node/9921104370"
+    },
+    {
+      "id": "node-5117651706",
+      "name": "La Estrada",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825857,
+      "lon": -73.035293,
+      "osmId": "node/5117651706"
+    },
+    {
+      "id": "node-9631592611",
+      "name": "La fuente del sabor",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825112,
+      "lon": -73.038724,
+      "osmId": "node/9631592611"
+    },
+    {
+      "id": "node-907590321",
+      "name": "La Gran Llanera Campestre",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824175,
+      "lon": -73.041652,
+      "osmId": "node/907590321"
+    },
+    {
+      "id": "node-3529395846",
+      "name": "La Huerta",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.831441,
+      "lon": -73.034519,
+      "osmId": "node/3529395846"
+    },
+    {
+      "id": "node-932376359",
+      "name": "La nueva cosecha",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833594,
+      "lon": -73.029773,
+      "osmId": "node/932376359"
+    },
+    {
+      "id": "node-903618182",
+      "name": "La Octava",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.832543,
+      "lon": -73.039223,
+      "osmId": "node/903618182"
+    },
+    {
+      "id": "way-962431473",
+      "name": "La Perla",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82789,
+      "lon": -73.031685,
+      "osmId": "way/962431473"
+    },
+    {
+      "id": "node-9906211099",
+      "name": "La Placita",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.820216,
+      "lon": -73.03574,
+      "osmId": "node/9906211099"
+    },
+    {
+      "id": "node-9951246274",
+      "name": "La Rebaja",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826132,
+      "lon": -73.034323,
+      "osmId": "node/9951246274"
+    },
+    {
+      "id": "way-962436367",
+      "name": "Las Rocas",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.825143,
+      "lon": -73.037677,
+      "osmId": "way/962436367"
+    },
+    {
+      "id": "node-4685279372",
+      "name": "Laurentino Tienda Masculina",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82701,
+      "lon": -73.034427,
+      "osmId": "node/4685279372"
+    },
+    {
+      "id": "node-907415739",
+      "name": "Lec Lee",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829152,
+      "lon": -73.033227,
+      "osmId": "node/907415739"
+    },
+    {
+      "id": "node-932337835",
+      "name": "Leche y Yogurt",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.827368,
+      "lon": -73.031336,
+      "osmId": "node/932337835"
+    },
+    {
+      "id": "node-11372581055",
+      "name": "LecLee",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826565,
+      "lon": -73.032643,
+      "osmId": "node/11372581055"
+    },
+    {
+      "id": "node-6806718888",
+      "name": "Licoreria Rockefeller",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.831259,
+      "lon": -73.035475,
+      "osmId": "node/6806718888"
+    },
+    {
+      "id": "node-11418606986",
+      "name": "Lili-Pink",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827296,
+      "lon": -73.034241,
+      "osmId": "node/11418606986"
+    },
+    {
+      "id": "way-962048091",
+      "name": "Los Leones",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830089,
+      "lon": -73.033942,
+      "osmId": "way/962048091"
+    },
+    {
+      "id": "node-907370044",
+      "name": "Los Nuevos Muchachos De La Hamburguesa",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826706,
+      "lon": -73.032746,
+      "osmId": "node/907370044"
+    },
+    {
+      "id": "node-10178474854",
+      "name": "Los Trillos",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826266,
+      "lon": -73.030487,
+      "osmId": "node/10178474854"
+    },
+    {
+      "id": "node-932376406",
+      "name": "M y C",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824601,
+      "lon": -73.036273,
+      "osmId": "node/932376406"
+    },
+    {
+      "id": "way-962431268",
+      "name": "M44 Burguer",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828135,
+      "lon": -73.031793,
+      "osmId": "way/962431268"
+    },
+    {
+      "id": "node-932337858",
+      "name": "Manil Distribuciones",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.826153,
+      "lon": -73.030517,
+      "osmId": "node/932337858"
+    },
+    {
+      "id": "node-933102193",
+      "name": "marqueteria",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826216,
+      "lon": -73.037145,
+      "osmId": "node/933102193"
+    },
+    {
+      "id": "node-9966262131",
+      "name": "Massimo CN",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82713,
+      "lon": -73.033144,
+      "osmId": "node/9966262131"
+    },
+    {
+      "id": "node-3529374405",
+      "name": "Matilde Lina",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829673,
+      "lon": -73.033497,
+      "osmId": "node/3529374405"
+    },
+    {
+      "id": "node-907382671",
+      "name": "MegaTodo",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826434,
+      "lon": -73.033321,
+      "osmId": "node/907382671"
+    },
+    {
+      "id": "way-960913915",
+      "name": "Mercaplaza",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.821982,
+      "lon": -73.034583,
+      "osmId": "way/960913915"
+    },
+    {
+      "id": "node-907386270",
+      "name": "mercopolis",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828217,
+      "lon": -73.032662,
+      "osmId": "node/907386270"
+    },
+    {
+      "id": "node-932337846",
+      "name": "mercopolis",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826179,
+      "lon": -73.030705,
+      "osmId": "node/932337846"
+    },
+    {
+      "id": "node-2456272654",
+      "name": "Mercopolis",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823012,
+      "lon": -73.036716,
+      "osmId": "node/2456272654"
+    },
+    {
+      "id": "node-874908864",
+      "name": "MERCOPOLIS",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825469,
+      "lon": -73.033881,
+      "osmId": "node/874908864"
+    },
+    {
+      "id": "node-907416349",
+      "name": "mermelada",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82696,
+      "lon": -73.032805,
+      "osmId": "node/907416349"
+    },
+    {
+      "id": "node-932337838",
+      "name": "Mi Canasta",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.834045,
+      "lon": -73.040769,
+      "osmId": "node/932337838"
+    },
+    {
+      "id": "node-4694366779",
+      "name": "Mi Cosecha",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831651,
+      "lon": -73.035778,
+      "osmId": "node/4694366779"
+    },
+    {
+      "id": "node-6411503885",
+      "name": "Mi segundo ranchito",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.819993,
+      "lon": -73.036932,
+      "osmId": "node/6411503885"
+    },
+    {
+      "id": "node-876507721",
+      "name": "Micromercado Cargua",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82508,
+      "lon": -73.043166,
+      "osmId": "node/876507721"
+    },
+    {
+      "id": "node-932376357",
+      "name": "Minutos a 100",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.83388,
+      "lon": -73.03673,
+      "osmId": "node/932376357"
+    },
+    {
+      "id": "node-932337945",
+      "name": "miriancita",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.833866,
+      "lon": -73.040472,
+      "osmId": "node/932337945"
+    },
+    {
+      "id": "way-962118898",
+      "name": "Miscelanea olga",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830309,
+      "lon": -73.039116,
+      "osmId": "way/962118898"
+    },
+    {
+      "id": "node-9951192655",
+      "name": "Modisteria Sofi Sport",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831938,
+      "lon": -73.039778,
+      "osmId": "node/9951192655"
+    },
+    {
+      "id": "node-907370052",
+      "name": "Muchachos De L Hamburguesa",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828961,
+      "lon": -73.034061,
+      "osmId": "node/907370052"
+    },
+    {
+      "id": "node-11423278046",
+      "name": "Natursalud",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828844,
+      "lon": -73.032878,
+      "osmId": "node/11423278046"
+    },
+    {
+      "id": "node-2456272656",
+      "name": "Ningar's",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.82315,
+      "lon": -73.036672,
+      "osmId": "node/2456272656"
+    },
+    {
+      "id": "node-1356956350",
+      "name": "Nuevo exito chino",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825719,
+      "lon": -73.032305,
+      "osmId": "node/1356956350"
+    },
+    {
+      "id": "node-932342521",
+      "name": "Nuevo Milenio",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82555,
+      "lon": -73.029844,
+      "osmId": "node/932342521"
+    },
+    {
+      "id": "node-9935875089",
+      "name": "Obleas",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831542,
+      "lon": -73.03459,
+      "osmId": "node/9935875089"
+    },
+    {
+      "id": "node-11418468606",
+      "name": "OFFCORS",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827698,
+      "lon": -73.032913,
+      "osmId": "node/11418468606"
+    },
+    {
+      "id": "node-5150951590",
+      "name": "Orlando's",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827431,
+      "lon": -73.031949,
+      "osmId": "node/5150951590"
+    },
+    {
+      "id": "node-11418690144",
+      "name": "Oxford Jeans",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828231,
+      "lon": -73.032373,
+      "osmId": "node/11418690144"
+    },
+    {
+      "id": "node-907386302",
+      "name": "palmarito",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.821029,
+      "lon": -73.033733,
+      "osmId": "node/907386302"
+    },
+    {
+      "id": "node-5117651703",
+      "name": "Paloma",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825659,
+      "lon": -73.03513,
+      "osmId": "node/5117651703"
+    },
+    {
+      "id": "way-962048763",
+      "name": "Pan del Campo",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830707,
+      "lon": -73.033097,
+      "osmId": "way/962048763"
+    },
+    {
+      "id": "node-3529382895",
+      "name": "Pan del oeste",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834146,
+      "lon": -73.036702,
+      "osmId": "node/3529382895"
+    },
+    {
+      "id": "node-11423285224",
+      "name": "Pan'tojarse",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830662,
+      "lon": -73.035599,
+      "osmId": "node/11423285224"
+    },
+    {
+      "id": "node-1934232882",
+      "name": "Panadería",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824711,
+      "lon": -73.035064,
+      "osmId": "node/1934232882"
+    },
+    {
+      "id": "node-11418151593",
+      "name": "Panadería Cándido Quintero",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.821447,
+      "lon": -73.038504,
+      "osmId": "node/11418151593"
+    },
+    {
+      "id": "node-11372523156",
+      "name": "Panadería Carey",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82647,
+      "lon": -73.032576,
+      "osmId": "node/11372523156"
+    },
+    {
+      "id": "node-11359320609",
+      "name": "Panadería Franco Pan",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82853,
+      "lon": -73.029714,
+      "osmId": "node/11359320609"
+    },
+    {
+      "id": "node-932343598",
+      "name": "Panadería la dorada",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827784,
+      "lon": -73.029351,
+      "osmId": "node/932343598"
+    },
+    {
+      "id": "node-9995893134",
+      "name": "Panadería Pan Rey",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824873,
+      "lon": -73.03541,
+      "osmId": "node/9995893134"
+    },
+    {
+      "id": "node-10121404470",
+      "name": "Panadería Peter Pan",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818207,
+      "lon": -73.031684,
+      "osmId": "node/10121404470"
+    },
+    {
+      "id": "node-6975027902",
+      "name": "Panaderia San Rafael",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833674,
+      "lon": -73.033545,
+      "osmId": "node/6975027902"
+    },
+    {
+      "id": "node-9966227714",
+      "name": "Panadería Trigos",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827558,
+      "lon": -73.0332,
+      "osmId": "node/9966227714"
+    },
+    {
+      "id": "node-11370012817",
+      "name": "Panadería Trigos",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.8251,
+      "lon": -73.032739,
+      "osmId": "node/11370012817"
+    },
+    {
+      "id": "way-1086034487",
+      "name": "Panadería y Pastelería Onzaga",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829936,
+      "lon": -73.024738,
+      "osmId": "way/1086034487"
+    },
+    {
+      "id": "node-11374528892",
+      "name": "Panda Panda",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824227,
+      "lon": -73.027215,
+      "osmId": "node/11374528892"
+    },
+    {
+      "id": "node-933102177",
+      "name": "Para Autos Audio",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823935,
+      "lon": -73.035894,
+      "osmId": "node/933102177"
+    },
+    {
+      "id": "node-4366714997",
+      "name": "Parrilla y Llanera La Pampa",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831029,
+      "lon": -73.034454,
+      "osmId": "node/4366714997"
+    },
+    {
+      "id": "way-960913972",
+      "name": "Pasadena",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824979,
+      "lon": -73.038148,
+      "osmId": "way/960913972"
+    },
+    {
+      "id": "node-907351911",
+      "name": "Pernilones",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827136,
+      "lon": -73.032996,
+      "osmId": "node/907351911"
+    },
+    {
+      "id": "node-911353169",
+      "name": "Pernilones",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.815973,
+      "lon": -73.029961,
+      "osmId": "node/911353169"
+    },
+    {
+      "id": "node-907386439",
+      "name": "pharmacuy",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817915,
+      "lon": -73.033146,
+      "osmId": "node/907386439"
+    },
+    {
+      "id": "node-907386296",
+      "name": "pipes",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.819777,
+      "lon": -73.033877,
+      "osmId": "node/907386296"
+    },
+    {
+      "id": "node-907415709",
+      "name": "Piqueteadero de Hilda",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829072,
+      "lon": -73.033358,
+      "osmId": "node/907415709"
+    },
+    {
+      "id": "node-8902471597",
+      "name": "Piqueteadero Gallina y Tamales",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817574,
+      "lon": -73.029671,
+      "osmId": "node/8902471597"
+    },
+    {
+      "id": "node-10176069425",
+      "name": "Pizza Al Parque",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826422,
+      "lon": -73.037135,
+      "osmId": "node/10176069425"
+    },
+    {
+      "id": "node-4004660204",
+      "name": "Pizza Napolitana",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82571,
+      "lon": -73.043627,
+      "osmId": "node/4004660204"
+    },
+    {
+      "id": "node-4685279366",
+      "name": "Pizza Nostra",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826828,
+      "lon": -73.034734,
+      "osmId": "node/4685279366"
+    },
+    {
+      "id": "node-10176034854",
+      "name": "Pizza Nostra",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825413,
+      "lon": -73.039855,
+      "osmId": "node/10176034854"
+    },
+    {
+      "id": "node-6975027898",
+      "name": "Pizza Show",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831613,
+      "lon": -73.033635,
+      "osmId": "node/6975027898"
+    },
+    {
+      "id": "node-9921104367",
+      "name": "Pizza Show",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830837,
+      "lon": -73.033383,
+      "osmId": "node/9921104367"
+    },
+    {
+      "id": "way-962051062",
+      "name": "Pizzeria La Madre",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826551,
+      "lon": -73.036937,
+      "osmId": "way/962051062"
+    },
+    {
+      "id": "way-1155120790",
+      "name": "Plaza Center",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa lista Fruit Markets dentro de 5499.",
+      "lat": 5.818401,
+      "lon": -73.035076,
+      "osmId": "way/1155120790"
+    },
+    {
+      "id": "node-896398243",
+      "name": "Pollo El Dorado",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829006,
+      "lon": -73.030963,
+      "osmId": "node/896398243"
+    },
+    {
+      "id": "node-907341532",
+      "name": "Pollo Polanco",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817955,
+      "lon": -73.034352,
+      "osmId": "node/907341532"
+    },
+    {
+      "id": "node-9811193645",
+      "name": "Pollo Polanco",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817876,
+      "lon": -73.034191,
+      "osmId": "node/9811193645"
+    },
+    {
+      "id": "node-932343597",
+      "name": "Pollos el dorado",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.826838,
+      "lon": -73.02889,
+      "osmId": "node/932343597"
+    },
+    {
+      "id": "node-11417408410",
+      "name": "Pollos el Dorado",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831401,
+      "lon": -73.034609,
+      "osmId": "node/11417408410"
+    },
+    {
+      "id": "node-11418152118",
+      "name": "Pollos el Dorado",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.834455,
+      "lon": -73.02612,
+      "osmId": "node/11418152118"
+    },
+    {
+      "id": "node-866992580",
+      "name": "Pollos El Dorado",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.828877,
+      "lon": -73.031281,
+      "osmId": "node/866992580"
+    },
+    {
+      "id": "node-11418408854",
+      "name": "Pompolea Boutique",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829296,
+      "lon": -73.033872,
+      "osmId": "node/11418408854"
+    },
+    {
+      "id": "node-932376468",
+      "name": "ponques",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826311,
+      "lon": -73.030406,
+      "osmId": "node/932376468"
+    },
+    {
+      "id": "node-10031911730",
+      "name": "Popsy",
+      "mcc": "5451",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "El manual de Visa incluye ice cream dentro de Dairy Products Stores.",
+      "lat": 5.830711,
+      "lon": -73.032535,
+      "osmId": "node/10031911730"
+    },
+    {
+      "id": "node-9966262127",
+      "name": "possess",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826914,
+      "lon": -73.033,
+      "osmId": "node/9966262127"
+    },
+    {
+      "id": "node-9935875070",
+      "name": "Postres Lupita",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.826518,
+      "lon": -73.034739,
+      "osmId": "node/9935875070"
+    },
+    {
+      "id": "node-907276045",
+      "name": "POZZETO",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.828111,
+      "lon": -73.03261,
+      "osmId": "node/907276045"
+    },
+    {
+      "id": "node-3529382896",
+      "name": "Presas & Presas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832911,
+      "lon": -73.037211,
+      "osmId": "node/3529382896"
+    },
+    {
+      "id": "node-5117651714",
+      "name": "Pronto",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825952,
+      "lon": -73.035886,
+      "osmId": "node/5117651714"
+    },
+    {
+      "id": "node-2456280174",
+      "name": "Puerta GRande",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.822927,
+      "lon": -73.036074,
+      "osmId": "node/2456280174"
+    },
+    {
+      "id": "way-962047425",
+      "name": "Puerto Madero",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832803,
+      "lon": -73.031291,
+      "osmId": "way/962047425"
+    },
+    {
+      "id": "node-907427744",
+      "name": "Querubín Lubín",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828707,
+      "lon": -73.035016,
+      "osmId": "node/907427744"
+    },
+    {
+      "id": "node-907386399",
+      "name": "ramir",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822187,
+      "lon": -73.033159,
+      "osmId": "node/907386399"
+    },
+    {
+      "id": "relation-12929685",
+      "name": "Red Freak",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827177,
+      "lon": -73.032566,
+      "osmId": "relation/12929685"
+    },
+    {
+      "id": "node-932337860",
+      "name": "restaurante",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827215,
+      "lon": -73.031246,
+      "osmId": "node/932337860"
+    },
+    {
+      "id": "node-9997884542",
+      "name": "restaurante",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832119,
+      "lon": -73.035824,
+      "osmId": "node/9997884542"
+    },
+    {
+      "id": "node-10171839470",
+      "name": "Restaurante El Chingón",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817717,
+      "lon": -73.029668,
+      "osmId": "node/10171839470"
+    },
+    {
+      "id": "node-11370001674",
+      "name": "Restaurante el Gran Pollo",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825036,
+      "lon": -73.032699,
+      "osmId": "node/11370001674"
+    },
+    {
+      "id": "node-10171839469",
+      "name": "Restaurante Francachela",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817962,
+      "lon": -73.029526,
+      "osmId": "node/10171839469"
+    },
+    {
+      "id": "node-11417416893",
+      "name": "Restaurante La Carpa Verde",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822333,
+      "lon": -73.037548,
+      "osmId": "node/11417416893"
+    },
+    {
+      "id": "node-5168557253",
+      "name": "Restaurante La Cucharita",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829096,
+      "lon": -73.033169,
+      "osmId": "node/5168557253"
+    },
+    {
+      "id": "way-1086028444",
+      "name": "Restaurante La Perrera",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830847,
+      "lon": -73.032616,
+      "osmId": "way/1086028444"
+    },
+    {
+      "id": "node-10168016947",
+      "name": "Restaurante Palo Alto",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817096,
+      "lon": -73.029839,
+      "osmId": "node/10168016947"
+    },
+    {
+      "id": "node-11413959249",
+      "name": "Restaurante Parque Gallineral",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82517,
+      "lon": -73.034428,
+      "osmId": "node/11413959249"
+    },
+    {
+      "id": "node-5365126221",
+      "name": "Restaurante Pernilones",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817787,
+      "lon": -73.029561,
+      "osmId": "node/5365126221"
+    },
+    {
+      "id": "node-10176055828",
+      "name": "Restaurante Silvestre",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.817829,
+      "lon": -73.034158,
+      "osmId": "node/10176055828"
+    },
+    {
+      "id": "way-1086030174",
+      "name": "Restaurante Trigos Artesanal",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827394,
+      "lon": -73.035037,
+      "osmId": "way/1086030174"
+    },
+    {
+      "id": "node-907378592",
+      "name": "Restaurante Tropical Las Palmas",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.827775,
+      "lon": -73.036471,
+      "osmId": "node/907378592"
+    },
+    {
+      "id": "node-10742420440",
+      "name": "Restaurante y Pescadería Riomar",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822788,
+      "lon": -73.037863,
+      "osmId": "node/10742420440"
+    },
+    {
+      "id": "node-6152849385",
+      "name": "Rico Pan",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831391,
+      "lon": -73.03561,
+      "osmId": "node/6152849385"
+    },
+    {
+      "id": "node-9966275207",
+      "name": "Roar Baby Store",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827331,
+      "lon": -73.033592,
+      "osmId": "node/9966275207"
+    },
+    {
+      "id": "node-9966262130",
+      "name": "rodder",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826956,
+      "lon": -73.033029,
+      "osmId": "node/9966262130"
+    },
+    {
+      "id": "node-5168557249",
+      "name": "Rodder Store",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829185,
+      "lon": -73.03323,
+      "osmId": "node/5168557249"
+    },
+    {
+      "id": "node-9966280689",
+      "name": "Ropa Almacen Solano",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827372,
+      "lon": -73.033275,
+      "osmId": "node/9966280689"
+    },
+    {
+      "id": "node-10172164938",
+      "name": "Ropa Arequipe",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827177,
+      "lon": -73.032463,
+      "osmId": "node/10172164938"
+    },
+    {
+      "id": "node-9966340017",
+      "name": "Ropa Bikkur",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827132,
+      "lon": -73.03314,
+      "osmId": "node/9966340017"
+    },
+    {
+      "id": "node-9966265920",
+      "name": "Ropa El Mundo Intimo",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82626,
+      "lon": -73.03386,
+      "osmId": "node/9966265920"
+    },
+    {
+      "id": "node-9966241744",
+      "name": "Ropa Interior Leonisa Outlet",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826809,
+      "lon": -73.033717,
+      "osmId": "node/9966241744"
+    },
+    {
+      "id": "node-9966251308",
+      "name": "Ropa Tempo",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827283,
+      "lon": -73.033667,
+      "osmId": "node/9966251308"
+    },
+    {
+      "id": "node-5117653034",
+      "name": "Rubianos",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826173,
+      "lon": -73.035656,
+      "osmId": "node/5117653034"
+    },
+    {
+      "id": "way-962049805",
+      "name": "Rugantino di Roma",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.830749,
+      "lon": -73.033394,
+      "osmId": "way/962049805"
+    },
+    {
+      "id": "node-10031948693",
+      "name": "Sabor Amargo",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82943,
+      "lon": -73.040969,
+      "osmId": "node/10031948693"
+    },
+    {
+      "id": "node-932332456",
+      "name": "Sabroson",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824006,
+      "lon": -73.026976,
+      "osmId": "node/932332456"
+    },
+    {
+      "id": "node-860606634",
+      "name": "salesiano",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.833977,
+      "lon": -73.035531,
+      "osmId": "node/860606634"
+    },
+    {
+      "id": "node-933102697",
+      "name": "Salon de Onces",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.826717,
+      "lon": -73.03468,
+      "osmId": "node/933102697"
+    },
+    {
+      "id": "way-962431784",
+      "name": "Salon de Onces Bocatos",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825831,
+      "lon": -73.03263,
+      "osmId": "way/962431784"
+    },
+    {
+      "id": "node-5122967655",
+      "name": "Salón Norteño",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825177,
+      "lon": -73.038114,
+      "osmId": "node/5122967655"
+    },
+    {
+      "id": "node-896406368",
+      "name": "San Andresito",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82545,
+      "lon": -73.033721,
+      "osmId": "node/896406368"
+    },
+    {
+      "id": "node-907386462",
+      "name": "San Antonio",
+      "mcc": "5422",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825994,
+      "lon": -73.031561,
+      "osmId": "node/907386462"
+    },
+    {
+      "id": "node-10178474852",
+      "name": "San Marcos",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.828339,
+      "lon": -73.033525,
+      "osmId": "node/10178474852"
+    },
+    {
+      "id": "node-907386404",
+      "name": "San Martin",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824937,
+      "lon": -73.031108,
+      "osmId": "node/907386404"
+    },
+    {
+      "id": "node-907415705",
+      "name": "San Miguel",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.829488,
+      "lon": -73.033548,
+      "osmId": "node/907415705"
+    },
+    {
+      "id": "node-932376404",
+      "name": "sanalejo",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824773,
+      "lon": -73.036409,
+      "osmId": "node/932376404"
+    },
+    {
+      "id": "way-960913945",
+      "name": "Sanar",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822243,
+      "lon": -73.037003,
+      "osmId": "way/960913945"
+    },
+    {
+      "id": "node-9966305019",
+      "name": "Sanduchera Rústica de Trigos",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827402,
+      "lon": -73.033523,
+      "osmId": "node/9966305019"
+    },
+    {
+      "id": "node-5754535408",
+      "name": "Sejel",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825767,
+      "lon": -73.036179,
+      "osmId": "node/5754535408"
+    },
+    {
+      "id": "node-11423264454",
+      "name": "Seven Seven",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828562,
+      "lon": -73.033077,
+      "osmId": "node/11423264454"
+    },
+    {
+      "id": "node-907415719",
+      "name": "Shooter's",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828789,
+      "lon": -73.032941,
+      "osmId": "node/907415719"
+    },
+    {
+      "id": "node-5117651709",
+      "name": "Solomaquinas",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826057,
+      "lon": -73.035385,
+      "osmId": "node/5117651709"
+    },
+    {
+      "id": "node-933102202",
+      "name": "sony",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824165,
+      "lon": -73.036085,
+      "osmId": "node/933102202"
+    },
+    {
+      "id": "node-11374391844",
+      "name": "Super Hamburguesas al Carbón",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826545,
+      "lon": -73.033587,
+      "osmId": "node/11374391844"
+    },
+    {
+      "id": "node-10049407339",
+      "name": "Supermercado del Barrio",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822254,
+      "lon": -73.039273,
+      "osmId": "node/10049407339"
+    },
+    {
+      "id": "way-1054232465",
+      "name": "Supermercado Paraiso",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.815433,
+      "lon": -73.031473,
+      "osmId": "way/1054232465"
+    },
+    {
+      "id": "node-6978513215",
+      "name": "Supermercado Paraiso Barrio Boyacá",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825461,
+      "lon": -73.043897,
+      "osmId": "node/6978513215"
+    },
+    {
+      "id": "node-6978513214",
+      "name": "Supermercado Paraiso Calle 15",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825246,
+      "lon": -73.032726,
+      "osmId": "node/6978513214"
+    },
+    {
+      "id": "node-907386368",
+      "name": "Supermercado Paraiso Calle 17",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828538,
+      "lon": -73.032838,
+      "osmId": "node/907386368"
+    },
+    {
+      "id": "node-865741640",
+      "name": "Supermercado Paraiso La Dorada",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82736,
+      "lon": -73.02803,
+      "osmId": "node/865741640"
+    },
+    {
+      "id": "node-865741662",
+      "name": "Supermercado Pasadema",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823214,
+      "lon": -73.025926,
+      "osmId": "node/865741662"
+    },
+    {
+      "id": "node-6978498251",
+      "name": "Supermercado Pasadena",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825005,
+      "lon": -73.02848,
+      "osmId": "node/6978498251"
+    },
+    {
+      "id": "node-6978498252",
+      "name": "Supermercado Pasadena Fruver",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.819645,
+      "lon": -73.02357,
+      "osmId": "node/6978498252"
+    },
+    {
+      "id": "node-907370340",
+      "name": "superofetz",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826489,
+      "lon": -73.033391,
+      "osmId": "node/907370340"
+    },
+    {
+      "id": "node-8902471600",
+      "name": "supersalud",
+      "mcc": "5912",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.815717,
+      "lon": -73.030517,
+      "osmId": "node/8902471600"
+    },
+    {
+      "id": "node-11418648011",
+      "name": "Surticom",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.826782,
+      "lon": -73.031921,
+      "osmId": "node/11418648011"
+    },
+    {
+      "id": "node-9966335383",
+      "name": "Sweaters Sara's Ropa",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827077,
+      "lon": -73.033103,
+      "osmId": "node/9966335383"
+    },
+    {
+      "id": "node-10742420447",
+      "name": "Tacos y Pastas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.821006,
+      "lon": -73.041452,
+      "osmId": "node/10742420447"
+    },
+    {
+      "id": "node-2456272660",
+      "name": "Taller bombas y compresores",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.822751,
+      "lon": -73.036361,
+      "osmId": "node/2456272660"
+    },
+    {
+      "id": "node-10176036809",
+      "name": "Tata",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.823224,
+      "lon": -73.026313,
+      "osmId": "node/10176036809"
+    },
+    {
+      "id": "node-933102684",
+      "name": "Tecnocom",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826381,
+      "lon": -73.035573,
+      "osmId": "node/933102684"
+    },
+    {
+      "id": "way-1088198332",
+      "name": "Terpel Los Laureles",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.81666,
+      "lon": -73.033986,
+      "osmId": "way/1088198332"
+    },
+    {
+      "id": "way-1088198333",
+      "name": "Terpel Los Laureles",
+      "mcc": "5541",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.816502,
+      "lon": -73.034098,
+      "osmId": "way/1088198333"
+    },
+    {
+      "id": "node-903618217",
+      "name": "Tienda",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.831406,
+      "lon": -73.041306,
+      "osmId": "node/903618217"
+    },
+    {
+      "id": "node-907411644",
+      "name": "Tienda",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.819223,
+      "lon": -73.034126,
+      "osmId": "node/907411644"
+    },
+    {
+      "id": "node-11683010579",
+      "name": "Tienda",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.821783,
+      "lon": -73.038398,
+      "osmId": "node/11683010579"
+    },
+    {
+      "id": "node-907204228",
+      "name": "Tienda Aguila",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.833142,
+      "lon": -73.036847,
+      "osmId": "node/907204228"
+    },
+    {
+      "id": "node-9811171282",
+      "name": "Tienda Bar la Gloria",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825045,
+      "lon": -73.038871,
+      "osmId": "node/9811171282"
+    },
+    {
+      "id": "node-11374373620",
+      "name": "Tienda Brillito",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.827522,
+      "lon": -73.036036,
+      "osmId": "node/11374373620"
+    },
+    {
+      "id": "node-9935875086",
+      "name": "Tienda de Disfraces",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.83181,
+      "lon": -73.034922,
+      "osmId": "node/9935875086"
+    },
+    {
+      "id": "node-10031934589",
+      "name": "Tienda de Disfraces",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.831821,
+      "lon": -73.036824,
+      "osmId": "node/10031934589"
+    },
+    {
+      "id": "node-6806688383",
+      "name": "Tienda de Huevos",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.830368,
+      "lon": -73.035736,
+      "osmId": "node/6806688383"
+    },
+    {
+      "id": "node-10184798462",
+      "name": "Tienda de Peluches",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826636,
+      "lon": -73.031745,
+      "osmId": "node/10184798462"
+    },
+    {
+      "id": "node-9966265822",
+      "name": "Tienda de Ropa Vade Retro",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827211,
+      "lon": -73.034207,
+      "osmId": "node/9966265822"
+    },
+    {
+      "id": "node-6806718886",
+      "name": "Tienda Dekada",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.830974,
+      "lon": -73.035335,
+      "osmId": "node/6806718886"
+    },
+    {
+      "id": "way-1084273997",
+      "name": "Tienda donde Doña Pilar",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.832033,
+      "lon": -73.03594,
+      "osmId": "way/1084273997"
+    },
+    {
+      "id": "node-4004657756",
+      "name": "Tienda Donde Esperanza",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.816513,
+      "lon": -73.035617,
+      "osmId": "node/4004657756"
+    },
+    {
+      "id": "node-9174932905",
+      "name": "Tienda El Veneco",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.833544,
+      "lon": -73.038558,
+      "osmId": "node/9174932905"
+    },
+    {
+      "id": "node-907411665",
+      "name": "Tienda palmaritos",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.820728,
+      "lon": -73.033773,
+      "osmId": "node/907411665"
+    },
+    {
+      "id": "node-907411682",
+      "name": "Tienda pipes",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.819735,
+      "lon": -73.034019,
+      "osmId": "node/907411682"
+    },
+    {
+      "id": "node-932376414",
+      "name": "Tienda Postobon",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824788,
+      "lon": -73.036369,
+      "osmId": "node/932376414"
+    },
+    {
+      "id": "node-6978513212",
+      "name": "Tiendas D1 Avenida de las Américas",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818023,
+      "lon": -73.034791,
+      "osmId": "node/6978513212"
+    },
+    {
+      "id": "node-6978513210",
+      "name": "Tiendas D1 Duitama Centro",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827839,
+      "lon": -73.032747,
+      "osmId": "node/6978513210"
+    },
+    {
+      "id": "node-6978513209",
+      "name": "Tiendas D1 Duitama Salida Santa Rosa",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.827498,
+      "lon": -73.025802,
+      "osmId": "node/6978513209"
+    },
+    {
+      "id": "node-6978513211",
+      "name": "Tiendas D1 Via Barrio Boyacá",
+      "mcc": "5411",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82425,
+      "lon": -73.041853,
+      "osmId": "node/6978513211"
+    },
+    {
+      "id": "node-11418468608",
+      "name": "Tiendas Free",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.8276,
+      "lon": -73.032337,
+      "osmId": "node/11418468608"
+    },
+    {
+      "id": "node-11413985606",
+      "name": "Tiendas Stone",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826777,
+      "lon": -73.032112,
+      "osmId": "node/11413985606"
+    },
+    {
+      "id": "node-932376411",
+      "name": "tigo",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.825359,
+      "lon": -73.035311,
+      "osmId": "node/932376411"
+    },
+    {
+      "id": "node-896423745",
+      "name": "Tigo",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825079,
+      "lon": -73.043708,
+      "osmId": "node/896423745"
+    },
+    {
+      "id": "node-876469048",
+      "name": "Titas",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.828395,
+      "lon": -73.03502,
+      "osmId": "node/876469048"
+    },
+    {
+      "id": "node-11372260530",
+      "name": "Todo a Mil",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826808,
+      "lon": -73.033961,
+      "osmId": "node/11372260530"
+    },
+    {
+      "id": "node-11418687200",
+      "name": "Todo D'Mark",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.829551,
+      "lon": -73.03307,
+      "osmId": "node/11418687200"
+    },
+    {
+      "id": "node-5117651713",
+      "name": "totto",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.82598,
+      "lon": -73.035854,
+      "osmId": "node/5117651713"
+    },
+    {
+      "id": "node-5112790121",
+      "name": "Trigos",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.827545,
+      "lon": -73.03319,
+      "osmId": "node/5112790121"
+    },
+    {
+      "id": "node-11418151101",
+      "name": "Trigos Artesanal",
+      "mcc": "5399",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "shop=wholesale generico. No se asume warehouse club: eso exige marca conocida.",
+      "lat": 5.823596,
+      "lon": -73.032316,
+      "osmId": "node/11418151101"
+    },
+    {
+      "id": "node-907329135",
+      "name": "Trigos Cafe Express",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.828222,
+      "lon": -73.033646,
+      "osmId": "node/907329135"
+    },
+    {
+      "id": "node-896423768",
+      "name": "Trucha y demas",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.824735,
+      "lon": -73.043226,
+      "osmId": "node/896423768"
+    },
+    {
+      "id": "node-3529382925",
+      "name": "Ttrigos Nissi",
+      "mcc": "5462",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.832693,
+      "lon": -73.03935,
+      "osmId": "node/3529382925"
+    },
+    {
+      "id": "node-876404019",
+      "name": "Tu nueva moda",
+      "mcc": "5651",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826526,
+      "lon": -73.033772,
+      "osmId": "node/876404019"
+    },
+    {
+      "id": "node-2456272663",
+      "name": "Ultra Alarmas",
+      "mcc": "5732",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.823052,
+      "lon": -73.036608,
+      "osmId": "node/2456272663"
+    },
+    {
+      "id": "node-5324875321",
+      "name": "Valzarsa restaurante",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818183,
+      "lon": -73.029133,
+      "osmId": "node/5324875321"
+    },
+    {
+      "id": "node-11413946849",
+      "name": "Valzarsa Restaurante",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.818764,
+      "lon": -73.028937,
+      "osmId": "node/11413946849"
+    },
+    {
+      "id": "node-11418198529",
+      "name": "Variedades y Promociones el rinconcito.com",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825155,
+      "lon": -73.038175,
+      "osmId": "node/11418198529"
+    },
+    {
+      "id": "node-896423492",
+      "name": "Venecia Cafe",
+      "mcc": "5814",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Mastercard lista coffee shops dentro de 5814. Visa podria ubicarlo en 5812.",
+      "lat": 5.830916,
+      "lon": -73.036265,
+      "osmId": "node/896423492"
+    },
+    {
+      "id": "node-933102208",
+      "name": "Venta de Filtros Agrofilter",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.824304,
+      "lon": -73.035757,
+      "osmId": "node/933102208"
+    },
+    {
+      "id": "node-9935857136",
+      "name": "Venta de Maderas La Ceiba",
+      "mcc": "5200",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.820286,
+      "lon": -73.036348,
+      "osmId": "node/9935857136"
+    },
+    {
+      "id": "node-933102174",
+      "name": "vidriosplanos",
+      "mcc": "5251",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.826086,
+      "lon": -73.037078,
+      "osmId": "node/933102174"
+    },
+    {
+      "id": "node-10031948695",
+      "name": "Viveres de la 10",
+      "mcc": "5499",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Amex nombra explicitamente a las convenience stores como excluidas de supermercados.",
+      "lat": 5.829564,
+      "lon": -73.041065,
+      "osmId": "node/10031948695"
+    },
+    {
+      "id": "node-10176064638",
+      "name": "Yoi Korean",
+      "mcc": "5331",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.825773,
+      "lon": -73.032973,
+      "osmId": "node/10176064638"
+    },
+    {
+      "id": "node-3369420771",
+      "name": "Zhong Hua China",
+      "mcc": "5812",
+      "mccSource": "inferred-from-osm",
+      "lat": 5.816254,
+      "lon": -73.03022,
+      "osmId": "node/3369420771"
+    },
+    {
+      "id": "node-10031960104",
+      "name": "Zona 7",
+      "mcc": "5813",
+      "mccSource": "inferred-from-osm",
+      "mccNote": "Los bares tienen categoria propia, separada de restaurantes.",
+      "lat": 5.829871,
+      "lon": -73.033619,
+      "osmId": "node/10031960104"
+    }
+  ]
+}

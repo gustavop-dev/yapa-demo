@@ -1,0 +1,16 @@
+{
+  "name": "@yapa/seed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "probe": "tsx src/probe.ts",
+    "typecheck": "tsc --noEmit",
+    "venue": "tsx src/venue.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@yapa/engine": "*"
+  }
+}

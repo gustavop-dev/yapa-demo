@@ -1,0 +1,27 @@
+{
+  "name": "@yapa/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "android:release": "expo run:android --variant release",
+    "prebuild": "expo prebuild --platform android --clean",
+    "typecheck": "tsc --noEmit",
+    "sync-data": "cp ../../data/merchants.duitama.json ../../data/merchants.costa-mesa.json src/data/"
+  },
+  "dependencies": {
+    "@yapa/engine": "*",
+    "expo": "~57.0.14",
+    "expo-constants": "~57.0.0",
+    "expo-location": "~57.0.11",
+    "expo-notifications": "~57.0.12",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.2"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2"
+  }
+}

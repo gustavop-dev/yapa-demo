@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+.DS_Store
+
+# Expo
+.expo/
+packages/mobile/android/
+packages/mobile/ios/
+# Los datos de comercios SI van al repo: la app los importa y sin ellos no compila.
+# Se regeneran con: npm run sync-data --workspace=@yapa/mobile
+google-services.json
