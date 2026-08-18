@@ -1,30 +1,40 @@
 #!/usr/bin/env bash
-# Dispara una notificacion push remota contra el Expo Push Service.
+# Fires a remote push notification against the Expo Push Service.
 #
-# Uso:
+# Usage:
 #   export YAPA_PUSH_TOKEN='ExponentPushToken[xxxxxxxx]'
 #   ./scripts/send-push.sh
-#   ./scripts/send-push.sh "Titulo propio" "Cuerpo propio"
+#   ./scripts/send-push.sh "Custom title" "Custom body"
 #
-# El punto de esta notificacion es que NO necesita ubicacion. Se dispara desde un
-# servidor contra el catalogo de promos: cero GPS, cero bateria, cero permisos
-# delicados. La mayor parte del valor del push esta aca, no en la geocerca.
+# The point of this notification is that it needs NO location. It is fired from a
+# server against the promo catalog: zero GPS, zero battery, zero sensitive permissions.
+# Most of the value of push lives here, not in the geofence.
 #
-# Rate limit del servicio: 600 notificaciones por segundo por proyecto.
+# The notification copy stays in Spanish: it is what the founder reads on screen.
+#
+# Service rate limit: 600 notifications per second per project.
 
 set -euo pipefail
 
 if [[ -z "${YAPA_PUSH_TOKEN:-}" ]]; then
-  echo "Falta YAPA_PUSH_TOKEN." >&2
-  echo "El token sale de getExpoPushTokenAsync y necesita:" >&2
-  echo "  1. Proyecto de Firebase creado" >&2
-  echo "  2. google-services.json en el binario, antes del prebuild" >&2
-  echo "  3. Service account key de FCM V1 subida con: eas credentials" >&2
+  echo "YAPA_PUSH_TOKEN is not set." >&2
+  echo "The token comes from getExpoPushTokenAsync and needs:" >&2
+  echo "  1. A Firebase project created" >&2
+  echo "  2. google-services.json in the binary, before the prebuild" >&2
+  echo "  3. An FCM V1 service account key uploaded with: eas credentials" >&2
   exit 1
 fi
 
 TITLE="${1:-Tu categoria rotativa vence en 3 dias}"
 BODY="${2:-Activala para no perder el 5% en supermercados.}"
+
+# Git Bash on Windows has no python3, so the pretty printer is optional: without it
+# the raw JSON still gets printed instead of the script dying on a broken pipe.
+if command -v python3 >/dev/null 2>&1; then
+  pretty() { python3 -m json.tool; }
+else
+  pretty() { cat; echo; }
+fi
 
 curl -sS \
   -H "Content-Type: application/json" \
@@ -32,8 +42,8 @@ curl -sS \
   -X POST "https://exp.host/--/api/v2/push/send" \
   -d "$(printf '{"to":"%s","title":"%s","body":"%s","channelId":"yapa-default","priority":"high"}' \
         "$YAPA_PUSH_TOKEN" "$TITLE" "$BODY")" \
-  | python3 -m json.tool
+  | pretty
 
 echo
-echo "Si data.status es 'ok', guardate el id: se puede consultar el recibo en"
+echo "If data.status is 'ok', keep the id: the receipt can be queried at"
 echo "https://exp.host/--/api/v2/push/getReceipts"
