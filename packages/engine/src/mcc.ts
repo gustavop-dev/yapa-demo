@@ -1,76 +1,76 @@
 import type { Mcc } from './types';
 
 /**
- * Titulos tomados del Visa Merchant Data Standards Manual, abril 2026.
+ * Titles taken from the Visa Merchant Data Standards Manual, April 2026.
  *
- * Regla de asignacion, seccion 1 del manual:
+ * Assignment rule, section 1 of the manual:
  * "The MCC is a four-digit number assigned to describe a Merchant's primary
  * business based on annual sales volume."
  *
- * Esa frase es el porque de todo el producto: Walmart vende comida, pero su
- * negocio primario no es comida, asi que no codifica como supermercado.
+ * That sentence is the reason the whole product exists: Walmart sells food, but food
+ * is not its primary business, so it does not code as a supermarket.
  *
- * Cada titulo fue verificado uno por uno contra el PDF del manual el 18 de agosto
- * de 2026. Ninguno viene de memoria ni de un resumen de terceros.
+ * Every title was verified one by one against the manual PDF on August 18, 2026. None
+ * of them comes from memory or from a third party summary.
  */
 export const MCC_CATALOG: Record<string, Mcc> = {
-  // Mercaderia general. Aca viven las exclusiones que rompen las categorias
-  // de supermercado de las tarjetas premium.
+  // General merchandise. This is where the exclusions that break the supermarket
+  // categories of premium cards live.
   '5200': { code: '5200', title: 'Home Supply Warehouse Stores' },
   '5251': { code: '5251', title: 'Hardware Stores' },
   '5300': {
     code: '5300',
     title: 'Wholesale Clubs',
-    note: 'Costco, BJ\'s, PriceSmart. Excluidos de la categoria de supermercados.',
+    note: 'Costco, BJ\'s, PriceSmart. Excluded from the supermarket category.',
   },
   '5310': {
     code: '5310',
     title: 'Discount Stores',
-    note: 'Walmart y Target. Es la exclusion mas conocida entre usuarios de tarjetas en USA.',
+    note: 'Walmart and Target. The best known exclusion among US card users.',
   },
   '5311': { code: '5311', title: 'Department Stores' },
   '5331': { code: '5331', title: 'Variety Stores' },
   '5399': { code: '5399', title: 'Miscellaneous General Merchandise' },
 
-  // Alimentos. La frontera entre 5411 y todo lo demas es donde se decide la plata.
+  // Food. The border between 5411 and everything else is where the money is decided.
   '5411': {
     code: '5411',
     title: 'Grocery Stores and Supermarkets',
-    note: 'El manual exige que los perecederos sean al menos el 45% del volumen mensual de ventas.',
+    note: 'The manual requires perishables to be at least 45% of monthly sales volume.',
   },
   '5422': {
     code: '5422',
     title: 'Freezer and Locker Meat Provisioners',
-    note: 'Carnicerias y meat markets. No es 5411 aunque venda comida.',
+    note: 'Butchers and meat markets. Not 5411 even though they sell food.',
   },
   '5441': { code: '5441', title: 'Candy, Nut, and Confectionery Stores' },
   '5451': {
     code: '5451',
     title: 'Dairy Products Stores',
-    note: 'El manual incluye heladerias: "butter, cheese, ice cream, milk, and other dairy".',
+    note: 'The manual includes ice cream shops: "butter, cheese, ice cream, milk, and other dairy".',
   },
   '5462': { code: '5462', title: 'Bakeries' },
   '5499': {
     code: '5499',
     title: 'Miscellaneous Food Stores - Convenience Stores and Specialty Markets',
     note:
-      'Amex nombra explicitamente a las convenience stores como excluidas de la ' +
-      'categoria de supermercados. Un 7-Eleven no es un 5411.',
+      'Amex explicitly names convenience stores as excluded from the supermarket ' +
+      'category. A 7-Eleven is not a 5411.',
   },
 
-  // Combustible. El par 5541 y 5542 cambia segun donde pagues, no segun donde estes.
+  // Fuel. The 5541 and 5542 pair changes with where you pay, not with where you are.
   '5541': {
     code: '5541',
     title: 'Service Stations (With or without Ancillary Services)',
-    note: 'Cita del manual: "Excluded from this category code are Automated Fuel Dispensers, MCC 5542".',
+    note: 'Manual quote: "Excluded from this category code are Automated Fuel Dispensers, MCC 5542".',
   },
   '5542': {
     code: '5542',
     title: 'Automated Fuel Dispensers',
-    note: 'Surtidor desatendido. Misma gasolinera que 5541, distinto MCC segun donde pagues.',
+    note: 'Unattended pump. Same gas station as 5541, different MCC depending on where you pay.',
   },
 
-  // Retail de mall.
+  // Mall retail.
   '4812': { code: '4812', title: 'Telecommunication Equipment and Telephone Sales' },
   '5651': { code: '5651', title: 'Family Clothing Stores' },
   '5655': { code: '5655', title: 'Sports and Riding Apparel Stores' },
@@ -104,26 +104,26 @@ export const MCC_CATALOG: Record<string, Mcc> = {
   '5992': { code: '5992', title: 'Florists' },
   '5995': { code: '5995', title: 'Pet Shops, Pet Foods and Supplies Stores' },
 
-  // Comida preparada.
+  // Prepared food.
   '5812': {
     code: '5812',
     title: 'Eating Places and Restaurants',
-    note: 'Consumo inmediato, tipicamente con servicio de mesa.',
+    note: 'Immediate consumption, typically with table service.',
   },
   '5813': {
     code: '5813',
     title:
       'Drinking Places (Alcoholic Beverages) - Bars, Taverns, Nightclubs, ' +
       'Cocktail Lounges, and Discotheques',
-    note: 'Un bar no es un restaurante para efectos de categoria, aunque sirva comida.',
+    note: 'A bar is not a restaurant for category purposes, even if it serves food.',
   },
   '5814': {
     code: '5814',
     title: 'Fast Food Restaurants',
-    note: 'Se ordena y se paga en mostrador, kiosco o ventanilla.',
+    note: 'Ordering and payment happen at a counter, kiosk or window.',
   },
 
-  // Salud y servicios.
+  // Health and services.
   '5912': { code: '5912', title: 'Drug Stores and Pharmacies' },
   '7210': { code: '7210', title: 'Laundry, Cleaning, and Garment Services' },
   '7230': { code: '7230', title: 'Beauty and Barber Shops' },
@@ -134,7 +134,7 @@ export const MCC_CATALOG: Record<string, Mcc> = {
     title:
       'Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and ' +
       'Private Golf Courses',
-    note: 'Aca cae un gimnasio. No es 7298 (spa) ni 5941 (venta de articulos deportivos).',
+    note: 'A gym lands here. Not 7298 (spa) and not 5941 (sporting goods retail).',
   },
   '8043': { code: '8043', title: 'Opticians, Optical Goods, and Eyeglasses' },
 };

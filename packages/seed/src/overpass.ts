@@ -2,15 +2,15 @@ import type { BBox } from './regions';
 import type { OsmTags } from './mcc-map';
 
 /**
- * Cliente minimo de la Overpass API de OpenStreetMap.
+ * Minimal client for the OpenStreetMap Overpass API.
  *
- * Uso previsto: extraccion puntual para generar un seed, no backend de produccion.
- * La propia politica de uso de la instancia publica lista como problematico
- * "setting up an app for more than just OSM mappers and relying on the public
- * instances as backend", y orienta a un maximo de unas 10.000 peticiones y menos
- * de 1 GB por dia. Este script hace una peticion por region.
+ * Intended use: one off extraction to generate a seed, not a production backend. The
+ * public instance usage policy itself lists as problematic "setting up an app for more
+ * than just OSM mappers and relying on the public instances as backend", and points at
+ * a ceiling of about 10,000 requests and under 1 GB per day. This script makes one
+ * request per region.
  *
- * Licencia de los datos: ODbL. Requiere atribuir "(c) OpenStreetMap contributors".
+ * Data license: ODbL. Requires attributing "(c) OpenStreetMap contributors".
  */
 const ENDPOINT = 'https://overpass-api.de/api/interpreter';
 
@@ -63,9 +63,9 @@ out center tags;`;
 }
 
 /**
- * Estados que valen un reintento: la instancia publica devuelve 429 cuando estas
- * sobre cuota y 504 cuando esta saturada, y ambos se resuelven esperando. Un 400
- * es una query mal escrita y reintentar no arregla nada.
+ * Statuses worth a retry: the public instance returns 429 when you are over quota and
+ * 504 when it is saturated, and both resolve by waiting. A 400 is a badly written
+ * query and retrying fixes nothing.
  */
 const RETRYABLE = new Set([429, 502, 503, 504]);
 
@@ -81,7 +81,8 @@ export async function runQuery(query: string, attempts = 4): Promise<OsmElement[
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          // La politica de uso pide identificarse para poder contactar si molesta.
+          // The usage policy asks for identification so they can reach you if the
+          // traffic becomes a problem.
           'User-Agent': 'yapa-demo-seed/0.1 (demo tecnico, extraccion puntual)',
         },
         body: new URLSearchParams({ data: query }).toString(),
@@ -90,7 +91,7 @@ export async function runQuery(query: string, attempts = 4): Promise<OsmElement[
       lastError = err instanceof Error ? err.message : String(err);
       if (attempt === attempts) break;
       const wait = 5_000 * attempt;
-      console.warn(`  red fallo (${lastError}), reintento en ${wait / 1000}s`);
+      console.warn(`  network failed (${lastError}), retrying in ${wait / 1000}s`);
       await sleep(wait);
       continue;
     }
@@ -102,7 +103,7 @@ export async function runQuery(query: string, attempts = 4): Promise<OsmElement[
 
     if (!RETRYABLE.has(response.status)) {
       throw new Error(
-        `Overpass devolvio ${response.status}: ${await response.text()}`,
+        `Overpass returned ${response.status}: ${await response.text()}`,
       );
     }
 
@@ -111,17 +112,17 @@ export async function runQuery(query: string, attempts = 4): Promise<OsmElement[
 
     const wait = 10_000 * attempt;
     console.warn(
-      `  Overpass devolvio ${response.status} (instancia publica saturada o sobre ` +
-        `cuota), reintento en ${wait / 1000}s`,
+      `  Overpass returned ${response.status} (public instance saturated or over ` +
+        `quota), retrying in ${wait / 1000}s`,
     );
     await sleep(wait);
   }
 
   throw new Error(
-    `Overpass no respondio despues de ${attempts} intentos (ultimo: ${lastError}). ` +
-      'Es una instancia publica compartida: su politica de uso la limita a unas ' +
-      '10.000 peticiones y menos de 1 GB por dia, y desaconseja usarla como backend. ' +
-      'Para produccion hay que montar instancia propia o usar Overture Maps.',
+    `Overpass did not answer after ${attempts} attempts (last: ${lastError}). ` +
+      'It is a shared public instance: its usage policy caps it at about 10,000 ' +
+      'requests and under 1 GB per day, and discourages using it as a backend. ' +
+      'Production needs a self hosted instance or Overture Maps.',
   );
 }
 

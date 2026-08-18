@@ -1,7 +1,10 @@
 /**
- * Convierte un archivo de venue sembrado a mano en JSON que el motor puede usar.
+ * Turns a hand seeded venue file into JSON the engine can use.
  *
- * Uso: npm run venue --workspace=@yapa/seed -- innovo-plaza
+ * Usage: npm run venue --workspace=@yapa/seed -- innovo-plaza
+ *
+ * The header keys of the .txt input (id, nombre, lat, lon, radio) stay in Spanish
+ * because they are typed on site by the person walking the mall.
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
@@ -43,7 +46,7 @@ function slug(name: string): string {
 async function main(): Promise<void> {
   const venueId = process.argv[2];
   if (!venueId) {
-    console.error('Uso: npm run venue --workspace=@yapa/seed -- <venue-id>');
+    console.error('Usage: npm run venue --workspace=@yapa/seed -- <venue-id>');
     process.exit(1);
   }
 
@@ -52,8 +55,8 @@ async function main(): Promise<void> {
 
   const header: Record<string, string> = {};
   const tenants: Tenant[] = [];
-  const sinCategoria: string[] = [];
-  const desconocidas: Array<{ name: string; category: string }> = [];
+  const withoutCategory: string[] = [];
+  const unknownCategories: Array<{ name: string; category: string }> = [];
 
   let inTenants = false;
   let lineNo = 0;
@@ -81,13 +84,13 @@ async function main(): Promise<void> {
     if (!name) continue;
 
     if (category === '' || category === '?') {
-      sinCategoria.push(name);
+      withoutCategory.push(name);
       continue;
     }
 
     const mcc = CATEGORY_TO_MCC[category];
     if (!mcc) {
-      desconocidas.push({ name, category });
+      unknownCategories.push({ name, category });
       continue;
     }
 
@@ -102,7 +105,7 @@ async function main(): Promise<void> {
 
   for (const field of ['id', 'nombre', 'lat', 'lon', 'radio']) {
     if (!header[field]) {
-      throw new Error(`Falta el campo "${field}" en la cabecera de ${inPath}`);
+      throw new Error(`Missing field "${field}" in the header of ${inPath}`);
     }
   }
 
@@ -126,24 +129,26 @@ async function main(): Promise<void> {
   const outPath = resolve(VENUES_DIR, `${venueId}.json`);
   await writeFile(outPath, `${JSON.stringify(venue, null, 2)}\n`, 'utf8');
 
-  console.log(`${venue.name}: ${tenants.length} locales -> ${outPath}\n`);
-  console.log('Reparto por MCC:');
+  console.log(`${venue.name}: ${tenants.length} stores -> ${outPath}\n`);
+  console.log('Breakdown by MCC:');
   for (const [mcc, count] of Object.entries(mccBreakdown).sort()) {
     console.log(`  ${mcc}: ${count}`);
   }
 
-  if (sinCategoria.length > 0) {
+  if (withoutCategory.length > 0) {
     console.log(
-      `\n${sinCategoria.length} local(es) sin categoria, quedaron afuera del seed:`,
+      `\n${withoutCategory.length} store(s) with no category, left out of the seed:`,
     );
-    for (const name of sinCategoria) console.log(`  ${name}`);
-    console.log('  Mejor eso que adivinar el MCC.');
+    for (const name of withoutCategory) console.log(`  ${name}`);
+    console.log('  Better that than guessing the MCC.');
   }
 
-  if (desconocidas.length > 0) {
-    console.log(`\n${desconocidas.length} categoria(s) que no existen en el vocabulario:`);
-    for (const d of desconocidas) console.log(`  ${d.name} -> "${d.category}"`);
-    console.log(`\n  Categorias validas: ${knownCategories().join(' ')}`);
+  if (unknownCategories.length > 0) {
+    console.log(
+      `\n${unknownCategories.length} category value(s) missing from the vocabulary:`,
+    );
+    for (const d of unknownCategories) console.log(`  ${d.name} -> "${d.category}"`);
+    console.log(`\n  Valid categories: ${knownCategories().join(' ')}`);
     process.exitCode = 1;
   }
 }

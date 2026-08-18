@@ -36,38 +36,38 @@ type SeedFile = {
 async function main(): Promise<void> {
   const regionId = process.argv[2];
   if (!regionId) {
-    console.error('Uso: npm run build --workspace=@yapa/seed -- <region>');
+    console.error('Usage: npm run build --workspace=@yapa/seed -- <region>');
     process.exit(1);
   }
 
   const region = regionOrThrow(regionId);
-  console.log(`Consultando Overpass para ${region.label}...`);
+  console.log(`Querying Overpass for ${region.label}...`);
 
   const elements = await fetchOverpass(region.bbox);
-  console.log(`Overpass devolvio ${elements.length} elementos.`);
+  console.log(`Overpass returned ${elements.length} elements.`);
 
   const merchants: SeedMerchant[] = [];
-  let sinNombre = 0;
-  let sinMcc = 0;
-  let sinCoords = 0;
+  let droppedNoName = 0;
+  let droppedNoMcc = 0;
+  let droppedNoCoords = 0;
 
   for (const el of elements) {
     const tags = el.tags ?? {};
     const name = tags['name'];
     if (!name) {
-      sinNombre += 1;
+      droppedNoName += 1;
       continue;
     }
 
     const coords = coordsOf(el);
     if (!coords) {
-      sinCoords += 1;
+      droppedNoCoords += 1;
       continue;
     }
 
     const guess = guessMcc(tags);
     if (!guess) {
-      sinMcc += 1;
+      droppedNoMcc += 1;
       continue;
     }
 
@@ -91,6 +91,8 @@ async function main(): Promise<void> {
     mccBreakdown[m.mcc] = (mccBreakdown[m.mcc] ?? 0) + 1;
   }
 
+  // The Spanish strings below are payload written into data/, not code
+  // documentation. Changing them would drift from the seed files already committed.
   const seed: SeedFile = {
     region: region.id,
     label: region.label,
@@ -108,9 +110,12 @@ async function main(): Promise<void> {
   const outPath = resolve(DATA_DIR, `merchants.${region.id}.json`);
   await writeFile(outPath, `${JSON.stringify(seed, null, 2)}\n`, 'utf8');
 
-  console.log(`\nDescartados: ${sinNombre} sin nombre, ${sinMcc} sin mapeo a MCC, ${sinCoords} sin coordenadas.`);
-  console.log(`Guardados ${merchants.length} comercios en ${outPath}\n`);
-  console.log('Reparto por MCC:');
+  console.log(
+    `\nDropped: ${droppedNoName} with no name, ${droppedNoMcc} with no MCC mapping, ` +
+      `${droppedNoCoords} with no coordinates.`,
+  );
+  console.log(`Saved ${merchants.length} merchants to ${outPath}\n`);
+  console.log('Breakdown by MCC:');
   for (const [mcc, count] of Object.entries(mccBreakdown).sort()) {
     console.log(`  ${mcc}: ${count}`);
   }

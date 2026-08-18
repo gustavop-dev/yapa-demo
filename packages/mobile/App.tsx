@@ -19,12 +19,14 @@ import {
 } from './src/location';
 import { notifyInSeconds, notifyNow, setupNotifications } from './src/notifications';
 
+// The on screen copy stays in Spanish: it is what the founder reads during the call.
+
 type Screen = {
   busy: boolean;
   outcome: LocationOutcome | null;
   nearby: NearbyResult | null;
   decision: Decision | null;
-  /** Comercio elegido por el usuario cuando los candidatos discrepan. */
+  /** Merchant picked by the user when candidates disagree. */
   resolvedGroup: string | null;
   notice: string | null;
 };
@@ -61,8 +63,8 @@ export default function App() {
       return;
     }
 
-    // Guarda contra doble toque: hay un issue de Expo donde llamadas simultaneas
-    // a getCurrentPositionAsync cuelgan la promesa.
+    // Guard against a double tap: there is an Expo issue where simultaneous calls to
+    // getCurrentPositionAsync hang the promise.
     setScreen({ ...EMPTY, busy: true });
 
     const outcome = await requestFix();

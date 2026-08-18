@@ -3,25 +3,26 @@ import { MCC_CATALOG } from '@yapa/engine';
 import { CATEGORY_TO_MCC, knownCategories } from '../src/categories';
 import { guessMcc } from '../src/mcc-map';
 
-describe('vocabulario de siembra a mano', () => {
-  it('mapea toda categoria a un MCC que el catalogo sabe nombrar', () => {
-    const huerfanas = Object.entries(CATEGORY_TO_MCC).filter(
+describe('hand seeding vocabulary', () => {
+  it('maps every category to an MCC the catalog can name', () => {
+    const orphans = Object.entries(CATEGORY_TO_MCC).filter(
       ([, mcc]) => !MCC_CATALOG[mcc],
     );
 
-    // Una categoria que apunta a un MCC sin titulo llega a la UI como
-    // "MCC 1234 (sin titulo)", que es peor que no ofrecer la categoria.
-    expect(huerfanas).toEqual([]);
+    // A category pointing at an MCC with no title reaches the UI as
+    // "MCC 1234 (sin titulo)", which is worse than not offering the category.
+    expect(orphans).toEqual([]);
   });
 
-  it('usa solo slugs tipeables desde un telefono', () => {
+  it('uses only slugs that are typable from a phone', () => {
     for (const category of knownCategories()) {
       expect(category).toBe(category.toLowerCase());
       expect(category).not.toContain(' ');
     }
   });
 
-  it('cubre las categorias que un mall tiene seguro', () => {
+  it('covers the categories a mall is guaranteed to have', () => {
+    // The slugs stay in Spanish: they are typed by hand while seeding in Duitama.
     for (const needed of [
       'restaurante',
       'comida-rapida',
@@ -37,9 +38,9 @@ describe('vocabulario de siembra a mano', () => {
   });
 });
 
-describe('inferencia de MCC desde tags de OpenStreetMap', () => {
-  it('produce solo MCC que el catalogo sabe nombrar', () => {
-    // Recorre el mismo universo de tags que consulta la query de Overpass.
+describe('MCC inference from OpenStreetMap tags', () => {
+  it('produces only MCCs the catalog can name', () => {
+    // Walks the same universe of tags the Overpass query asks for.
     const tagPairs: Array<[string, string]> = [
       ['shop', 'supermarket'],
       ['shop', 'department_store'],
@@ -67,18 +68,18 @@ describe('inferencia de MCC desde tags de OpenStreetMap', () => {
     ];
 
     for (const [key, value] of tagPairs) {
-      const guess = guessMcc({ [key]: value, name: 'Comercio de prueba' });
-      expect(guess, `${key}=${value} no mapea`).not.toBeNull();
+      const guess = guessMcc({ [key]: value, name: 'Test merchant' });
+      expect(guess, `${key}=${value} does not map`).not.toBeNull();
       expect(MCC_CATALOG[guess!.mcc], `${key}=${value} -> MCC ${guess!.mcc}`).toBeTruthy();
     }
   });
 
-  it('no asume warehouse club por un tag generico de mayorista', () => {
-    // "Cereales Futurama" en Duitama esta tagueado shop=wholesale y es un mayorista
-    // de granos. La exclusion de warehouse clubs no le corresponde.
-    const generico = guessMcc({ shop: 'wholesale', name: 'Cereales Futurama' });
-    expect(generico?.mcc).not.toBe('5300');
-    expect(generico?.source).toBe('inferred-from-osm');
+  it('does not assume warehouse club from a generic wholesale tag', () => {
+    // "Cereales Futurama" in Duitama is tagged shop=wholesale and is a grain
+    // wholesaler. The warehouse club exclusion does not apply to it.
+    const generic = guessMcc({ shop: 'wholesale', name: 'Cereales Futurama' });
+    expect(generic?.mcc).not.toBe('5300');
+    expect(generic?.source).toBe('inferred-from-osm');
 
     const club = guessMcc({ shop: 'wholesale', name: 'Costco' });
     expect(club?.mcc).toBe('5300');
@@ -86,16 +87,16 @@ describe('inferencia de MCC desde tags de OpenStreetMap', () => {
     expect(club?.brandId).toBe('costco');
   });
 
-  it('conserva la marca cuando el tag manda, para exclusiones por nombre', () => {
-    // Una gasolinera de Costco es una gasolinera de verdad y codifica como tal,
-    // pero la marca tiene que viajar porque el emisor la excluye por nombre.
+  it('keeps the brand when the tag carries it, for name based exclusions', () => {
+    // A Costco gas station is a real gas station and codes as one, but the brand has
+    // to travel because the issuer excludes it by name.
     const gas = guessMcc({ amenity: 'fuel', name: 'Costco Gasoline' });
 
     expect(gas?.mcc).toBe('5541');
     expect(gas?.brandId).toBe('costco');
   });
 
-  it('devuelve null en un tag que no conoce, en vez de adivinar', () => {
+  it('returns null on an unknown tag instead of guessing', () => {
     expect(guessMcc({ shop: 'funeral_directors', name: 'X' })).toBeNull();
   });
 });

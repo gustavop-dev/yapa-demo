@@ -3,25 +3,24 @@ import costaMesa from './data/merchants.costa-mesa.json';
 import duitama from './data/merchants.duitama.json';
 
 /**
- * Los sets de comercios van embebidos en el binario.
+ * The merchant sets are embedded in the binary.
  *
- * Esto no es una limitacion del demo, es la arquitectura: la resolucion de candidatos
- * ocurre en el dispositivo, y por eso el backend nunca recibe una coordenada. No es
- * una promesa de politica de privacidad, es una propiedad del protocolo.
+ * This is not a limitation of the demo, it is the architecture: candidate resolution
+ * happens on device, which is why the backend never receives a coordinate. That is not
+ * a privacy policy promise, it is a property of the protocol.
  *
- * En produccion no se puede embarcar el catalogo de un pais entero, y ahi la respuesta
- * es Overture Maps con indice espacial en backend propio, sirviendo por celda
- * geografica gruesa. Google Places no sirve para eso: su ToS prohibe almacenar
- * nombres y categorias.
+ * In production a whole country catalog cannot be shipped, and the answer there is
+ * Overture Maps with a spatial index on our own backend, served by coarse geographic
+ * cell. Google Places cannot do that job: its ToS forbids storing names and categories.
  *
- * Regenerar con: npm run sync-data --workspace=@yapa/mobile
+ * Regenerate with: npm run sync-data --workspace=@yapa/mobile
  */
 
 export type Region = {
   id: string;
   label: string;
   merchants: Merchant[];
-  /** Un punto con densidad real, para ensayar y para simular ubicacion. */
+  /** A point with real density, for rehearsing and for simulating location. */
   demoPoint: { lat: number; lon: number; note: string };
 };
 
@@ -48,7 +47,7 @@ export const REGIONS: Region[] = [
   },
 ];
 
-/** Todos los comercios juntos: el fix real decide en cual region cae. */
+/** Every merchant together: the real fix decides which region it lands in. */
 export const ALL_MERCHANTS: Merchant[] = REGIONS.flatMap((r) => r.merchants);
 
 export const ATTRIBUTION = '(c) OpenStreetMap contributors, ODbL 1.0';

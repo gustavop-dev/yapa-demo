@@ -8,10 +8,10 @@ import {
 import { geohash, buildConfirmation } from '../src/privacy';
 import { FOOD_COURT, ORIGIN, TARGET } from './fixtures';
 
-describe('la ubicacion es un filtro de candidatos, no una respuesta', () => {
-  it('rechaza el fix cuando el error horizontal supera el umbral util', () => {
-    // El modo aproximado de Android da unos 3 kilometros cuadrados. Con ese error
-    // la lista de candidatos aparentaria una precision que no tenemos.
+describe('location is a candidate filter, not an answer', () => {
+  it('rejects the fix when horizontal error is above the usable threshold', () => {
+    // Android approximate mode gives about 3 square kilometers. With that error the
+    // candidate list would fake a precision we do not have.
     const result = resolveNearby(ORIGIN, 1500, [TARGET, ...FOOD_COURT]);
 
     expect(result.status).toBe('accuracy-too-low');
@@ -19,13 +19,13 @@ describe('la ubicacion es un filtro de candidatos, no una respuesta', () => {
     expect(result.thresholdM).toBe(PRECISION.unusableAccuracyM);
   });
 
-  it('agranda el radio de busqueda cuando el fix es peor', () => {
+  it('widens the search radius when the fix is worse', () => {
     expect(candidateRadiusM(5)).toBe(PRECISION.minRadiusM);
     expect(candidateRadiusM(100)).toBe(200);
     expect(candidateRadiusM(450)).toBe(PRECISION.maxRadiusM);
   });
 
-  it('devuelve candidatos ordenados por distancia', () => {
+  it('returns candidates sorted by distance', () => {
     const result = resolveNearby(ORIGIN, 20, [TARGET, ...FOOD_COURT]);
 
     expect(result.status).toBe('ok');
@@ -35,21 +35,21 @@ describe('la ubicacion es un filtro de candidatos, no una respuesta', () => {
     expect(distances).toEqual([...distances].sort((a, b) => a - b));
   });
 
-  it('distingue no encontrar nada de no poder ubicar', () => {
+  it('tells finding nothing apart from not being able to locate', () => {
     const faraway = { lat: 40.7128, lon: -74.006 };
     const result = resolveNearby(faraway, 20, [TARGET]);
     expect(result.status).toBe('no-candidates');
   });
 
-  it('mide distancias en metros con sentido', () => {
+  it('measures distances in sane meters', () => {
     const oneDegreeNorth = { lat: ORIGIN.lat + 1, lon: ORIGIN.lon };
     expect(haversineM(ORIGIN, oneDegreeNorth)).toBeGreaterThan(110_000);
     expect(haversineM(ORIGIN, oneDegreeNorth)).toBeLessThan(112_000);
   });
 });
 
-describe('lo que se persiste despues de confirmar', () => {
-  it('guarda geohash de nivel 6, que queda fuera de la definicion de Maryland', () => {
+describe('what gets persisted after a confirmation', () => {
+  it('stores a level 6 geohash, which stays outside the Maryland definition', () => {
     const confirmation = buildConfirmation(
       TARGET.id,
       TARGET,
@@ -61,7 +61,7 @@ describe('lo que se persiste despues de confirmar', () => {
     expect(confirmation.hourBucket).toBe(14);
   });
 
-  it('no incluye coordenadas crudas en ningun campo', () => {
+  it('includes no raw coordinates in any field', () => {
     const confirmation = buildConfirmation(TARGET.id, TARGET, new Date());
     const keys = Object.keys(confirmation);
 
@@ -70,14 +70,14 @@ describe('lo que se persiste despues de confirmar', () => {
     expect(JSON.stringify(confirmation)).not.toContain(String(TARGET.lon));
   });
 
-  it('codifica geohash contra valores de referencia conocidos', () => {
-    // Ejemplo canonico de la especificacion: ezs42 decodifica a (42.6, -5.6).
+  it('encodes geohashes against known reference values', () => {
+    // Canonical example from the spec: ezs42 decodes to (42.6, -5.6).
     expect(geohash({ lat: 42.6, lon: -5.6 }, 5)).toBe('ezs42');
     expect(geohash({ lat: 51.5074, lon: -0.1278 }, 6)).toBe('gcpvj0');
     expect(geohash({ lat: 48.8583, lon: 2.2945 }, 6)).toBe('u09tun');
   });
 
-  it('mete en la misma celda de nivel 6 a comercios de la misma cuadra', () => {
+  it('puts merchants on the same block into the same level 6 cell', () => {
     const a = geohash(TARGET, 6);
     const b = geohash(FOOD_COURT[0]!, 6);
     expect(a).toBe(b);

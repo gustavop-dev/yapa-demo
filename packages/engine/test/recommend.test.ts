@@ -10,8 +10,8 @@ import {
   WHOLESALE_CLUB,
 } from './fixtures';
 
-describe('el caso canonico de Estados Unidos: Target no es un supermercado', () => {
-  it('no aplica la regla de supermercados en un MCC 5310, y gana la tasa plana', () => {
+describe('the canonical US case: Target is not a supermarket', () => {
+  it('does not apply the supermarket rule to MCC 5310, so the flat rate wins', () => {
     const rec = recommend(TARGET, CARDS);
 
     expect(rec.mcc.code).toBe('5310');
@@ -20,7 +20,7 @@ describe('el caso canonico de Estados Unidos: Target no es un supermercado', () 
     expect(rec.winner.valuePerDollar).toBeCloseTo(0.02);
   });
 
-  it('explica la exclusion citando el texto del emisor, no solo el numero', () => {
+  it('explains the exclusion by quoting the issuer, not just the number', () => {
     const rec = recommend(TARGET, CARDS);
 
     const bcpSupermarkets = rec.rejected.find(
@@ -35,17 +35,17 @@ describe('el caso canonico de Estados Unidos: Target no es un supermercado', () 
     );
   });
 
-  it('lista como rechazada toda regla que habria ganado si aplicara', () => {
+  it('lists as rejected every rule that would have won if it applied', () => {
     const rec = recommend(TARGET, CARDS);
     const rejectedIds = rec.rejected.map((r) => r.rule.id);
 
-    // 6% de BCP y 4x de Gold valen mas que el 2% ganador, asi que el usuario
-    // merece saber por que no las puede usar.
+    // BCP 6% and Gold 4x are worth more than the winning 2%, so the user deserves to
+    // know why they cannot use them.
     expect(rejectedIds).toContain('amex-bcp-supermarkets');
     expect(rejectedIds).toContain('amex-gold-supermarkets');
   });
 
-  it('trata al club mayorista igual que al superstore', () => {
+  it('treats the warehouse club the same as the superstore', () => {
     const rec = recommend(WHOLESALE_CLUB, CARDS);
 
     expect(rec.mcc.code).toBe('5300');
@@ -60,8 +60,8 @@ describe('el caso canonico de Estados Unidos: Target no es un supermercado', () 
   });
 });
 
-describe('un supermercado de verdad si activa la categoria', () => {
-  it('elige el 6% de Blue Cash Preferred sobre el 4x de Gold', () => {
+describe('a real supermarket does trigger the category', () => {
+  it('picks the Blue Cash Preferred 6% over the Gold 4x', () => {
     const rec = recommend(SUPERMARKET, CARDS);
 
     expect(rec.mcc.code).toBe('5411');
@@ -71,7 +71,7 @@ describe('un supermercado de verdad si activa la categoria', () => {
     expect(rec.winner.valueIsEstimated).toBe(false);
   });
 
-  it('marca como estimada la valoracion cuando la tarjeta acumula puntos', () => {
+  it('marks the valuation as estimated when the card earns points', () => {
     const rec = recommend(SUPERMARKET, CARDS);
     const gold = rec.rejected.find((r) => r.cardId === 'amex-gold');
 
@@ -80,8 +80,8 @@ describe('un supermercado de verdad si activa la categoria', () => {
   });
 });
 
-describe('5541 contra 5542: el mismo surtidor, distinto MCC', () => {
-  it('paga con la de 3% cuando el MCC es 5541 (Service Stations)', () => {
+describe('5541 versus 5542: same pump, different MCC', () => {
+  it('pays with the 3% card when the MCC is 5541 (Service Stations)', () => {
     const rec = recommend(GAS_STATION, CARDS);
 
     expect(rec.winner.cardId).toBe('amex-bcp');
@@ -89,7 +89,7 @@ describe('5541 contra 5542: el mismo surtidor, distinto MCC', () => {
     expect(rec.winner.valuePerDollar).toBeCloseTo(0.03);
   });
 
-  it('no adivina en 5542: reporta la incertidumbre y cae a la tasa plana', () => {
+  it('does not guess on 5542: it reports the uncertainty and falls to the flat rate', () => {
     const rec = recommend(FUEL_PUMP, CARDS);
 
     expect(rec.mcc.code).toBe('5542');
@@ -101,7 +101,7 @@ describe('5541 contra 5542: el mismo surtidor, distinto MCC', () => {
   });
 });
 
-describe('exclusiones por marca: el MCC es necesario pero no suficiente', () => {
+describe('brand exclusions: the MCC is necessary but not sufficient', () => {
   const chevron: Merchant = {
     id: 'chevron',
     name: 'Chevron',
@@ -121,7 +121,7 @@ describe('exclusiones por marca: el MCC es necesario pero no suficiente', () => 
     lon: -117.931,
   };
 
-  it('da respuestas distintas para dos gasolineras con el mismo MCC', () => {
+  it('gives different answers for two gas stations sharing an MCC', () => {
     const a = recommend(chevron, CARDS);
     const b = recommend(costcoGas, CARDS);
 
@@ -130,7 +130,7 @@ describe('exclusiones por marca: el MCC es necesario pero no suficiente', () => 
     expect(b.winner.cardId).toBe('citi-double-cash');
   });
 
-  it('explica que la exclusion es por nombre de marca, no por categoria', () => {
+  it('explains that the exclusion is by brand name, not by category', () => {
     const rec = recommend(costcoGas, CARDS);
     const gas = rec.rejected.find((r) => r.rule.id === 'amex-bcp-gas');
 
@@ -141,8 +141,8 @@ describe('exclusiones por marca: el MCC es necesario pero no suficiente', () => 
   });
 });
 
-describe('honestidad del catalogo', () => {
-  it('toda regla sin fuente citada esta marcada como no verificada', () => {
+describe('catalog honesty', () => {
+  it('marks as unverified every rule with no cited source', () => {
     for (const card of CARDS) {
       for (const rule of card.rules) {
         if (rule.provenance.verified) {
@@ -155,7 +155,7 @@ describe('honestidad del catalogo', () => {
     }
   });
 
-  it('toda tarjeta de puntos declara que su valuacion es un supuesto propio', () => {
+  it('makes every points card declare that its valuation is our own assumption', () => {
     for (const card of CARDS) {
       if (card.pointValueUsd !== null) {
         expect(card.pointValueNote).toContain('NO es un dato del emisor');

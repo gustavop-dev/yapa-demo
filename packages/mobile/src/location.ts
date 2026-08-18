@@ -2,18 +2,18 @@ import * as Location from 'expo-location';
 import { Linking } from 'react-native';
 
 /**
- * Ubicacion en foreground, con accion explicita del usuario.
+ * Foreground location, behind an explicit user action.
  *
- * Decision de compliance, no de bateria: este archivo NUNCA puede usar
- * requestBackgroundPermissionsAsync, startLocationUpdatesAsync ni
- * startGeofencingAsync. Todas existen en expo-location y ninguna hace falta.
+ * A compliance decision, not a battery one: this file may NEVER use
+ * requestBackgroundPermissionsAsync, startLocationUpdatesAsync or
+ * startGeofencingAsync. All of them exist in expo-location and none of them is needed.
  *
- * Pedir background location en Android abre la pantalla de Ajustes desde Android 11,
- * obliga a una revision extra de Google Play, y contradice la postura de privacidad
- * que es el argumento central del producto.
+ * Asking for background location on Android opens the Settings screen since Android
+ * 11, forces an extra Google Play review, and contradicts the privacy stance that is
+ * the central argument of the product.
  */
 
-/** Cuanto esperamos un fix antes de rendirnos. Ver TIMEOUT abajo. */
+/** How long we wait for a fix before giving up. See fixWithTimeout below. */
 const FIX_TIMEOUT_MS = 15_000;
 
 export type Precision = 'fine' | 'coarse';
@@ -27,25 +27,25 @@ export type LocationOutcome =
       kind: 'fix';
       lat: number;
       lon: number;
-      /** Radio de incertidumbre en metros. null si el proveedor no lo informa. */
+      /** Uncertainty radius in meters. null if the provider does not report it. */
       accuracyM: number | null;
-      /** Lo que el usuario concedio, que no es lo mismo que lo que pedimos. */
+      /** What the user granted, which is not the same as what we asked for. */
       precision: Precision;
-      /** true si la posicion viene de un mock provider. Solo Android. */
+      /** true if the position comes from a mock provider. Android only. */
       mocked: boolean;
       timestamp: number;
     };
 
 /**
- * Lee la precision realmente concedida.
+ * Reads the precision actually granted.
  *
- * Esta funcion existe porque en Android `granted` MIENTE. Verificado leyendo el
- * modulo nativo de expo-location: `status`, `granted` y `canAskAgain` se calculan
- * chequeando solo ACCESS_COARSE_LOCATION. Si el usuario elige "Aproximada",
- * `granted` devuelve true y `status` devuelve 'granted', y la app cree que tiene
- * precision cuando en realidad tiene un area de unos 3 kilometros cuadrados.
+ * This function exists because on Android `granted` LIES. Verified by reading the
+ * native expo-location module: `status`, `granted` and `canAskAgain` are computed by
+ * checking ACCESS_COARSE_LOCATION only. If the user picks "Approximate", `granted`
+ * returns true and `status` returns 'granted', and the app believes it has precision
+ * when what it really has is an area of about 3 square kilometers.
  *
- * El unico dato confiable es `android.accuracy`.
+ * The only trustworthy field is `android.accuracy`.
  */
 export function precisionOf(
   response: Location.LocationPermissionResponse,
@@ -54,7 +54,7 @@ export function precisionOf(
   if (android === 'fine') return 'fine';
   if (android === 'coarse') return 'coarse';
 
-  // iOS, para cuando exista un build de iOS. Hoy no se compila ni se prueba.
+  // iOS, for when an iOS build exists. Today it is neither compiled nor tested.
   const ios = response.ios?.accuracy;
   if (ios === 'full') return 'fine';
   if (ios === 'reduced') return 'coarse';
@@ -63,8 +63,8 @@ export function precisionOf(
 }
 
 /**
- * Pide permiso sin disparar el dialogo si ya lo tenemos.
- * Devuelve la respuesta cruda para que quien llama decida que hacer.
+ * Asks for permission without firing the dialog when we already have it.
+ * Returns the raw response so the caller decides what to do.
  */
 export async function ensurePermission(): Promise<Location.LocationPermissionResponse> {
   const current = await Location.getForegroundPermissionsAsync();
@@ -73,15 +73,16 @@ export async function ensurePermission(): Promise<Location.LocationPermissionRes
 }
 
 /**
- * Pide el upgrade de aproximada a precisa.
+ * Asks for the upgrade from approximate to precise.
  *
- * En Android 12 a 16 no existe equivalente a requestTemporaryFullAccuracyAuthorization
- * de iOS. La unica via documentada es volver a pedir FINE y COARSE juntos, y el
- * sistema muestra un dialogo distinto, de upgrade. expo-location ya pide los dos
- * juntos internamente, asi que alcanza con volver a llamar la misma funcion.
+ * On Android 12 to 16 there is no equivalent to iOS
+ * requestTemporaryFullAccuracyAuthorization. The only documented path is to request
+ * FINE and COARSE together again, and the system shows a different, upgrade oriented
+ * dialog. expo-location already asks for both together internally, so calling the same
+ * function again is enough.
  *
- * Ojo: Android considera denegacion permanente al segundo rechazo, y despues el
- * dialogo deja de aparecer. Por eso esto se ofrece, no se insiste.
+ * Careful: Android treats the second refusal as a permanent denial, and after that the
+ * dialog stops appearing. That is why this is offered, not insisted on.
  */
 export async function requestPrecisionUpgrade(): Promise<Precision | null> {
   const response = await Location.requestForegroundPermissionsAsync();
@@ -93,15 +94,15 @@ export function openAppSettings(): void {
 }
 
 /**
- * Un solo fix, con timeout propio.
+ * A single fix, with a timeout of our own.
  *
- * El timeout no es paranoia. Verificado en el fuente de expo-location 57.0.11:
- * requestSingleLocation llama getCurrentLocation(request, null) pasando null como
- * CancellationToken, y no hay temporizador en ninguna capa. Si el proveedor nunca
- * devuelve un fix, la promesa no resuelve ni rechaza (issue expo/expo#39851).
- * LocationOptions tampoco expone una opcion `timeout`.
+ * The timeout is not paranoia. Verified in the expo-location 57.0.11 source:
+ * requestSingleLocation calls getCurrentLocation(request, null) passing null as the
+ * CancellationToken, and there is no timer at any layer. If the provider never returns
+ * a fix, the promise neither resolves nor rejects (issue expo/expo#39851).
+ * LocationOptions does not expose a `timeout` option either.
  *
- * En una demo en vivo, una promesa que nunca resuelve es una pantalla congelada.
+ * In a live demo, a promise that never resolves is a frozen screen.
  */
 async function fixWithTimeout(): Promise<Location.LocationObject> {
   let timer: ReturnType<typeof setTimeout> | undefined;
@@ -121,11 +122,10 @@ async function fixWithTimeout(): Promise<Location.LocationObject> {
 }
 
 /**
- * El flujo completo, en el orden que Android exige.
+ * The full flow, in the order Android requires.
  *
- * Se llama SOLO desde el handler del tap, nunca al montar la pantalla. El tap es lo
- * que justifica pedir la ubicacion, y es tambien lo que la hace defendible frente a
- * la regulacion de Estados Unidos.
+ * Called ONLY from the tap handler, never on screen mount. The tap is what justifies
+ * asking for location, and it is also what makes it defensible under US regulation.
  */
 export async function requestFix(): Promise<LocationOutcome> {
   try {

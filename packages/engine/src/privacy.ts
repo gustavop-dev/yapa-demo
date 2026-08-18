@@ -3,17 +3,17 @@ import type { Coords } from './types';
 const BASE32 = '0123456789bcdefghjkmnpqrstuvwxyz';
 
 /**
- * Precision de geohash que guardamos como dato de entrenamiento.
+ * Geohash precision we store as training data.
  *
- * Maryland define "precise geolocation" como lo que ubica al dispositivo dentro de
- * un radio de 1.750 pies (unos 533 m). Las celdas aproximadas por nivel:
+ * Maryland defines "precise geolocation" as anything that locates the device within a
+ * 1,750 foot radius (about 533 m). Approximate cell sizes per level:
  *
- *   nivel 5  ->  4,9 km x 4,9 km      queda fuera de la definicion
- *   nivel 6  ->  1,2 km x 0,61 km     queda fuera, por poco (610 m contra 533 m)
- *   nivel 7  ->  153 m x 153 m        cae dentro de la definicion
+ *   level 5  ->  4.9 km x 4.9 km      outside the definition
+ *   level 6  ->  1.2 km x 0.61 km     outside, barely (610 m against 533 m)
+ *   level 7  ->  153 m x 153 m        inside the definition
  *
- * O sea que la precision que haria util al prior es exactamente la que dispara las
- * reglas de dato sensible. Elegimos el nivel 6 a proposito.
+ * So the precision that would make the prior useful is exactly the one that trips the
+ * sensitive data rules. Level 6 is a deliberate choice.
  */
 export const TRAINING_GEOHASH_PRECISION = 6;
 
@@ -63,11 +63,11 @@ export function geohash(point: Coords, precision: number): string {
 }
 
 /**
- * Lo unico que se persiste despues de que el usuario confirma.
+ * The only thing persisted after the user confirms.
  *
- * No hay lat/lon crudos aca, y es a proposito: el backend no puede filtrar una
- * ubicacion que nunca recibio. Es una propiedad del protocolo, no una promesa de
- * la politica de privacidad.
+ * There are no raw lat/lon here, on purpose: the backend cannot leak a location it
+ * never received. That is a property of the protocol, not a promise in the privacy
+ * policy.
  */
 export type TrainingConfirmation = {
   merchantId: string;

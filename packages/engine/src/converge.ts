@@ -4,9 +4,9 @@ import type { Card, Merchant, Recommendation } from './types';
 export type AnswerGroup = {
   cardId: string;
   cardName: string;
-  /** Los comercios que llevan a esta misma respuesta. */
+  /** The merchants that lead to this same answer. */
   merchants: Merchant[];
-  /** Representante del grupo, para poder mostrar el porque sin preguntar todavia. */
+  /** Group representative, so the why can be shown before asking anything. */
   recommendation: Recommendation;
 };
 
@@ -20,19 +20,19 @@ export type Decision =
   | { kind: 'ambiguous'; groups: AnswerGroup[] };
 
 /**
- * Decide si hace falta preguntarle algo al usuario.
+ * Decides whether the user has to be asked anything at all.
  *
- * El punto no es identificar el comercio: es identificar la tarjeta. Si todos los
- * candidatos cercanos llevan a la misma tarjeta, no hay nada que preguntar aunque
- * no sepamos en cual de los ocho locales del food court esta parado.
+ * The point is not to identify the merchant: it is to identify the card. If every
+ * nearby candidate leads to the same card there is nothing to ask, even if we do not
+ * know which of the eight food court stores the user is standing in.
  *
- * Y cuando si hay que preguntar, se agrupa por respuesta y no por comercio: ocho
- * candidatos que producen dos respuestas distintas son una pregunta binaria, no
- * una lista de ocho.
+ * And when asking is unavoidable, candidates are grouped by answer and not by
+ * merchant: eight candidates that produce two distinct answers are a binary question,
+ * not a list of eight.
  */
 export function decide(candidates: Merchant[], cards: Card[]): Decision {
   if (candidates.length === 0) {
-    throw new Error('decide() necesita al menos un comercio candidato');
+    throw new Error('decide() needs at least one candidate merchant');
   }
 
   const byCard = new Map<string, AnswerGroup>();
@@ -66,7 +66,7 @@ export function decide(candidates: Merchant[], cards: Card[]): Decision {
     };
   }
 
-  // El grupo mas grande primero: es la respuesta mas probable a priori.
+  // Largest group first: it is the most likely answer a priori.
   groups.sort((a, b) => b.merchants.length - a.merchants.length);
   return { kind: 'ambiguous', groups };
 }

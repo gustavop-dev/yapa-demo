@@ -1,14 +1,14 @@
 import type { Merchant } from '../src/types';
 
 /**
- * Comercios de prueba. Coordenadas cerca de South Coast Plaza, Costa Mesa, sur de
- * California. Son inventadas a nivel de metros: sirven para ejercitar la geometria,
- * no para navegar. El seed real se genera desde OpenStreetMap.
+ * Test merchants. Coordinates near South Coast Plaza, Costa Mesa, southern
+ * California. They are made up at the meter level: they exercise the geometry, they do
+ * not navigate. The real seed is generated from OpenStreetMap.
  */
 const BASE_LAT = 33.6903;
 const BASE_LON = -117.8887;
 
-/** Desplaza unos metros desde el punto base, para armar racimos de comercios. */
+/** Offsets a few meters from the base point, to build clusters of merchants. */
 function at(northM: number, eastM: number): { lat: number; lon: number } {
   const dLat = northM / 111_320;
   const dLon = eastM / (111_320 * Math.cos((BASE_LAT * Math.PI) / 180));
@@ -50,7 +50,7 @@ export const GAS_STATION: Merchant = {
   ...at(-25, -45),
 };
 
-/** Mismo surtidor fisico que GAS_STATION, pagando en la bomba. */
+/** Same physical station as GAS_STATION, paying at the pump. */
 export const FUEL_PUMP: Merchant = {
   id: 'shell-harbor-blvd-pump',
   name: 'Shell (surtidor)',
@@ -59,7 +59,7 @@ export const FUEL_PUMP: Merchant = {
   ...at(-25, -44),
 };
 
-/** Ocho locales de un food court, todos MCC de comida. */
+/** Eight food court stores, all of them food MCCs. */
 export const FOOD_COURT: Merchant[] = [
   { id: 'fc-1', name: 'Panda Express', mcc: '5814' },
   { id: 'fc-2', name: 'Chipotle', mcc: '5814' },
@@ -75,7 +75,7 @@ export const FOOD_COURT: Merchant[] = [
   ...at(5 + i, 5 + i),
 }));
 
-/** Un racimo mixto: seis locales de comida y dos superstores pegados. */
+/** A mixed cluster: six food stores and two superstores right next to them. */
 export const MIXED_CLUSTER: Merchant[] = [
   ...FOOD_COURT.slice(0, 6),
   TARGET,

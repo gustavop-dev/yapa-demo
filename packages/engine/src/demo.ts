@@ -1,7 +1,10 @@
 /**
- * Demo de consola del motor. Corre con `npm run demo` y no necesita telefono,
- * GPS, red ni app. Existe para que el bloque de mayor valor del proyecto sea
- * mostrable por si solo.
+ * Console demo of the engine. Runs with `npm run demo` and needs no phone, GPS,
+ * network or app. It exists so the highest value block of the project can be shown on
+ * its own.
+ *
+ * The printed output stays in Spanish: it is narration for the live call, not code
+ * documentation.
  */
 import { CARDS } from './cards';
 import { decide } from './converge';

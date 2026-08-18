@@ -1,13 +1,17 @@
 /**
- * Traduccion de tags de OpenStreetMap a MCC.
+ * Translation from OpenStreetMap tags to MCC.
  *
- * Todo lo que sale de aca es una INFERENCIA. Ninguna red ni emisor publica el MCC
- * por comercio, y la unica herramienta publica es el Visa Supplier Locator. Un tag
- * de OSM describe que vende el local, no con que codigo lo dio de alta su
- * adquirente, que es lo que realmente decide la recompensa.
+ * Everything coming out of here is an INFERENCE. No network or issuer publishes MCC
+ * per merchant, and the only public tool is the Visa Supplier Locator. An OSM tag
+ * describes what the store sells, not the code its acquirer registered it under, which
+ * is what actually decides the reward.
  *
- * Por eso todo sale marcado 'inferred-from-osm' y solo los comercios que verifiques
- * a mano suben a 'visa-supplier-locator'.
+ * That is why everything comes out marked 'inferred-from-osm' and only merchants
+ * verified by hand are promoted to 'visa-supplier-locator'.
+ *
+ * The note strings stay in Spanish: they are copied verbatim into the generated seed
+ * files under data/, so translating them here would silently drift from the data
+ * already committed.
  */
 
 export type OsmTags = Record<string, string>;
@@ -16,7 +20,7 @@ type Rule = {
   key: string;
   value: string;
   mcc: string;
-  /** Por que este mapeo, cuando no es obvio. */
+  /** Why this mapping, when it is not obvious. */
   note?: string;
 };
 
@@ -27,10 +31,10 @@ const RULES: Rule[] = [
     key: 'shop',
     value: 'wholesale',
     mcc: '5399',
-    // shop=wholesale NO significa warehouse club. En Estados Unidos suele ser
-    // Costco o Sam's, pero en Colombia el mismo tag cae sobre mayoristas de granos
-    // como "Cereales Futurama". El 5300 solo puede salir de una marca conocida,
-    // porque la exclusion de warehouse clubs no aplica a un mayorista de arroz.
+    // shop=wholesale does NOT mean warehouse club. In the US it is usually Costco or
+    // Sam's, but in Colombia the same tag lands on grain wholesalers like "Cereales
+    // Futurama". 5300 can only come from a known brand, because the warehouse club
+    // exclusion does not apply to a rice wholesaler.
     note: 'shop=wholesale generico. No se asume warehouse club: eso exige marca conocida.',
   },
   {
@@ -81,11 +85,11 @@ const RULES: Rule[] = [
 ];
 
 /**
- * Marcas cuyo MCC es reporte de comunidad, no fuente oficial.
+ * Brands whose MCC is community reported, not an official source.
  *
- * Existen porque son justamente los casos que rompen la inferencia por tag: OSM
- * etiqueta a Target como department_store o supermarket segun quien lo mapeo, y
- * ninguna de las dos cosas es lo que decide la recompensa.
+ * They exist because these are exactly the cases that break tag inference: OSM tags
+ * Target as department_store or supermarket depending on who mapped it, and neither of
+ * those is what decides the reward.
  */
 const BRAND_OVERRIDES: Array<{
   match: RegExp;
@@ -138,15 +142,15 @@ const BRAND_OVERRIDES: Array<{
 ];
 
 /**
- * Tags donde el MCC de la marca manda sobre el del tag.
+ * Tags where the brand MCC wins over the tag MCC.
  *
- * Solo aplica a tags de mercaderia general, porque ahi es donde OSM y el MCC
- * discrepan: Target esta mapeado como department_store o supermarket segun quien lo
- * cargo, y ninguna de las dos cosas es lo que decide la recompensa.
+ * This only applies to general merchandise tags, because that is where OSM and MCC
+ * disagree: Target is mapped as department_store or supermarket depending on who
+ * entered it, and neither is what decides the reward.
  *
- * En cambio una gasolinera de Costco es una gasolinera de verdad y codifica como
- * tal, asi que el tag gana y la marca queda solo como etiqueta. Esa distincion
- * importa: el emisor la excluye por nombre, no por categoria.
+ * A Costco gas station, on the other hand, is a real gas station and codes as one, so
+ * the tag wins and the brand stays only as a label. That distinction matters: the
+ * issuer excludes it by name, not by category.
  */
 const GENERAL_MERCHANDISE_TAGS = new Set([
   'shop=department_store',
@@ -195,8 +199,8 @@ export function guessMcc(tags: OsmTags): MccGuess | null {
       };
     }
 
-    // Sub-local de una marca conocida: manda el tag, pero la marca viaja igual
-    // porque hay reglas que excluyen por nombre.
+    // Sub location of a known brand: the tag wins, but the brand travels anyway
+    // because some rules exclude by name.
     return {
       mcc: fromTag.mcc,
       source: 'inferred-from-osm',

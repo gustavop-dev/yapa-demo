@@ -8,9 +8,9 @@ import { resolveNearby } from '../src/geo';
 import type { Merchant } from '../src/types';
 
 /**
- * Valida el seed generado desde OpenStreetMap. No prueba el motor: prueba que el
- * pipeline de datos sigue produciendo algo con el que el motor pueda trabajar, y
- * que los escenarios que necesita el demo siguen presentes despues de regenerarlo.
+ * Validates the seed generated from OpenStreetMap. It does not test the engine: it
+ * tests that the data pipeline keeps producing something the engine can work with, and
+ * that the scenarios the demo needs survive a regeneration.
  */
 const SEED_PATH = resolve(
   import.meta.dirname,
@@ -27,23 +27,23 @@ type Seed = {
 
 const seed = JSON.parse(readFileSync(SEED_PATH, 'utf8')) as Seed;
 
-describe('el seed de Costa Mesa', () => {
-  it('lleva atribucion y licencia, que ODbL exige', () => {
+describe('the Costa Mesa seed', () => {
+  it('carries the attribution and license ODbL requires', () => {
     expect(seed.attribution).toBe('(c) OpenStreetMap contributors');
     expect(seed.license).toBe('ODbL 1.0');
   });
 
-  it('usa solo MCC que el catalogo sabe nombrar', () => {
+  it('uses only MCCs the catalog can name', () => {
     const unknown = [
       ...new Set(seed.merchants.map((m) => m.mcc)),
     ].filter((mcc) => !MCC_CATALOG[mcc]);
 
-    // Un MCC sin titulo llegaria a la UI como "MCC 1234 (sin titulo)", que es peor
-    // que no mostrarlo. Si el mapa de OSM crece, el catalogo tiene que crecer igual.
+    // An MCC with no title would reach the UI as "MCC 1234 (sin titulo)", which is
+    // worse than not showing it. If the OSM map grows, the catalog has to grow too.
     expect(unknown).toEqual([]);
   });
 
-  it('deja todos los comercios dentro del bounding box declarado', () => {
+  it('keeps every merchant inside the declared bounding box', () => {
     for (const m of seed.merchants) {
       expect(m.lat).toBeGreaterThanOrEqual(seed.bbox.south);
       expect(m.lat).toBeLessThanOrEqual(seed.bbox.north);
@@ -52,7 +52,7 @@ describe('el seed de Costa Mesa', () => {
     }
   });
 
-  it('marca como community, no como inferido, todo MCC de marca conocida', () => {
+  it('marks every known brand MCC as community, not as inferred', () => {
     const superstores = seed.merchants.filter(
       (m) => m.mcc === '5310' || m.mcc === '5300',
     );
@@ -64,25 +64,25 @@ describe('el seed de Costa Mesa', () => {
     }
   });
 
-  it('conserva los escenarios que el demo necesita', () => {
+  it('preserves the scenarios the demo needs', () => {
     const byMcc = (mcc: string) => seed.merchants.filter((m) => m.mcc === mcc);
 
-    expect(byMcc('5411').length).toBeGreaterThan(0); // supermercado de verdad
+    expect(byMcc('5411').length).toBeGreaterThan(0); // real supermarket
     expect(byMcc('5310').length).toBeGreaterThan(0); // superstore
     expect(byMcc('5300').length).toBeGreaterThan(0); // warehouse club
-    expect(byMcc('5541').length).toBeGreaterThan(0); // gasolinera
-    expect(byMcc('5812').length).toBeGreaterThan(0); // restaurante
-    expect(byMcc('5814').length).toBeGreaterThan(0); // comida rapida
+    expect(byMcc('5541').length).toBeGreaterThan(0); // gas station
+    expect(byMcc('5812').length).toBeGreaterThan(0); // restaurant
+    expect(byMcc('5814').length).toBeGreaterThan(0); // fast food
   });
 
-  it('tiene una gasolinera de club mayorista, que es el caso fino', () => {
+  it('has a warehouse club gas station, which is the subtle case', () => {
     const clubGas = seed.merchants.filter(
       (m) => m.mcc === '5541' && m.brandId !== undefined,
     );
 
     expect(clubGas.length).toBeGreaterThan(0);
 
-    // Mismo MCC que una gasolinera normal, respuesta distinta.
+    // Same MCC as a regular gas station, different answer.
     const plain = seed.merchants.find(
       (m) => m.mcc === '5541' && m.brandId === undefined,
     );
@@ -92,7 +92,7 @@ describe('el seed de Costa Mesa', () => {
     );
   });
 
-  it('produce candidatos reales al resolver alrededor de un superstore', () => {
+  it('produces real candidates when resolving around a superstore', () => {
     const target = seed.merchants.find((m) => m.mcc === '5310');
     expect(target).toBeDefined();
 
@@ -104,7 +104,7 @@ describe('el seed de Costa Mesa', () => {
     expect(result.candidates[0]?.id).toBe(target!.id);
   });
 
-  it('no revienta el motor con ningun comercio del set', () => {
+  it('does not break the engine with any merchant in the set', () => {
     for (const m of seed.merchants) {
       const rec = recommend(m, CARDS);
       expect(rec.winner.valuePerDollar).toBeGreaterThan(0);

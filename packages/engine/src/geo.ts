@@ -17,15 +17,15 @@ export function haversineM(a: Coords, b: Coords): number {
 }
 
 /**
- * Umbrales de precision del demo.
+ * Accuracy thresholds for the demo.
  *
- * unusableAccuracyM es una decision de producto, no un limite de plataforma: por
- * encima de ese error el circulo de incertidumbre cubre decenas de locales en una
- * zona densa y la ubicacion deja de ser un filtro util. Preferimos decirlo antes
- * que devolver una lista que aparenta precision que no tenemos.
+ * unusableAccuracyM is a product decision, not a platform limit: above that error the
+ * uncertainty circle covers dozens of stores in a dense area and location stops being
+ * a useful filter. We would rather say so than return a list that fakes a precision we
+ * do not have.
  *
- * Referencia de por que esto importa: el modo aproximado de Android da unos 3
- * kilometros cuadrados, y el reduced accuracy de iOS entre 1 y 20 km.
+ * Why this matters: Android approximate mode gives about 3 square kilometers, and iOS
+ * reduced accuracy is between 1 and 20 km.
  */
 export const PRECISION = {
   unusableAccuracyM: 500,
@@ -33,7 +33,7 @@ export const PRECISION = {
   maxRadiusM: 400,
 } as const;
 
-/** El radio de busqueda sigue al error reportado, acotado por arriba y por abajo. */
+/** The search radius follows the reported error, clamped at both ends. */
 export function candidateRadiusM(accuracyM: number): number {
   const scaled = accuracyM * 2;
   return Math.min(PRECISION.maxRadiusM, Math.max(PRECISION.minRadiusM, scaled));
@@ -44,18 +44,18 @@ export type NearbyResult =
       status: 'ok';
       radiusM: number;
       candidates: MerchantCandidate[];
-      /** Presente cuando el fix cayo dentro de un edificio con locales adentro. */
+      /** Present when the fix landed inside a building that has stores in it. */
       venue?: { id: string; name: string };
     }
   | { status: 'accuracy-too-low'; accuracyM: number; thresholdM: number }
   | { status: 'no-candidates'; radiusM: number };
 
 /**
- * Encuentra el venue que contiene al punto, si hay alguno.
+ * Finds the venue containing the point, if there is one.
  *
- * Si el usuario esta adentro de un mall, el GPS no va a distinguir un local de
- * otro, asi que la respuesta correcta no es "el local mas cercano": es "estas en
- * este edificio, y estos son sus locales".
+ * If the user is inside a mall, GPS will not tell one store from another, so the right
+ * answer is not "the closest store": it is "you are in this building, and these are
+ * its stores".
  */
 function containingVenue(
   point: Coords,
@@ -66,9 +66,9 @@ function containingVenue(
 
   for (const venue of venues) {
     const distanceM = haversineM(point, venue);
-    // Se suma el error del fix: si el circulo de incertidumbre solapa el edificio,
-    // el usuario puede estar adentro. Exigir que el punto caiga exacto dentro de la
-    // huella seria tratar la coordenada como si fuera exacta.
+    // The fix error is added in: if the uncertainty circle overlaps the building, the
+    // user may well be inside. Requiring the point to fall exactly within the
+    // footprint would treat the coordinate as if it were exact.
     if (distanceM > venue.radiusM + accuracyM) continue;
     if (best === null || distanceM < best.distanceM) best = { venue, distanceM };
   }
@@ -95,9 +95,9 @@ export function resolveNearby(
 
   const venue = containingVenue(point, accuracyM, venues);
   if (venue && venue.tenants.length > 0) {
-    // Sin limite y sin ordenar por distancia: adentro del edificio todos los
-    // locales estan a la misma distancia efectiva. Recortar la lista aca seria
-    // descartar candidatos por un criterio que no existe.
+    // No limit and no distance sorting: inside the building every store sits at the
+    // same effective distance. Trimming the list here would drop candidates by a
+    // criterion that does not exist.
     return {
       status: 'ok',
       radiusM: venue.radiusM,

@@ -3,8 +3,8 @@ import { CARDS } from '../src/cards';
 import { decide } from '../src/converge';
 import { FOOD_COURT, MIXED_CLUSTER, TARGET } from './fixtures';
 
-describe('convergencia: preguntar solo cuando la respuesta cambia', () => {
-  it('no pregunta nada en un food court, aunque no sepa en cual de los ocho esta', () => {
+describe('convergence: ask only when the answer changes', () => {
+  it('asks nothing in a food court, even without knowing which of the eight', () => {
     const decision = decide(FOOD_COURT, CARDS);
 
     expect(decision.kind).toBe('converged');
@@ -12,18 +12,18 @@ describe('convergencia: preguntar solo cuando la respuesta cambia', () => {
 
     expect(decision.candidates).toHaveLength(8);
     expect(decision.cardId).toBe('amex-gold');
-    // 5812 y 5814 son MCC distintos y caen en la misma regla, asi que la
-    // ambiguedad de local no produce ambiguedad de respuesta.
+    // 5812 and 5814 are different MCCs that fall under the same rule, so store level
+    // ambiguity does not produce answer level ambiguity.
     expect(new Set(FOOD_COURT.map((m) => m.mcc)).size).toBe(2);
   });
 
-  it('agrupa por respuesta y no por comercio cuando si hay que preguntar', () => {
+  it('groups by answer and not by merchant when asking is unavoidable', () => {
     const decision = decide(MIXED_CLUSTER, CARDS);
 
     expect(decision.kind).toBe('ambiguous');
     if (decision.kind !== 'ambiguous') return;
 
-    // Ocho candidatos, dos respuestas posibles: la pregunta es binaria.
+    // Eight candidates, two possible answers: the question is binary.
     expect(MIXED_CLUSTER).toHaveLength(8);
     expect(decision.groups).toHaveLength(2);
 
@@ -31,18 +31,18 @@ describe('convergencia: preguntar solo cuando la respuesta cambia', () => {
     expect(total).toBe(8);
   });
 
-  it('ordena los grupos por tamano, que es la respuesta mas probable a priori', () => {
+  it('sorts groups by size, which is the most likely answer a priori', () => {
     const decision = decide(MIXED_CLUSTER, CARDS);
-    if (decision.kind !== 'ambiguous') throw new Error('esperaba ambiguo');
+    if (decision.kind !== 'ambiguous') throw new Error('expected an ambiguous decision');
 
     const sizes = decision.groups.map((g) => g.merchants.length);
     expect(sizes).toEqual([...sizes].sort((a, b) => b - a));
     expect(decision.groups[0]?.cardId).toBe('amex-gold');
   });
 
-  it('trae el porque ya calculado en cada grupo, para no pedir dos viajes', () => {
+  it('carries the why already computed in each group, to avoid a second round trip', () => {
     const decision = decide(MIXED_CLUSTER, CARDS);
-    if (decision.kind !== 'ambiguous') throw new Error('esperaba ambiguo');
+    if (decision.kind !== 'ambiguous') throw new Error('expected an ambiguous decision');
 
     for (const group of decision.groups) {
       expect(group.recommendation.winner.cardId).toBe(group.cardId);
@@ -50,7 +50,7 @@ describe('convergencia: preguntar solo cuando la respuesta cambia', () => {
     }
   });
 
-  it('converge cuando hay un solo candidato', () => {
+  it('converges when there is a single candidate', () => {
     const decision = decide([TARGET], CARDS);
     expect(decision.kind).toBe('converged');
   });

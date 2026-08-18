@@ -1,15 +1,16 @@
 /**
- * Vocabulario en espanol para sembrar un venue a mano, mapeado a MCC.
+ * Spanish vocabulary for hand seeding a venue, mapped to MCC.
  *
- * Existe porque el formato tiene que ser tipeable desde un telefono caminando un
- * mall. Pedir el MCC de memoria seria garantizar errores; pedir "farmacia" y
- * traducirlo aca es la unica forma de que el dato entre bien.
+ * It exists because the format has to be typable from a phone while walking a mall.
+ * Asking for the MCC from memory would guarantee mistakes; asking for "farmacia" and
+ * translating it here is the only way the data gets entered correctly. The slugs stay
+ * in Spanish on purpose: they are typed by a person on site.
  *
- * Todos los MCC de este mapa estan verificados contra el Visa Merchant Data
- * Standards Manual, abril 2026.
+ * Every MCC in this map is verified against the Visa Merchant Data Standards Manual,
+ * April 2026.
  */
 export const CATEGORY_TO_MCC: Record<string, string> = {
-  // Comida
+  // Food
   restaurante: '5812',
   'comida-rapida': '5814',
   cafe: '5814',
@@ -22,7 +23,7 @@ export const CATEGORY_TO_MCC: Record<string, string> = {
   tienda: '5499',
   fruteria: '5499',
 
-  // Ropa y accesorios
+  // Clothing and accessories
   ropa: '5651',
   'ropa-deportiva': '5655',
   zapatos: '5661',
@@ -32,7 +33,7 @@ export const CATEGORY_TO_MCC: Record<string, string> = {
   cosmeticos: '5977',
   perfumeria: '5977',
 
-  // Tecnologia
+  // Technology
   electronica: '5732',
   celulares: '4812',
   telefonia: '4812',
@@ -41,7 +42,7 @@ export const CATEGORY_TO_MCC: Record<string, string> = {
   discos: '5735',
   fotografia: '5946',
 
-  // Ocio
+  // Leisure
   libreria: '5942',
   papeleria: '5943',
   juguetes: '5945',
@@ -52,7 +53,7 @@ export const CATEGORY_TO_MCC: Record<string, string> = {
   gimnasio: '7997',
   mascotas: '5995',
 
-  // Servicios
+  // Services
   farmacia: '5912',
   droguería: '5912',
   drogueria: '5912',
@@ -63,12 +64,12 @@ export const CATEGORY_TO_MCC: Record<string, string> = {
   lavanderia: '7210',
   floristeria: '5992',
 
-  // Hogar
+  // Home
   muebles: '5712',
   ferreteria: '5251',
   materiales: '5200',
 
-  // Mercaderia general
+  // General merchandise
   variedades: '5331',
   departamental: '5311',
   descuento: '5310',

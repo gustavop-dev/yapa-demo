@@ -17,9 +17,36 @@ descripciones de PR:
    de tres adjetivos.
 4. **Claude no va como co-autor.** Sin trailer `Co-Authored-By: Claude` en los commits
    y sin la línea "Generated with Claude Code" en descripciones de PR.
+5. **El código y su documentación van en inglés.** Identificadores, comentarios, JSDoc,
+   nombres de tests y READMEs de paquetes. También los mensajes de commit y las
+   descripciones de PR.
+6. **Se quedan en español**, porque son material para la entrevista y no código:
+   `CLAUDE.md`, `ARRANQUE.md`, todo `docs/` y los textos de UI de la app.
 
 Escribir como lo escribiría un ingeniero explicando su trabajo a otro, no como lo
 escribiría un asistente.
+
+## Formato de commits
+
+Conventional Commits, en inglés, en imperativo y en minúscula.
+
+```
+<type>(<scope>): <subject>
+
+<body opcional, explica el porqué, no el qué>
+```
+
+- **type**: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `build`, `perf`.
+- **scope**: el paquete o área tocada: `engine`, `seed`, `mobile`, `docs`, `scripts`.
+- **subject**: máximo 72 caracteres, sin punto final.
+- Un commit por cambio coherente. Nada de "varios arreglos".
+
+Ejemplos del repo:
+
+```
+feat(engine): add MCC recommendation engine with OpenStreetMap seed
+docs(setup): add Windows getting started guide
+```
 
 ## Qué es esto
 

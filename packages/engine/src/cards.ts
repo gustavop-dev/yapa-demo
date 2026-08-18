@@ -1,15 +1,16 @@
 import type { Card } from './types';
 
 /**
- * Catalogo de tarjetas del demo.
+ * Card catalog for the demo.
  *
- * Regla del proyecto: no se inventan tasas. Cada regla lleva su procedencia.
- * Las que tienen sourceQuote fueron leidas del documento del emisor el 18 de
- * agosto de 2026. Las que tienen todo estan sin verificar y la UI debe mostrarlo.
+ * Project rule: rates are never made up. Every rule carries its provenance. The ones
+ * with sourceQuote were read from the issuer document on August 18, 2026. The ones
+ * with todo are unverified and the UI has to say so.
  *
- * Tres tarjetas alcanzan porque los multiplicadores se pisan entre si, que es lo
- * unico que hace interesante al problema. Cincuenta tarjetas inventadas no
- * demuestran nada.
+ * Card labels and notes stay in Spanish because they are rendered in the app.
+ *
+ * Three cards are enough because their multipliers overlap, which is the only thing
+ * that makes the problem interesting. Fifty made up cards prove nothing.
  */
 
 const AMEX_SUPERMARKET_EXCLUSION_QUOTE =
@@ -59,8 +60,8 @@ export const CARDS: Card[] = [
         provenance: {
           verified: false,
           todo:
-            'TODO: verificar la tasa vigente de restaurantes y su tope contra los ' +
-            'terminos de Membership Rewards. Solo se verifico la parte de U.S. supermarkets.',
+            'TODO: verify the current restaurant rate and its cap against the ' +
+            'Membership Rewards terms. Only the U.S. supermarkets part was verified.',
         },
       },
       {
@@ -71,7 +72,7 @@ export const CARDS: Card[] = [
         matchMcc: [],
         provenance: {
           verified: false,
-          todo: 'TODO: verificar la tasa base contra los terminos vigentes.',
+          todo: 'TODO: verify the base rate against the current terms.',
         },
       },
     ],
@@ -112,9 +113,9 @@ export const CARDS: Card[] = [
         unit: 'cash-back-pct',
         matchMcc: ['5541'],
         excludeMcc: ['5300', '5310', '5411'],
-        // La cita dice "warehouse clubs that sell gasoline are not considered gas
-        // stations". Una gasolinera de Costco es una gasolinera y codifica como tal,
-        // asi que la exclusion tiene que ser por marca y no por MCC.
+        // The quote says "warehouse clubs that sell gasoline are not considered gas
+        // stations". A Costco gas station is a gas station and codes as one, so the
+        // exclusion has to be by brand and not by MCC.
         excludeBrandId: ['costco', 'sams-club', 'bjs', 'walmart', 'target'],
         uncertainMcc: ['5542'],
         provenance: {
@@ -136,7 +137,7 @@ export const CARDS: Card[] = [
         matchMcc: [],
         provenance: {
           verified: false,
-          todo: 'TODO: verificar la tasa base contra el Card Member Agreement vigente.',
+          todo: 'TODO: verify the base rate against the current Card Member Agreement.',
         },
       },
     ],
@@ -159,10 +160,10 @@ export const CARDS: Card[] = [
         provenance: {
           verified: false,
           todo:
-            'TODO: verificar contra los terminos vigentes de Citi. La pagina de ' +
-            'terminos se renderiza por JavaScript y no se pudo leer el 18 de agosto ' +
-            'de 2026. La tarjeta esta en el catalogo por su rol estructural: es la ' +
-            'tasa plana que gana cuando ninguna categoria aplica.',
+            'TODO: verify against the current Citi terms. The terms page renders via ' +
+            'JavaScript and could not be read on August 18, 2026. The card is in the ' +
+            'catalog for its structural role: it is the flat rate that wins when no ' +
+            'category applies.',
         },
       },
     ],

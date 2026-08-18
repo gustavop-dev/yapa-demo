@@ -1,7 +1,7 @@
 /**
- * Sonda de cobertura: consulta una region y reporta que hay mapeado, sin escribir
- * nada. Sirve para saber si vale la pena generar el seed desde OSM o si hay que
- * sembrar a mano, antes de gastar tiempo.
+ * Coverage probe: queries a region and reports what is mapped, writing nothing. It
+ * tells you whether generating the seed from OSM is worth it or whether the venue has
+ * to be seeded by hand, before spending the time.
  */
 import { guessMcc } from './mcc-map';
 import { coordsOf, fetchOverpass } from './overpass';
@@ -10,12 +10,12 @@ import { regionOrThrow } from './regions';
 async function main(): Promise<void> {
   const regionId = process.argv[2];
   if (!regionId) {
-    console.error('Uso: npm run probe --workspace=@yapa/seed -- <region>');
+    console.error('Usage: npm run probe --workspace=@yapa/seed -- <region>');
     process.exit(1);
   }
 
   const region = regionOrThrow(regionId);
-  console.log(`Sondeando ${region.label}`);
+  console.log(`Probing ${region.label}`);
   console.log(`bbox: ${JSON.stringify(region.bbox)}\n`);
 
   const elements = await fetchOverpass(region.bbox);
@@ -42,9 +42,9 @@ async function main(): Promise<void> {
     (byMcc[guess.mcc] ??= []).push(name);
   }
 
-  console.log(`Elementos devueltos : ${elements.length}`);
-  console.log(`Con nombre y coords : ${named}`);
-  console.log(`Con MCC inferible   : ${mapped}\n`);
+  console.log(`Elements returned   : ${elements.length}`);
+  console.log(`With name and coords: ${named}`);
+  console.log(`With inferable MCC  : ${mapped}\n`);
 
   for (const [mcc, names] of Object.entries(byMcc).sort()) {
     console.log(`MCC ${mcc} (${names.length}):`);
@@ -52,7 +52,7 @@ async function main(): Promise<void> {
   }
 
   if (Object.keys(unmapped).length > 0) {
-    console.log('\nTags sin mapeo a MCC:');
+    console.log('\nTags with no MCC mapping:');
     for (const [tag, count] of Object.entries(unmapped).sort((a, b) => b[1] - a[1])) {
       console.log(`  ${tag}: ${count}`);
     }

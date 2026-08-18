@@ -13,9 +13,9 @@ import type {
 type RuleValue = { valuePerDollar: number; estimated: boolean };
 
 /**
- * Normaliza a dolares por dolar gastado para poder comparar entre monedas.
- * Devuelve null cuando la tarjeta acumula puntos y no tenemos valuacion, porque
- * inventar un numero seria peor que decir que no se puede comparar.
+ * Normalizes to dollars per dollar spent so cards in different currencies can be
+ * compared. Returns null when the card earns points and we have no valuation, because
+ * making a number up would be worse than saying the comparison cannot be made.
  */
 export function ruleValue(card: Card, rule: EarnRule): RuleValue | null {
   if (rule.unit === 'cash-back-pct') {
@@ -31,7 +31,7 @@ function ruleKind(rule: EarnRule): RuleMatchKind {
   return 'base';
 }
 
-/** Orden de especificidad: promo de marca gana sobre MCC, y MCC sobre tasa base. */
+/** Specificity order: brand promo beats MCC, and MCC beats the base rate. */
 const KIND_PRIORITY: Record<RuleMatchKind, number> = {
   'brand-promo': 3,
   mcc: 2,
@@ -95,14 +95,17 @@ function rejectionFor(
 }
 
 /**
- * Calcula la recomendacion para un comercio concreto.
+ * Computes the recommendation for a single merchant.
  *
- * La salida no es una tarjeta: es una tarjeta mas las razones por las que las
- * otras opciones perdieron. Sin ese "porque" esto es un numero, no un producto.
+ * The output is not a card: it is a card plus the reasons the other options lost.
+ * Without that "why" this is a number, not a product.
+ *
+ * Rejection copy stays in Spanish on purpose: it is user facing text rendered by the
+ * app, not code documentation.
  */
 export function recommend(merchant: Merchant, cards: Card[]): Recommendation {
   if (cards.length === 0) {
-    throw new Error('recommend() necesita al menos una tarjeta declarada');
+    throw new Error('recommend() needs at least one declared card');
   }
 
   const winners: Match[] = [];
@@ -144,8 +147,8 @@ export function recommend(merchant: Merchant, cards: Card[]): Recommendation {
 
   if (winners.length === 0) {
     throw new Error(
-      'Ninguna tarjeta declarada produjo una regla aplicable. Revisa que las ' +
-        'tarjetas tengan tasa base o valuacion de puntos.',
+      'No declared card produced an applicable rule. Check that the cards have a ' +
+        'base rate or a point valuation.',
     );
   }
 
@@ -154,14 +157,14 @@ export function recommend(merchant: Merchant, cards: Card[]): Recommendation {
 
   const rejected: Rejection[] = [];
 
-  // Reglas que habrian ganado pero no aplican. Este es el caso Target.
+  // Rules that would have won but do not apply. This is the Target case.
   for (const { card, rule, value } of unapplied) {
     if (value.valuePerDollar <= winner.valuePerDollar) continue;
     const { kind, reason } = rejectionFor(rule, merchant);
     rejected.push({ cardId: card.id, cardName: card.name, rule, kind, reason });
   }
 
-  // Tarjetas que si aplican pero rinden menos.
+  // Cards that do apply but pay less.
   for (const other of winners.slice(1)) {
     rejected.push({
       cardId: other.cardId,

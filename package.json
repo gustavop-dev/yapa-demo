@@ -2,7 +2,7 @@
   "name": "yapa-demo",
   "private": true,
   "version": "0.1.0",
-  "description": "Demo tecnico: recomendador de tarjeta por MCC del comercio",
+  "description": "Technical demo: card recommender based on merchant MCC",
   "workspaces": [
     "packages/*"
   ],
