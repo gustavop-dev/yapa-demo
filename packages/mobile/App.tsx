@@ -17,7 +17,12 @@ import {
   requestPrecisionUpgrade,
   type LocationOutcome,
 } from './src/location';
-import { notifyInSeconds, notifyNow, setupNotifications } from './src/notifications';
+import {
+  getPushToken,
+  notifyInSeconds,
+  notifyNow,
+  setupNotifications,
+} from './src/notifications';
 import {
   simulateArrival,
   startProximityWatch,
@@ -54,6 +59,9 @@ export default function App() {
   );
   const [screen, setScreen] = useState<Screen>(EMPTY);
   const [watching, setWatching] = useState(false);
+  // Kept outside `screen` so a new tap does not wipe it: the token is read off the
+  // mirrored phone and pasted into scripts/send-push.sh.
+  const [pushToken, setPushToken] = useState<string | null>(null);
   const watcher = useRef<ProximityWatcher | null>(null);
 
   // The watcher holds a live location subscription. Leaving it running after the
@@ -213,6 +221,35 @@ export default function App() {
     }));
   }, [cards]);
 
+  const onShowPushToken = useCallback(async () => {
+    const setup = await setupNotifications();
+    if (setup.kind === 'denied') {
+      setScreen((prev) => ({
+        ...prev,
+        notice: 'Sin permiso de notificaciones no hay token.',
+      }));
+      return;
+    }
+
+    const result = await getPushToken();
+
+    if (result.kind === 'token') {
+      setPushToken(result.token);
+      // Also on the log, so it can be copied with adb logcat instead of by hand.
+      console.log(`[yapa] ExponentPushToken: ${result.token}`);
+      return;
+    }
+
+    setPushToken(null);
+    setScreen((prev) => ({
+      ...prev,
+      notice:
+        result.kind === 'no-project-id'
+          ? 'Falta el projectId de EAS en app.json. Correr eas init.'
+          : result.message,
+    }));
+  }, []);
+
   return (
     <View style={styles.root}>
       <StatusBar style="light" />
@@ -292,6 +329,23 @@ export default function App() {
           en segundo plano, asi que un vigilante de fondo aparentaria funcionar sin
           hacerlo.
         </Text>
+
+        <Text style={styles.sectionLabel}>Push remota</Text>
+        <Pressable style={styles.smallBtn} onPress={onShowPushToken}>
+          <Text style={styles.smallBtnText}>Mostrar token</Text>
+        </Pressable>
+        {pushToken ? (
+          <View style={[styles.panel, styles.panelGood]}>
+            <Text style={styles.panelTitle}>ExponentPushToken</Text>
+            <Text selectable style={styles.token}>
+              {pushToken}
+            </Text>
+            <Text style={styles.panelBody}>
+              Con esto, scripts/send-push.sh dispara la notificacion desde la
+              terminal con la app cerrada. Esa no necesita ubicacion.
+            </Text>
+          </View>
+        ) : null}
 
         <Text style={styles.footer}>{ATTRIBUTION}</Text>
       </ScrollView>
@@ -558,6 +612,12 @@ const styles = StyleSheet.create({
   },
   smallBtnText: { color: '#58a6ff', fontSize: 14, fontWeight: '600' },
   smallBtnOn: { backgroundColor: '#1f6feb' },
+  token: {
+    color: '#58a6ff',
+    fontFamily: 'monospace',
+    fontSize: 12,
+    marginTop: 8,
+  },
   smallBtnTextOn: { color: '#fff', fontSize: 14, fontWeight: '600' },
   footer: { color: '#484f58', fontSize: 11, marginTop: 36, textAlign: 'center' },
 });
