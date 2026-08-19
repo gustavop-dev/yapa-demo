@@ -8,23 +8,49 @@ Windows igual, asi que la VM solo agrega capas entre el telefono y lo que ve Dav
 
 Repositorio: https://github.com/gustavop-dev/yapa-demo (privado)
 
-## Paso 1: instalar (casi todo son descargas)
+## Paso 1: instalar
 
-1. **Node LTS**: https://nodejs.org (el instalador .msi)
-2. **Git para Windows**: https://git-scm.com/download/win
-   Incluye Git Bash, que es lo que vas a usar para correr los scripts `.sh` del repo.
-3. **Android Studio**: https://developer.android.com/studio
-   Al abrirlo por primera vez, dejá que el asistente baje el SDK y acepte las
-   licencias. Esa es la parte que mas se rompe si se hace a mano.
-4. **scrcpy**: bajar el zip de Windows desde
-   https://github.com/Genymobile/scrcpy/releases (hoy la v4.1)
-   Descomprimirlo en una carpeta fija y agregar esa carpeta al PATH.
-   No uses versiones viejas: la que trae apt en Linux es la 1.25, de 2022.
+Todo esto se instala por linea de comandos con `winget`, sin Android Studio. Son unos
+2 GB en vez de 8, y no hay wizard grafico que haya que atender:
 
-**JDK**: Android Studio ya trae un JDK embebido y Gradle lo usa por defecto, asi que
-normalmente no hace falta instalar nada aparte. Si el build se queja de la version de
-Java, instalá **JDK 17**: la documentacion de React Native dice textual *"We recommend
-JDK 17. You may encounter problems using higher JDK versions."*
+```powershell
+winget install --id Microsoft.OpenJDK.17 --exact
+winget install --id Google.PlatformTools --exact
+winget install --id Genymobile.scrcpy --exact
+```
+
+- **JDK 17** porque la documentacion de React Native dice textual *"We recommend JDK
+  17. You may encounter problems using higher JDK versions."*
+- **Google.PlatformTools** es `adb` y `fastboot`. Deja el PATH modificado, asi que hay
+  que abrir una terminal nueva para que aparezcan.
+- **scrcpy 4.1**, el binario oficial. No uses la version de apt de Linux: es la 1.25,
+  de 2022.
+
+Node LTS (https://nodejs.org) y Git para Windows (https://git-scm.com/download/win)
+van aparte con su instalador. Git Bash es lo que vas a usar para los scripts `.sh` del
+repo.
+
+Falta el SDK propiamente dicho, que Android Studio bajaria solo. Sin Android Studio se
+baja con las command line tools:
+
+1. Bajar `commandlinetools-win-*_latest.zip` de
+   https://developer.android.com/studio (seccion "Command line tools only").
+2. Descomprimir en `%LOCALAPPDATA%\Android\Sdk\cmdline-tools\latest`, de forma que
+   quede `...\cmdline-tools\latest\bin\sdkmanager.bat`. Ese anidamiento importa: si
+   queda un nivel de mas, `sdkmanager` no encuentra su propia raiz.
+3. Instalar los paquetes y aceptar licencias:
+
+```powershell
+$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
+& "$env:ANDROID_HOME\cmdline-tools\latest\bin\sdkmanager.bat" --licenses
+& "$env:ANDROID_HOME\cmdline-tools\latest\bin\sdkmanager.bat" "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+```
+
+4. Dejar `ANDROID_HOME` fijo para las proximas sesiones:
+
+```powershell
+[Environment]::SetEnvironmentVariable("ANDROID_HOME", "$env:LOCALAPPDATA\Android\Sdk", "User")
+```
 
 ## Paso 2: clonar y preparar
 
@@ -37,7 +63,7 @@ npm install
 npm test
 ```
 
-`npm test` tiene que dar 47 tests en verde (40 del motor, 7 del seed). Si eso pasa, el
+`npm test` tiene que dar 55 tests en verde (48 del motor, 7 del seed). Si eso pasa, el
 motor viajo bien y el problema, si aparece, va a ser de toolchain y no de codigo.
 
 Para ver el motor decidiendo sin necesidad de telefono:
@@ -115,13 +141,33 @@ La app tiene que detectarlo y mostrar el estado degradado, aunque Android report
 
 ## Lo que ya esta hecho
 
-- Motor de recomendacion por MCC, 47 tests en verde
+- Motor de recomendacion por MCC, 55 tests en verde
 - 386 comercios de Costa Mesa y 467 de Duitama, sacados de OpenStreetMap
-- Pantalla, modulo de ubicacion y modulo de notificaciones, escritos y compilando,
-  todavia sin probar en dispositivo
+- Pantalla, modulo de ubicacion y modulo de notificaciones, escritos y con typecheck
+  limpio, todavia sin probar en dispositivo
+- Dia 3: disparador de proximidad con histeresis (entra a 120 m, se re-arma pasados
+  220 m), silencio por encima de 200 m de error, una notificacion por llegada y no una
+  por comercio, y cooldown de 90 s. La logica pura vive en `@yapa/engine` y tiene 8
+  tests propios, asi que se verifica sin telefono
+- El vigilante se corta solo al pasar la app a segundo plano, que es la misma decision
+  de compliance que el resto del proyecto
+- Boton de ensayo que corre el mismo disparador contra el punto mas denso de Duitama,
+  para no depender de que haya algo cerca durante la llamada
+- Boton que muestra el `ExponentPushToken` en pantalla y lo escribe al log
 - `scripts/send-push.sh` para disparar la push remota cuando tengas el token
 
 ## Lo que falta
 
-- Dias 3 y 4 del plan: notificacion de proximidad y push remota con Firebase
+- Verificar en el telefono todo lo del dia 3: nada de eso corrio nunca en un
+  dispositivo, y el plan marca eso como el riesgo numero uno
+- Dia 4, que es casi todo tramite de cuentas y no codigo:
+  1. Crear el proyecto en Firebase Console
+  2. Bajar `google-services.json`, ponerlo en `packages/mobile/` y agregar
+     `"googleServicesFile": "./google-services.json"` dentro de `android` en
+     `app.json`. Tiene que estar **antes** del prebuild
+  3. Generar la service account key (Project settings, Service accounts, Generate New
+     Private Key) y subirla con `eas credentials`, en Android, FCM V1
+  4. `eas init` para que `app.json` tenga un `projectId` de verdad: hoy dice
+     `PENDIENTE` y por eso el boton de token responde que falta
+  5. Rebuild, tocar "Mostrar token" y pasarselo a `scripts/send-push.sh`
 - El plan completo esta en `docs/plan-geo-y-push.md`

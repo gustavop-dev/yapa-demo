@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# LINUX ONLY, y fuera del camino actual. El desarrollo se movio a Windows: ver
+# ARRANQUE.md, que instala lo mismo con winget y las command line tools del SDK.
+# Se conserva porque documenta las reglas udev y el problema del scrcpy de apt, que
+# no tienen equivalente en Windows.
+#
 # Prepara la maquina para compilar la app y para espejar el telefono en la llamada.
 #
 # Instala: JDK 17, adb, reglas udev, y scrcpy desde el binario oficial.
