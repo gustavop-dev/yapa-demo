@@ -9,7 +9,7 @@
     "android:release": "expo run:android --variant release",
     "prebuild": "expo prebuild --platform android --clean",
     "typecheck": "tsc --noEmit",
-    "sync-data": "cp ../../data/merchants.duitama.json ../../data/merchants.costa-mesa.json src/data/"
+    "sync-data": "node scripts/sync-data.mjs"
   },
   "dependencies": {
     "@yapa/engine": "*",

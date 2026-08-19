@@ -35,6 +35,12 @@ export type MerchantCore = {
   name: string;
   mcc: string;
   mccSource: MccSource;
+  /** Curated place category used to infer the MCC. */
+  category?: string;
+  /** Venue level as published by the directory. */
+  level?: string;
+  /** Venue unit as published by the directory. */
+  unit?: string;
   /** Stable brand, for merchant specific promos and exclusions. */
   brandId?: string;
 };

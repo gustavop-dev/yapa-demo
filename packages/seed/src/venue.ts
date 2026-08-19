@@ -1,5 +1,5 @@
 /**
- * Turns a hand seeded venue file into JSON the engine can use.
+ * Turns a curated venue file into JSON the engine can use.
  *
  * Usage: npm run venue --workspace=@yapa/seed -- innovo-plaza
  *
@@ -20,6 +20,8 @@ type Tenant = {
   mcc: string;
   mccSource: 'hand-seeded';
   category: string;
+  level?: string;
+  unit?: string;
 };
 
 type VenueFile = {
@@ -29,6 +31,7 @@ type VenueFile = {
   lon: number;
   radiusM: number;
   source: string;
+  observedAt?: string | undefined;
   tenantCount: number;
   mccBreakdown: Record<string, number>;
   tenants: Tenant[];
@@ -80,6 +83,8 @@ async function main(): Promise<void> {
     const parts = text.split('|').map((p) => p.trim());
     const name = parts[0];
     const category = (parts[1] ?? '').toLowerCase();
+    const level = parts[2] || undefined;
+    const unit = parts[3] || undefined;
 
     if (!name) continue;
 
@@ -94,13 +99,16 @@ async function main(): Promise<void> {
       continue;
     }
 
-    tenants.push({
+    const tenant: Tenant = {
       id: `${venueId}-${slug(name)}`,
       name,
       mcc,
       mccSource: 'hand-seeded',
       category,
-    });
+    };
+    if (level) tenant.level = level;
+    if (unit) tenant.unit = unit;
+    tenants.push(tenant);
   }
 
   for (const field of ['id', 'nombre', 'lat', 'lon', 'radio']) {
@@ -120,7 +128,8 @@ async function main(): Promise<void> {
     lat: Number(header['lat']),
     lon: Number(header['lon']),
     radiusM: Number(header['radio']),
-    source: 'Sembrado a mano caminando el lugar',
+    source: header['fuente'] ?? 'Sembrado a mano caminando el lugar',
+    observedAt: header['observado'],
     tenantCount: tenants.length,
     mccBreakdown,
     tenants,

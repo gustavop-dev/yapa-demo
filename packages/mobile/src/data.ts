@@ -1,6 +1,7 @@
-import type { Merchant } from '@yapa/engine';
+import type { Merchant, Venue } from '@yapa/engine';
 import costaMesa from './data/merchants.costa-mesa.json';
 import duitama from './data/merchants.duitama.json';
+import innovoPlaza from './data/venue.innovo-plaza.json';
 
 /**
  * The merchant sets are embedded in the binary.
@@ -49,5 +50,8 @@ export const REGIONS: Region[] = [
 
 /** Every merchant together: the real fix decides which region it lands in. */
 export const ALL_MERCHANTS: Merchant[] = REGIONS.flatMap((r) => r.merchants);
+
+/** Indoor venues use one building footprint and a list of possible tenants. */
+export const ALL_VENUES: Venue[] = [innovoPlaza as Venue];
 
 export const ATTRIBUTION = '(c) OpenStreetMap contributors, ODbL 1.0';

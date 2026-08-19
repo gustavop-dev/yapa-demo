@@ -1,5 +1,17 @@
 # Yapa: plan de georreferencia y push
 
+## Estado del piloto de interiores
+
+El piloto de resolucion interior queda congelado con Innovo Plaza como unico venue.
+El GPS resuelve el edificio y el usuario confirma el comercio exacto en un directorio
+local con busqueda y filtros por categoria y piso. La muestra tiene 25 locales curados,
+22 con piso y numero de local publicados de forma consistente.
+
+No se agregan mas venues ni se intenta posicionamiento interior. Completar los 101
+locales y mantenerlos actualizados requiere un pipeline de datos con responsable de
+frescura. Eso queda fuera del piloto. El trabajo de push remota y ensayo conserva el
+orden definido en este plan.
+
 ## Context
 
 Demo técnico para un filtro de entrevista con Yapa (fundador: David Rueda). David puso
@@ -34,7 +46,7 @@ los commits. Aplica a código, comentarios, documentación y mensajes de commit.
 
 ## Lo que ya está construido y NO se vuelve a tocar
 
-Está en el repo, con 47 tests en verde y typecheck limpio. Se congela acá.
+Está en el repo, con 55 tests en verde y typecheck limpio. Se congela acá.
 
 | Paquete | Qué provee | API que la app va a consumir |
 |---|---|---|
@@ -486,7 +498,7 @@ flywheel de entrenamiento tampoco. Las tres salieron de leer contratos.
 | Geofencing real en background | Exige `ACCESS_BACKGROUND_LOCATION`, y desde Android 11 pedirlo abre Ajustes. Contradice la decisión de compliance. Es el hallazgo, no una omisión. |
 | El endpoint desplegado | El motor ya es un módulo puro y corre embebido. Con 5 días y demo en vivo, un servidor remoto es una dependencia de red que se puede caer mientras David mira. |
 | Camino de iOS en código | Sin Mac no compila ni se prueba. Va documentado con la API exacta. |
-| Siembra de Innovo Plaza | Ya no se depende del mall. La plantilla y el parser quedan en el repo como diseño. |
+| Directorio completo de Innovo Plaza | El piloto incluye 25 locales curados. Mantener los 101 requiere un pipeline con control de frescura. |
 | Gestión dinámica de geocercas | Va en la página de restricciones. Construirlo es un fin de semana entero. |
 | Más tarjetas o más MCC | 45 MCC y 3 tarjetas ya sobran para lo que se evalúa. |
 
@@ -494,7 +506,7 @@ flywheel de entrenamiento tampoco. Las tres salieron de leer contratos.
 
 ## Verificación
 
-**Motor:** `npm test`, 47 tests, ya en verde. No se toca.
+**Motor y seed:** `npm test`, 55 tests, ya en verde.
 
 **Permisos, en el teléfono, repetible:**
 - Conceder "Aproximada" y confirmar que la app lo detecta y entra en estado degradado,
