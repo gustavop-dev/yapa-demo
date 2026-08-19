@@ -1,7 +1,7 @@
 import { CARDS, decide, resolveNearby } from '@yapa/engine';
 import type { Decision, NearbyResult } from '@yapa/engine';
 import { StatusBar } from 'expo-status-bar';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Pressable,
@@ -10,7 +10,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { ALL_MERCHANTS, ATTRIBUTION } from './src/data';
+import { ALL_MERCHANTS, ATTRIBUTION, REGIONS } from './src/data';
 import {
   openAppSettings,
   requestFix,
@@ -18,8 +18,16 @@ import {
   type LocationOutcome,
 } from './src/location';
 import { notifyInSeconds, notifyNow, setupNotifications } from './src/notifications';
+import {
+  simulateArrival,
+  startProximityWatch,
+  type ProximityWatcher,
+} from './src/proximity';
 
 // The on screen copy stays in Spanish: it is what the founder reads during the call.
+
+/** The densest corner of the seed, from the grid measured over Duitama. */
+const REHEARSAL_POINT = REGIONS.find((r) => r.id === 'duitama')!.demoPoint;
 
 type Screen = {
   busy: boolean;
@@ -45,6 +53,17 @@ export default function App() {
     CARDS.map((c) => c.id),
   );
   const [screen, setScreen] = useState<Screen>(EMPTY);
+  const [watching, setWatching] = useState(false);
+  const watcher = useRef<ProximityWatcher | null>(null);
+
+  // The watcher holds a live location subscription. Leaving it running after the
+  // screen is gone is exactly the background listening this project refuses to do.
+  useEffect(() => {
+    return () => {
+      watcher.current?.stop();
+      watcher.current = null;
+    };
+  }, []);
 
   const cards = useMemo(
     () => CARDS.filter((c) => selectedCards.includes(c.id)),
@@ -126,6 +145,74 @@ export default function App() {
     }));
   }, []);
 
+  const onToggleWatch = useCallback(async () => {
+    if (watcher.current) {
+      watcher.current.stop();
+      watcher.current = null;
+      setWatching(false);
+      setScreen((prev) => ({ ...prev, notice: 'Vigilancia detenida.' }));
+      return;
+    }
+
+    const setup = await setupNotifications();
+    if (setup.kind === 'denied') {
+      setScreen((prev) => ({
+        ...prev,
+        notice: 'Sin permiso de notificaciones no hay nada que mostrar.',
+      }));
+      return;
+    }
+
+    const started = await startProximityWatch({
+      merchants: ALL_MERCHANTS,
+      cards,
+      onEvent: (event) => {
+        setScreen((prev) => ({
+          ...prev,
+          notice: `Notificacion disparada cerca de ${event.anchor.name}.`,
+        }));
+      },
+    });
+
+    if (started.kind === 'no-permission') {
+      setScreen((prev) => ({
+        ...prev,
+        notice: 'Toca "Con cual pago" primero: la ubicacion se pide ahi.',
+      }));
+      return;
+    }
+
+    if (started.kind === 'error') {
+      setScreen((prev) => ({ ...prev, notice: started.message }));
+      return;
+    }
+
+    watcher.current = started.watcher;
+    setWatching(true);
+    setScreen((prev) => ({
+      ...prev,
+      notice: 'Vigilando. Solo con la app abierta: al salir se corta sola.',
+    }));
+  }, [cards]);
+
+  const onSimulateArrival = useCallback(async () => {
+    const setup = await setupNotifications();
+    if (setup.kind === 'denied') return;
+
+    const event = await simulateArrival({
+      point: REHEARSAL_POINT,
+      merchants: ALL_MERCHANTS,
+      cards,
+    });
+
+    setScreen((prev) => ({
+      ...prev,
+      notice: event
+        ? `Simulado en ${REHEARSAL_POINT.note}`
+        : 'No hay comercios sembrados en el punto de ensayo.',
+    }));
+  }, [cards]);
+
   return (
     <View style={styles.root}>
       <StatusBar style="light" />
@@ -175,7 +262,7 @@ export default function App() {
 
         {screen.decision ? <DecisionPanel decision={screen.decision} /> : null}
 
-        <Text style={styles.sectionLabel}>Notificaciones</Text>
+        <Text style={styles.sectionLabel}>Notificaciones sin ubicacion</Text>
         <View style={styles.row}>
           <Pressable style={styles.smallBtn} onPress={onTestNotification}>
             <Text style={styles.smallBtnText}>Inmediata</Text>
@@ -184,6 +271,27 @@ export default function App() {
             <Text style={styles.smallBtnText}>En 10 s</Text>
           </Pressable>
         </View>
+
+        <Text style={styles.sectionLabel}>Notificacion por proximidad</Text>
+        <View style={styles.row}>
+          <Pressable
+            style={[styles.smallBtn, watching && styles.smallBtnOn]}
+            onPress={onToggleWatch}
+          >
+            <Text style={watching ? styles.smallBtnTextOn : styles.smallBtnText}>
+              {watching ? 'Vigilando, tocar para parar' : 'Vigilar proximidad'}
+            </Text>
+          </Pressable>
+          <Pressable style={styles.smallBtn} onPress={onSimulateArrival}>
+            <Text style={styles.smallBtnText}>Simular llegada</Text>
+          </Pressable>
+        </View>
+        <Text style={styles.panelBody}>
+          La vigilancia corre solo con la app abierta. Sin
+          ACCESS_BACKGROUND_LOCATION, Android entrega unas pocas posiciones por hora
+          en segundo plano, asi que un vigilante de fondo aparentaria funcionar sin
+          hacerlo.
+        </Text>
 
         <Text style={styles.footer}>{ATTRIBUTION}</Text>
       </ScrollView>
@@ -449,5 +557,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   smallBtnText: { color: '#58a6ff', fontSize: 14, fontWeight: '600' },
+  smallBtnOn: { backgroundColor: '#1f6feb' },
+  smallBtnTextOn: { color: '#fff', fontSize: 14, fontWeight: '600' },
   footer: { color: '#484f58', fontSize: 11, marginTop: 36, textAlign: 'center' },
 });
