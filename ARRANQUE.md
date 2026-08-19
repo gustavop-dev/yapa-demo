@@ -34,23 +34,38 @@ Falta el SDK propiamente dicho, que Android Studio bajaria solo. Sin Android Stu
 baja con las command line tools:
 
 1. Bajar `commandlinetools-win-*_latest.zip` de
-   https://developer.android.com/studio (seccion "Command line tools only").
+   https://developer.android.com/studio (seccion "Command line tools only"). Son unos
+   155 MB y `dl.google.com` corta la conexion seguido: conviene bajarlo con `curl -C -`
+   dentro de un bucle que reintente, porque asi retoma en vez de empezar de cero.
 2. Descomprimir en `%LOCALAPPDATA%\Android\Sdk\cmdline-tools\latest`, de forma que
    quede `...\cmdline-tools\latest\bin\sdkmanager.bat`. Ese anidamiento importa: si
    queda un nivel de mas, `sdkmanager` no encuentra su propia raiz.
-3. Instalar los paquetes y aceptar licencias:
+3. Aceptar licencias. **Desde Git Bash, no desde PowerShell**: `sdkmanager --licenses`
+   pide confirmacion por cada licencia, y en PowerShell 5.1 mandarle una cadena con
+   varias `y` por la tuberia no alimenta el prompt, sale con "7 of 7 SDK package
+   licenses not accepted". Con `yes` de Git Bash funciona:
 
-```powershell
-$env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
-& "$env:ANDROID_HOME\cmdline-tools\latest\bin\sdkmanager.bat" --licenses
-& "$env:ANDROID_HOME\cmdline-tools\latest\bin\sdkmanager.bat" "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+```sh
+export JAVA_HOME="/c/Program Files/Microsoft/jdk-17.0.20.8-hotspot"
+export ANDROID_HOME="$LOCALAPPDATA/Android/Sdk"
+yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager.bat" --licenses
+"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager.bat" "platform-tools" "platforms;android-36" "build-tools;36.0.0"
 ```
 
-4. Dejar `ANDROID_HOME` fijo para las proximas sesiones:
+4. Dejar las variables fijas para las proximas sesiones:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("ANDROID_HOME", "$env:LOCALAPPDATA\Android\Sdk", "User")
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot", "User")
 ```
+
+`sdkmanager` avisa que esta deprecado y que lo reemplaza `android sdk`, del mismo
+directorio. Sigue funcionando, y el aviso no es un error.
+
+Verificacion: `adb version` da 37.0.1, `scrcpy --version` da 4.1, y
+`java -version` tiene que decir 17. Ojo con lo ultimo si tenes un Java viejo
+instalado: `winget` no toca el PATH del Java que ya estaba, asi que una terminal
+puede seguir viendo el 8. Por eso `JAVA_HOME` va fijo.
 
 ## Paso 2: clonar y preparar
 
