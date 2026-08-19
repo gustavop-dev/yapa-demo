@@ -3,7 +3,10 @@
 Contexto de negocio y research completo: @docs/yapa-research-context.md
 (léelo cuando necesites justificar una decisión, no en cada tarea)
 
-Plan de trabajo vigente: `~/.claude/plans/te-voy-a-dar-wiggly-cake.md`
+Plan de trabajo vigente: `docs/plan-geo-y-push.md`
+
+`AGENTS.md` es la version de este archivo para Codex y otros agentes. Si cambias uno,
+cambia el otro.
 
 ## Reglas de escritura (obligatorias, sin excepciones)
 
