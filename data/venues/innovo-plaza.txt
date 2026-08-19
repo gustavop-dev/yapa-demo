@@ -1,8 +1,9 @@
 # Innovo Plaza, Duitama, Boyaca
 #
-# Este archivo se llena a mano caminando el mall. Es a proposito: OpenStreetMap
-# tiene 467 comercios mapeados en Duitama y solo 1 adentro de este mall, asi que
-# el problema de interiores es doble, no hay GPS util y tampoco hay datos de POI.
+# Este archivo combina el directorio oficial del centro comercial con verificacion
+# manual. OpenStreetMap tiene 467 comercios mapeados en Duitama y solo dos puntos
+# asociados claramente al interior del mall. El directorio oficial cubre mas locales,
+# pero es una observacion puntual y puede quedar desactualizado.
 #
 # NO hace falta coordenada por local. Adentro del edificio el error horizontal
 # supera la distancia entre locales, asi que darle lat/lon a cada tienda seria
@@ -11,7 +12,10 @@
 #
 # Como llenarlo: un local por linea, con el formato
 #
-#     Nombre del local | categoria
+#     Nombre del local | categoria | piso | local
+#
+# Piso y local son opcionales. Se copian del directorio oficial cuando el dato es
+# consistente. Se dejan vacios cuando dos paginas publican valores distintos.
 #
 # Vocabulario de categorias (usa la que mas se acerque):
 #
@@ -31,6 +35,11 @@
 # Si no sabes la categoria de un local, escribi ? y el script te avisa cuantos
 # quedaron sin clasificar. Es mejor eso que adivinar el MCC.
 #
+# Las categorias se verificaron contra la seccion donde aparece cada comercio en
+# https://innovoplaza.co/. No son MCC observados en una transaccion. El generador las
+# traduce con la tabla de Visa y deja mccSource como hand-seeded para no presentarlas
+# como datos publicados por el adquirente.
+#
 # Cuando termines:  npm run venue --workspace=@yapa/seed -- innovo-plaza
 
 id: innovo-plaza
@@ -38,17 +47,39 @@ nombre: Innovo Plaza
 lat: 5.8325762
 lon: -73.0321686
 radio: 93
+fuente: https://innovoplaza.co/
+observado: 2026-08-19
 
 # El radio de 93 m es el maximo desde el centroide de la huella real del edificio
 # en OpenStreetMap (way/962050370, poligono de 44 nodos). No es una estimacion.
 
 --- locales ---
 
-# Estos dos ya estaban en OpenStreetMap, dejalos y agrega el resto abajo.
-Puerto Madero | restaurante
-Frutin | heladeria
+# Estos dos ya estaban en OpenStreetMap. El directorio no dio un local consistente.
+Puerto Madero | restaurante | |
+Frutin | heladeria | |
 
-# Agrega desde aca. Ejemplos del formato, borralos cuando pongas los reales:
-# Juan Valdez | comida-rapida
-# Arturo Calle | ropa
-# Farmatodo | farmacia
+# Seleccion representativa del directorio oficial. No intenta copiar sus 101 locales.
+Hamburguesas El Corral | comida-rapida | 2 | 2-24 A
+Sandwich Qbano | comida-rapida | 2 | 2-20
+Mi Fogon Boyacense | restaurante | 2 | 2-17 A
+Don Calentao | restaurante | 2 | 2-17 B
+Capri | restaurante | 2 | 2-18
+Pipe Parrilla | restaurante | 2 | 2-19
+Cafe Bocato | cafe | 1 | 1-59
+Helados Mimo's | heladeria | 1 | 1-57
+Helados Pillos | heladeria | 1 | 1-33
+Trigos | panaderia | 1 | 1-58
+Color Siete | ropa | 1 | 1-22
+Tiendas LandMark | ropa | 1 | 1-25
+Chantilly Boutique | ropa | 2 | 2-06
+Bosi | zapatos | 1 | 1-53
+Velez | marroquineria | 1 | 1-30
+Drogueria Colsubsidio | farmacia | 1 | 1-16
+Farmacias Cruz Verde | farmacia | 1 | 1-45
+Mauro Peluqueria | peluqueria | 1 | 1-10
+Opticas Ocular Center | optica | 1 | 1-18
+Novo Games | videojuegos | 2 | 2-16
+Claro | telefonia | 1 | 1-39
+Jugueteria del Abuelo | juguetes | 2 | 2-27
+Masglo | cosmeticos | |

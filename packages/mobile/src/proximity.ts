@@ -1,10 +1,15 @@
 import {
   emptyProximityState,
   evaluateProximity,
+  haversineM,
+  PROXIMITY,
+  resolveNearby,
   type Card,
   type Merchant,
+  type MerchantCandidate,
   type ProximityEvent,
   type ProximityState,
+  type Venue,
 } from '@yapa/engine';
 import * as Location from 'expo-location';
 import { AppState, type AppStateStatus } from 'react-native';
@@ -38,19 +43,34 @@ export type ProximityWatcher = {
   stop: () => void;
 };
 
+export type ProximitySnapshot =
+  | {
+      kind: 'ok';
+      accuracyM: number;
+      candidates: MerchantCandidate[];
+      venue?: { id: string; name: string };
+    }
+  | {
+      kind: 'accuracy-too-low';
+      accuracyM: number;
+      thresholdM: number;
+    };
+
 export type WatchStart =
   | { kind: 'watching'; watcher: ProximityWatcher }
   | { kind: 'no-permission' }
   | { kind: 'error'; message: string };
 
-export function notificationFor(event: ProximityEvent): {
+export function notificationFor(event: ProximityEvent, venueName?: string): {
   title: string;
   body: string;
 } {
   if (event.kind === 'converged') {
     const rec = event.recommendation;
     return {
-      title: `Estas llegando a ${event.anchor.name}`,
+      title: venueName
+        ? `Estas en ${venueName}`
+        : `Estas llegando a ${event.anchor.name}`,
       body:
         `Paga con ${rec.winner.cardName}: ${rec.winner.rule.label}, ` +
         `${(rec.winner.valuePerDollar * 100).toFixed(2)}% por dolar. ` +
@@ -59,7 +79,9 @@ export function notificationFor(event: ProximityEvent): {
   }
 
   return {
-    title: `${event.candidates.length} comercios cerca de vos`,
+    title: venueName
+      ? `${event.candidates.length} comercios posibles en ${venueName}`
+      : `${event.candidates.length} comercios cerca de vos`,
     body:
       `Hay ${event.answerCount} respuestas posibles segun en cual estes. ` +
       `Abri Yapa y te lo desempato con una sola pregunta.`,
@@ -72,8 +94,13 @@ export function notificationFor(event: ProximityEvent): {
  */
 export async function startProximityWatch(opts: {
   merchants: Merchant[];
+  venues?: Venue[];
   cards: Card[];
-  onEvent?: (event: ProximityEvent) => void;
+  onPosition?: (snapshot: ProximitySnapshot) => void;
+  onEvent?: (
+    event: ProximityEvent,
+    context: { venue?: { id: string; name: string } },
+  ) => void;
 }): Promise<WatchStart> {
   const permission = await Location.getForegroundPermissionsAsync();
   if (!permission.granted) return { kind: 'no-permission' };
@@ -83,11 +110,57 @@ export async function startProximityWatch(opts: {
   let stopped = false;
 
   const handle = async (position: Location.LocationObject): Promise<void> => {
+    const point = {
+      lat: position.coords.latitude,
+      lon: position.coords.longitude,
+    };
+    const accuracyM = position.coords.accuracy ?? Number.POSITIVE_INFINITY;
+    const venueResult = resolveNearby(
+      point,
+      accuracyM,
+      [],
+      opts.venues ?? [],
+    );
+    const activeVenue =
+      venueResult.status === 'ok' ? venueResult.venue : undefined;
+    const evaluationMerchants = activeVenue
+      ? venueResult.status === 'ok'
+        ? venueResult.candidates
+        : []
+      : opts.merchants;
+
+    if (accuracyM > PROXIMITY.maxAccuracyM) {
+      opts.onPosition?.({
+        kind: 'accuracy-too-low',
+        accuracyM,
+        thresholdM: PROXIMITY.maxAccuracyM,
+      });
+    } else {
+      const candidates = activeVenue
+        ? venueResult.status === 'ok'
+          ? venueResult.candidates
+          : []
+        : opts.merchants
+            .map((merchant) => ({
+              ...merchant,
+              distanceM: haversineM(point, merchant),
+            }))
+            .filter((merchant) => merchant.distanceM <= PROXIMITY.enterRadiusM)
+            .sort((a, b) => a.distanceM - b.distanceM);
+
+      opts.onPosition?.({
+        kind: 'ok',
+        accuracyM,
+        candidates,
+        venue: activeVenue,
+      });
+    }
+
     const step = evaluateProximity(
       state,
-      { lat: position.coords.latitude, lon: position.coords.longitude },
-      position.coords.accuracy ?? Number.POSITIVE_INFINITY,
-      opts.merchants,
+      point,
+      accuracyM,
+      evaluationMerchants,
       opts.cards,
       position.timestamp,
     );
@@ -95,9 +168,9 @@ export async function startProximityWatch(opts: {
     state = step.state;
     if (!step.event) return;
 
-    const { title, body } = notificationFor(step.event);
+    const { title, body } = notificationFor(step.event, activeVenue?.name);
     await notifyNow(title, body);
-    opts.onEvent?.(step.event);
+    opts.onEvent?.(step.event, { venue: activeVenue });
   };
 
   const subscribe = async (): Promise<void> => {
